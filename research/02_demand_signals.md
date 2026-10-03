@@ -6,7 +6,7 @@
 
 **Method note:** Evidence gathered via web-search extracts on 2026-10-03; direct page fetching was blocked in this environment.
 
-> **Coverage warning — read first.** All six workstream agents share one WebSearch budget for the session, and it ran out after roughly three dozen WS2 queries. Direct access was also blocked: OECD returned 403 here, and the lead had already found Eurostat, all three statistics offices, the job sites, the procurement portals, Upwork, LinkedIn, Google Trends and DBnomics blocked. As a result:
+> **Coverage warning — read first.** All six workstream agents share one WebSearch budget for the session, and it ran out after roughly three dozen WS2 queries. Direct access was also blocked: the proxy refused OECD here, and the lead had already found Eurostat, all three statistics offices, the job sites, the procurement portals, Upwork, LinkedIn, Google Trends and DBnomics blocked. As a result:
 > - **Estonian grants** were researched in depth from primary sources (EIS pages and Riigi Teataja).
 > - **Latvian grants** were researched only partly (LIAA, Ministry of Economics, EU-funds portal).
 > - **Lithuanian grants** were not researched.
@@ -22,19 +22,19 @@
    - Terms: EUR 20,000 unit price, 20% self-financing, EUR 2.0M budget, prior-year revenue ≥ EUR 200,000 [V:WS2-001].
    - EIS opened it on 24.08.2026 and closed it at 16:00 the same day because requests exceeded the budget [V:WS2-001][V:WS2-003]. Invest in Estonia says it was "fully allocated on the morning" it opened [V:WS2-002].
    - Capacity is about 100 firms (2,000,000 / 20,000) [E:A-WS2-01].
-   - This is the strongest component-B demand signal in WS2. But it shows demand for *subsidised* AI projects among firms with at least EUR 200k revenue. It does not show willingness to pay without a subsidy.
-2. **EE digitalisation-roadmap grant has been closed since 24.07.2026 09:00 (prior lead confirmed).**
+   - This is the strongest component-B demand signal in WS2. But it shows demand for *subsidised* AI projects among firms with at least EUR 200k revenue [V:WS2-001]. It does not show willingness to pay without a subsidy.
+2. **EE digitalisation-roadmap grant has been closed since 24.07.2026 09:00 (prior lead confirmed)** [V:WS2-004].
    - Terms: max EUR 10,000, revenue ≥ EUR 200,000 (two-year average) [V:WS2-004].
    - Next call: UNKNOWN (resolve: EIS planned-calls information or an EIS client manager).
 3. **Two EE grants that fit components A and B are open now.**
    - **(a) RTE software implementation & integration grant** [V:WS2-007][V:WS2-009][V:WS2-010]:
-     - Open on a rolling basis: EUR 2,000–5,000 per company at 50%, from a EUR 1.0M budget.
-     - Client conditions: revenue ≥ EUR 50,000, and the client must adopt e-invoicing.
-     - A "digital advisor" is **mandatory**, and advisor fees may take up to 50% of the aid.
+     - Open on a rolling basis: EUR 2,000–5,000 per company at 50%, from a EUR 1.0M budget [V:WS2-007].
+     - Client conditions: revenue ≥ EUR 50,000, and the client must adopt e-invoicing [V:WS2-007].
+     - A "digital advisor" is **mandatory**, and advisor fees may take up to 50% of the aid [V:WS2-009].
    - **(b) Roadmap follow-on advisory & development grant** [V:WS2-005]:
-     - Max EUR 35,000, with 30–50% self-financing.
-     - Revenue ≥ EUR 200,000.
-4. **The operator cannot be the grant-paid advisor at launch.**
+     - Max EUR 35,000, with 30–50% self-financing [V:WS2-005].
+     - Revenue ≥ EUR 200,000 [V:WS2-005].
+4. **The operator probably cannot be the grant-paid advisor at launch (inference).**
    - The paid "digital advisor" must have at least 3 similar projects in the preceding 4 years [V:WS2-009]. Roadmap consultants face the same test [V:WS2-011].
    - A new FIE without consulting references therefore probably cannot be paid from these grants at the start. This is an inference from the rule text; whether in-house experience counts is UNKNOWN.
    - Once eligible, the RTE grant could cover up to about EUR 2,500 of advisor fees per client (about a EUR 5,000 invoice) [E:A-WS2-03].
@@ -51,7 +51,7 @@
    - New programme: EUR 27,613,228 for at least 1,750 firms, with grants up to EUR 10,000, from Q3 2025 [V:WS2-021].
    - AI strand: up to EUR 200,000. Aid rates are 50% (small), 40% (medium) and 30% (mid-caps) [V:WS2-022].
    - An EDIC (dih.lv) maturity test is required before applying. The catalogue already lists CRM packages, e.g. a Pipedrive licence with 12 h of implementation for EUR 2,990 excl. VAT [V:WS3-020][V:WS3-017].
-   - The earlier EUR 37.5M programme (100% aid for micro/small firms if the project is ≤ EUR 5,000) ran until 31.03.2026 [V:WS2-019][V:WS2-020].
+   - The earlier EUR 37.5M programme (100% aid for micro firms if the project is ≤ EUR 5,000) ran until 31.03.2026 [V:WS2-019][V:WS2-020].
    - UNKNOWN: status as of Oct 2026, minimum revenue, and the rules for getting listed as a provider.
 8. **Lithuania: nothing verified** on grants, EDIHs or usage statistics — UNKNOWN. The search budget ran out before any Lithuanian query was executed.
 9. **Also UNKNOWN for all three countries:** CRM and ERP adoption, job-posting counts and salaries, freelance volumes, Google Trends and procurement counts. Exact protocols are in § 11.
@@ -74,7 +74,7 @@
 **The "65% of people and 34% of enterprises use AI" stat.ee release:** UNKNOWN. Its year and definitions could not be checked. Hypotheses to test, none verified:
 - a different survey year (e.g., 2026);
 - a broader AI definition (any AI tool, including generative AI, vs the Eurostat list of AI technologies);
-- a different population (all enterprises vs enterprises with 10 or more persons employed).
+- a different population (all enterprises vs enterprises with ten or more persons employed).
 
 Resolution: open the stat.ee release and note the reference year, population and AI definition. Then compare with the Eurostat AI-use table for EE in the same year.
 
@@ -94,7 +94,7 @@ Every site in scope was blocked for direct fetching. The search budget ran out b
 | cvonline.lt | LT | same | UNKNOWN |
 | LinkedIn Jobs | EE/LV/LT | same | UNKNOWN |
 
-The manual-check protocol is in § 11, item U3. Interpretation note for synthesis: in-house hiring for these roles is a **substitute** for outsourced services as well as a demand signal. Record both counts and seniority.
+The manual-check protocol for this UNKNOWN is in § 11, item U3. Interpretation note for synthesis: in-house hiring for these roles is a **substitute** for outsourced services as well as a demand signal. Record both counts and seniority.
 
 ---
 
@@ -102,7 +102,7 @@ The manual-check protocol is in § 11, item U3. Interpretation note for synthesi
 
 Upwork, Fiverr, Malt, Freelancer and the local classifieds (okidoki.ee, ss.lv, skelbiu.lt) were not researched. Project volumes and budgets mentioning EE/LV/LT or the Baltic languages together with CRM, lead generation or automation are **UNKNOWN** (protocol: § 11, item U4).
 
-The prior lead "Upwork AI-automation median about $29.50/h (May 2026, Upwatcher)" belongs to WS5. WS2 did not re-verify it.
+The prior lead "Upwork AI-automation median about $29.50/h (May 2026, Upwatcher)" belongs to WS5. WS2 did not re-verify it, so for WS2 it stays UNKNOWN.
 
 ---
 
@@ -126,14 +126,14 @@ The structured version of this section is in `_work/data/WS2_grants.csv`.
 | EE-10 | Tark tellija (smart-buyer toolkit) | Available; not a grant [V:WS2-017] | free | — | n/a (videos, contract templates for buying IT) | A/B (buyer education) |
 
 Context:
-- In 2026 the ministry put EUR 10M into the RTE (real-time economy) digitalisation measures. Grants run from a few thousand euros to EUR 150,000 per project, for business-software adoption, process automation and real-time data-exchange software [V:WS2-014].
-- ERR News reported an EUR 85M national AI-uptake plan for the public and private sectors (LEAD WS2-033; split not seen).
+- The ministry put EUR 10M into the RTE (real-time economy) digitalisation measures. Grants run from a few thousand euros to EUR 150,000 per project, for business-software adoption, process automation and real-time data-exchange software [V:WS2-014]. The news item is undated; the governing regulation was adopted on 23.01.2026 [V:WS2-009].
+- ERR News reported an EUR 85M national AI-uptake plan for the public and private sectors (title-level only, LEAD WS2-033). The share for private-sector grants is UNKNOWN.
 
 ### 5.2 Latvia — LIAA / Ministry of Economics
 
 | # | Programme | Status on 2026-10-03 / next call | Amount & co-funding | Eligibility incl. minimum revenue | External consultants / providers payable? | Fit |
 |---|---|---|---|---|---|---|
-| LV-1 | Support for the digitisation of business processes (EUR 37.5M programme) | Stated end date 31.03.2026, or earlier if funds run out [V:WS2-019], so **closed** by its own terms (inference) | up to EUR 100,000; micro/small firms **100%** if the total project is ≤ EUR 5,000; otherwise 30–60% aid; ≥ 200 recipients by 30.06.2026 [V:WS2-020] | enterprises, associations, foundations, research organisations; an **EDIC digital-maturity test and roadmap first**, then apply via business.gov.lv [V:WS2-019]. Minimum revenue: UNKNOWN | **Yes, via the EDIC catalogue.** It lists CRM packages: Pipedrive licence + 12 h implementation EUR 2,990; Pipedrive bundles up to EUR 7,440; a generic CRM implementation package EUR 5,000 (all excl. VAT) [V:WS3-017][V:WS3-018][V:WS3-019]. Whether these entries belong to LV-1 or LV-2: UNKNOWN | A/B |
+| LV-1 | Support for the digitisation of business processes (EUR 37.5M programme) | Stated end date 31.03.2026, or earlier if funds run out [V:WS2-019], so **closed** by its own terms (inference) | up to EUR 100,000; **100%** for micro firms ("small" in LIAA's English text) if the total project is ≤ EUR 5,000; otherwise 30–60% aid; ≥ 200 recipients by 30.06.2026 [V:WS2-020] | enterprises, associations, foundations, research organisations; an **EDIC digital-maturity test and roadmap first**, then apply via business.gov.lv [V:WS2-019]. Minimum revenue: UNKNOWN | **Yes, via the EDIC catalogue.** It lists CRM packages: Pipedrive licence + 12 h implementation EUR 2,990; Pipedrive bundles up to EUR 7,440; a generic CRM implementation package EUR 5,000 (all excl. VAT) [V:WS3-017][V:WS3-018][V:WS3-019]. Whether these entries belong to LV-1 or LV-2: UNKNOWN | A/B |
 | LV-2 | New business-process digitalisation programme | Available from Q3 2025 [V:WS2-021]. Undated articles: EUR 5.4M reserved and funding still available [V:WS2-023]. "Likely accepting until at least the end of this year" (LEAD WS2-027; year unknown). **Current status UNKNOWN** | total EUR 27,613,228; ≥ 1,750 firms; grants ≤ EUR 10,000 [V:WS2-021]. ≤ EUR 10,000 for buying digital solutions and maturity assessment, ≤ EUR 200,000 for AI solutions; aid 50% small / 40% medium / 30% small mid-caps & mid-caps [V:WS2-022] | micro/small/medium firms (incl. farms, cooperatives), small mid-caps, mid-caps, associations uniting ≥ 3 firms [V:WS2-022]. Minimum revenue: UNKNOWN | **Yes for purchased digital solutions** [V:WS2-022]. Consultancy-only projects: UNKNOWN | A/B |
 | LV-3 | Innovation vouchers (Inovāciju vaučeru atbalsts) | UNKNOWN (LEAD WS2-030) | UNKNOWN | UNKNOWN | UNKNOWN | ? |
 | LV-4 | Norway Grants business & innovation development | UNKNOWN (LEAD WS2-029; title gives "more than EUR 14 million", terms not seen) | UNKNOWN | UNKNOWN | UNKNOWN | ? |
@@ -175,7 +175,7 @@ These are inferences from the rule texts. Each rests on the cited sources.
    - The only low-floor digital grant seen is the RTE software grant, at EUR 50,000 [V:WS2-007].
    - WS1's enterprise counts should be cut at these floors when grant-backed demand is sized. Revenue-band counts are UNKNOWN in WS2.
 2. **An experience floor applies to paid advisors in EE.** A provider needs at least 3 similar projects in 4 years [V:WS2-009][V:WS2-011]. That favours established Pipedrive/HubSpot partners (see WS3) over a newcomer. A plausible route is to do a few unsubsidised projects first; whether that works is untested.
-3. **Grant windows can close within hours.** Example: the EE AI grant, first-come-first-served [V:WS2-001][V:WS2-003]. Clients need applications ready at opening, which usually happens in business hours. That is a friction for an operator who works in the evenings.
+3. **Grant windows can close within hours.** The EE AI grant was processed on a rolling basis until the money ran out [V:WS2-003]. It opened on a working day (Monday 24.08.2026) and was used up by that afternoon [V:WS2-001][V:WS2-002]. Clients therefore need applications ready at opening. Grant-led selling depends on preparation during business hours, which is a friction for an operator who works in the evenings (inference).
 4. **Latvia buys through a catalogue.** LIAA-funded purchases go through EDIC-catalogue offers, and CRM packages are already listed by established resellers [V:WS3-017][V:WS3-019][V:WS3-020]. Price points there run from EUR 2,990 to 7,440 [V:WS3-017][V:WS3-018]. They anchor what grant-funded LV buyers expect to pay for licence + implementation bundles.
 5. **No open grant seen funds outbound lead generation.** The closed EE SME programme's "marketing activities" is the only near-match [V:WS2-016]. Component C has no evidenced subsidy channel in EE or LV; LT is UNKNOWN.
 
@@ -191,7 +191,7 @@ Google Trends (trends.google.com) was blocked, and no published trend evidence w
 
 Not researched. riigihanked.riik.ee, the Latvian EIS/IUB and Lithuania's CVP IS were all blocked, and no search budget was left for TED. Count and typical value of small tenders for CRM implementation, sales automation or lead generation in the last 24 months: **UNKNOWN** for EE, LV and LT.
 
-Resolution parameters (§ 11, item U6). The CPV codes below are candidates and must be verified against the CPV 2008 list before use:
+Resolution parameters for this UNKNOWN (§ 11, item U6). The CPV codes below are candidates and must be verified against the CPV 2008 list before use:
 - **Software:** `48445000-0` (CRM software package), `48451000-4` (ERP software package), `72263000-6` (software implementation), `72265000-0` (software configuration), `72266000-7` (software consultancy).
 - **Marketing / consultancy:** `79342000-3` (marketing services), `79342100-4` (direct marketing), `79410000-1` (business and management consultancy).
 
@@ -213,9 +213,9 @@ Market shares were not researched: UNKNOWN for EE (Merit Aktiva, Directo, SmartA
 - EE: the RTE grant explicitly funds "linking of existing software" [V:WS2-007].
 - LT: a CRM builder advertises integrations with Rivilė, Saskaita.lt and Paysera [V:WS3-025].
 
-Resolution: each vendor's published client count and API/marketplace pages (§ 11, item U8).
+Resolution of this UNKNOWN: each vendor's published client count and API/marketplace pages (§ 11, item U8).
 
-### 8.3 Russian-origin CRM (Bitrix24, amoCRM/Kommo)
+### 8.3 Russian-origin CRM (Bitrix24, amoCRM/Kommo) — UNKNOWN
 
 Use among Baltic SMEs, migration signals and official advice: UNKNOWN. WS3 owns the partner counts. Resolution: § 11, item U9.
 
@@ -223,7 +223,7 @@ Use among Baltic SMEs, migration signals and official advice: UNKNOWN. WS3 owns 
 
 EIB Investment Survey 2025 country overviews and the Digital Decade 2025 country reports (share of SMEs with at least basic digital intensity) were not reached: UNKNOWN for EE, LV and LT.
 
-Indirect EE signal (interpretation): EIS pairs money with a mandatory advisor, a compulsory free course and a buyer toolkit [V:WS2-007][V:WS2-009][V:WS2-017]. So the agency treats know-how, not only money, as a barrier. The AI grant's same-day exhaustion [V:WS2-001] suggests that co-funding is a binding constraint for at least the ~55–100 firms it could fund [E:A-WS2-01].
+Indirect EE signal (interpretation): EIS pairs money with a mandatory advisor, a compulsory free course and a buyer toolkit [V:WS2-007][V:WS2-009][V:WS2-017]. So the agency treats know-how, not only money, as a barrier. The AI grant's same-day exhaustion [V:WS2-001] shows that at least the ~55–100 firms it could fund want subsidised AI projects [E:A-WS2-01]. It does not show whether those firms would go ahead without the subsidy.
 
 ---
 
@@ -257,28 +257,28 @@ Indirect EE signal (interpretation): EIS pairs money with a mandatory advisor, a
 
 | ID | UNKNOWN | Cheapest resolution |
 |---|---|---|
-| U1 | **LT grants, all fields** (critical) | About 6 searches limited to inovacijuagentura.lt, esinvesticijos.lt and eimin.lrv.lt ("kvietimai skaitmeninimas", "dirbtinio intelekto diegimas MVĮ", "procesų skaitmeninimas 2026"). Alternatively, one email to the Innovation Agency's client service asking for open/planned SME digitalisation calls, the minimum revenue rule and whether consultant fees are eligible |
-| U2 | **CRM, ERP and AI use by country and size class**, plus the stat.ee "34%" release | Eurostat Data Browser (blocked here): the AI-use and ERP/CRM tables, filtered to EE/LV/LT, size classes 10–49 / 50–249 / 10+, latest year; record the exact dataset code. Or 3 searches limited to ec.europa.eu with the exact indicator wording. The national releases are fallbacks |
-| U3 | **Job-posting snapshot** | Manual check of each site, about 30 minutes per country. Terms by language: **ET** "CRM", "Pipedrive", "HubSpot", "müügijuht B2B", "ärikliendihaldur", "automatiseerimine"; **LV** "CRM", "pārdošanas vadītājs", "biznesa attīstības"; **LT** "CRM", "pardavimų vadybininkas", "verslo plėtros"; **EN** "SDR", "BDR", "Revenue Operations", "Sales Operations", "n8n", "Zapier", "Make". Record active ads, ads with salary ranges, the minimum and maximum salary, and the date. LinkedIn: same terms with a country location filter |
-| U4 | **Freelance demand** | Upwork job search with country + skill ("Lithuanian" / "Latvian" / "Estonian" / "Baltic" × "CRM", "lead generation", "automation"); record open projects and budget bands. Fiverr: counts of gigs for the same terms. Local classifieds okidoki.ee, ss.lv and skelbiu.lt: counts of service ads for "CRM" and automation |
-| U5 | **Search trends** | trends.google.com, last 5 years, geo EE/LV/LT. Terms: "CRM", "Pipedrive", "HubSpot", "n8n", "ChatGPT"; ET "tehisintellekt", LV "mākslīgais intelekts", LT "dirbtinis intelektas"; RU "CRM система", "автоматизация бизнеса". Record the direction (up / flat / down) and the peak year |
-| U6 | **Procurement counts and values** | Portal searches for the last 24 months (from 2024-10-03) using the § 7 CPV candidates and keywords: ET "CRM", "kliendihaldus"; LV "CRM", "klientu attiecību pārvaldība"; LT "CRM", "klientų valdymo sistema". Record count, estimated and awarded value, buyer type and procedure type. Use TED for above-threshold notices |
-| U7 | **Next-call dates for the closed EE grants** (AI, roadmap, RTE automation, eCMR, digital transformation); whether external providers can be paid from the AI grant; the consultant rule for the advisory & development grant | The EIS planned-calls information, the measure-conditions PDFs, or one call/email to an EIS client manager |
-| U8 | **ERP ecosystem shares** | Vendor sites (published client counts) and their API/marketplace pages; Pipedrive/HubSpot marketplace integration listings for Merit, Directo, Rivilė and B1 |
-| U9 | **Russian-origin CRM use and official advice** | Searches in RU/LV/LT ("Bitrix24 Латвия/Литва/Эстония", "amoCRM Kommo Baltija"); advisories from the national cyber-security bodies (RIA in EE, CERT.LV, NKSC in LT) |
-| U10 | **SME barriers** | EIB Investment Survey 2025 country overviews (EE/LV/LT) and the Digital Decade 2025 country reports (SMEs with at least basic digital intensity) |
-| U11 | **E-invoicing mandates (LV, LT, ViDA; legal basis in EE)** | 3–4 searches limited to riigiteataja.ee, likumi.lv, vmi.lt and eur-lex.europa.eu |
-| U12 | **LV programme status, minimum revenue, catalogue-listing rules for a foreign provider; EE/LT EDIH services** | One email to dih.lv / LIAA; the EU EDIH catalogue pages for EE and LT |
+| U1 | UNKNOWN: **LT grants, all fields** (critical) | About 6 searches limited to inovacijuagentura.lt, esinvesticijos.lt and eimin.lrv.lt ("kvietimai skaitmeninimas", "dirbtinio intelekto diegimas MVĮ", "procesų skaitmeninimas 2026"). Alternatively, one email to the Innovation Agency's client service asking for open/planned SME digitalisation calls, the minimum revenue rule and whether consultant fees are eligible |
+| U2 | UNKNOWN: **CRM, ERP and AI use by country and size class**, plus the stat.ee "34%" release | Eurostat Data Browser (blocked here): the AI-use and ERP/CRM tables, filtered to EE/LV/LT, size classes 10–49 / 50–249 / 10+, latest year; record the exact dataset code. Or 3 searches limited to ec.europa.eu with the exact indicator wording. The national releases are fallbacks |
+| U3 | UNKNOWN: **Job-posting snapshot** | Manual check of each site, about 30 minutes per country. Terms by language: **ET** "CRM", "Pipedrive", "HubSpot", "müügijuht B2B", "ärikliendihaldur", "automatiseerimine"; **LV** "CRM", "pārdošanas vadītājs", "biznesa attīstības"; **LT** "CRM", "pardavimų vadybininkas", "verslo plėtros"; **EN** "SDR", "BDR", "Revenue Operations", "Sales Operations", "n8n", "Zapier", "Make". Record active ads, ads with salary ranges, the minimum and maximum salary, and the date. LinkedIn: same terms with a country location filter |
+| U4 | UNKNOWN: **Freelance demand** | Upwork job search with country + skill ("Lithuanian" / "Latvian" / "Estonian" / "Baltic" × "CRM", "lead generation", "automation"); record open projects and budget bands. Fiverr: counts of gigs for the same terms. Local classifieds okidoki.ee, ss.lv and skelbiu.lt: counts of service ads for "CRM" and automation |
+| U5 | UNKNOWN: **Search trends** | trends.google.com, last 5 years, geo EE/LV/LT. Terms: "CRM", "Pipedrive", "HubSpot", "n8n", "ChatGPT"; ET "tehisintellekt", LV "mākslīgais intelekts", LT "dirbtinis intelektas"; RU "CRM система", "автоматизация бизнеса". Record the direction (up / flat / down) and the peak year |
+| U6 | UNKNOWN: **Procurement counts and values** | Portal searches for the last 24 months (from 2024-10-03) using the § 7 CPV candidates and keywords: ET "CRM", "kliendihaldus"; LV "CRM", "klientu attiecību pārvaldība"; LT "CRM", "klientų valdymo sistema". Record count, estimated and awarded value, buyer type and procedure type. Use TED for above-threshold notices |
+| U7 | UNKNOWN: **Next-call dates for the closed EE grants** (AI, roadmap, RTE automation, eCMR, digital transformation); whether external providers can be paid from the AI grant; the consultant rule for the advisory & development grant | The EIS planned-calls information, the measure-conditions PDFs, or one call/email to an EIS client manager |
+| U8 | UNKNOWN: **ERP ecosystem shares** | Vendor sites (published client counts) and their API/marketplace pages; Pipedrive/HubSpot marketplace integration listings for Merit, Directo, Rivilė and B1 |
+| U9 | UNKNOWN: **Russian-origin CRM use and official advice** | Searches in RU/LV/LT ("Bitrix24 Латвия/Литва/Эстония", "amoCRM Kommo Baltija"); advisories from the national cyber-security bodies (RIA in EE, CERT.LV, NKSC in LT) |
+| U10 | UNKNOWN: **SME barriers** | EIB Investment Survey 2025 country overviews (EE/LV/LT) and the Digital Decade 2025 country reports (SMEs with at least basic digital intensity) |
+| U11 | UNKNOWN: **E-invoicing mandates (LV, LT, ViDA; legal basis in EE)** | 3–4 searches limited to riigiteataja.ee, likumi.lv, vmi.lt and eur-lex.europa.eu |
+| U12 | UNKNOWN: **LV programme status, minimum revenue, catalogue-listing rules for a foreign provider; EE/LT EDIH services** | One email to dih.lv / LIAA; the EU EDIH catalogue pages for EE and LT |
 
 ---
 
 ## 12. Synthesis inputs
 
-Scores run from 1 to 5, where 5 is most favourable to the operator. A score here rates the **strength of the demand evidence WS2 gathered**. A low score caused by a research gap is marked "gap" and is not a negative finding.
+Scores use a one-to-five scale, where five is most favourable to the operator. A score here rates the **strength of the demand evidence WS2 gathered**. A low score caused by a research gap is marked "gap" and is not a negative finding.
 
 | Country × component | Demand-evidence summary | Score | Rationale & sources | Grants that could fund A/B (when; consultant-eligible?) | Procurement relevance |
 |---|---|---|---|---|---|
-| EE × A (CRM) | A dedicated, open grant for adopting and integrating business software, with a mandatory paid advisor | 3 | Instrument exists and is rolling [V:WS2-007][V:WS2-010]; no usage or posting data (gap) | **Yes, now:** RTE software (EUR 2–5k, 50%; advisor needs ≥ 3 projects in 4 years) [V:WS2-009]; advisory & development (open; needs a roadmap) [V:WS2-005] | UNKNOWN |
+| EE × A (CRM) | A dedicated, open grant for adopting and integrating business software, with a mandatory paid advisor | 2 | The instrument is supply-side evidence and is rolling [V:WS2-007][V:WS2-010]; uptake UNKNOWN; no usage or posting data (gap) | **Yes, now:** RTE software (EUR 2–5k, 50%; advisor needs ≥ 3 projects in 4 years) [V:WS2-009]; advisory & development (open; needs a roadmap) [V:WS2-005] | UNKNOWN |
 | EE × B (automation/AI) | AI grant used up on day one; AI use 14% → 22% (2024 → 2025); automation and eCMR grants closed | 4 | [V:WS2-001][V:WS2-003][V:WS2-018][V:WS2-006][V:WS2-008] | **Partly:** AI grant closed (next call UNKNOWN); advisory & development open [V:WS2-005]; consultants payable with experience thresholds [V:WS2-011] | UNKNOWN |
 | EE × C (lead gen) | No WS2 evidence; no open grant funds lead gen | 1 (gap) | Only the closed SME programme listed marketing costs [V:WS2-016] | **No** open instrument found [V:WS2-016] | UNKNOWN |
 | LV × A (CRM) | LIAA grants buy digital solutions through the EDIC catalogue; CRM packages already listed; 241 applications (undated) | 3 | [V:WS2-021][V:WS2-022][V:WS2-025][V:WS3-017][V:WS3-020] | **Probably yes:** ≤ EUR 10k strand (status Oct 2026 UNKNOWN); provider must be in the catalogue (foreign-listing rule UNKNOWN) | UNKNOWN |
