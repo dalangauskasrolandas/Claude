@@ -284,8 +284,11 @@ Also needed are regional counts for Ida-Virumaa (EE: Statistics Estonia county t
 | | EE | LV | LT |
 |---|---|---|---|
 | M69.20 enterprises, total / 10–49 / 50–249 | UNKNOWN (resolve: ER025 at 4-digit EMTAK 69201–69203, 2024) | UNKNOWN (resolve: CSB UZS020/UZS030 at NACE 69.20) | UNKNOWN (resolve: VDA operating enterprises, NACE 69.20) |
+| Accounting records in Hunter database, 1–200 staff (reachability proxy; industry 47, misclassification noise noted) | 103 (1-10: 78; 11-50: 19; 51-200: 6); ≥1 email 88.3%, personal 61.2% [V:WS1-058] [V:WS1-059] [V:WS1-060] [E:A-WS1-15] | 67 (46 / 17 / 4); ≥1 email 74.6%, personal 41.8% [V:WS1-073] [V:WS1-074] [V:WS1-075] [E:A-WS1-15] | 131 (89 / 37 / 5); ≥1 email 86.3%, personal 47.3% [V:WS1-088] [V:WS1-089] [V:WS1-090] [E:A-WS1-15] |
 | Certified/licensed accountants | UNKNOWN (resolve: Estonian Qualifications Authority register of certified accountants) | UNKNOWN (lead to verify: Latvia's State Revenue Service licenses outsourced accounting service providers; the public licence register would give an exact count of outsourced-accounting firms) | UNKNOWN (no licensing known; resolve: LBAA membership, LEAD WS6-032) |
-| Structural expectation | Most M69.20 firms are expected to be micro (0–9) in all three countries. If so, accounting firms are better **referral partners** (many small offices, each serving many SME clients) than direct buyers of a CRM project. This is a hypothesis to test with the counts above. | same | same |
+| Structural expectation | Most M69.20 firms are expected to be micro (0–9) in all three countries. If so, accounting firms are better **referral partners** (many small offices, each serving many SME clients) than direct buyers of a CRM project. This is a hypothesis to test with the counts above. The database counts point the same way: most listed accounting records are in the 1-10 bucket [E:A-WS1-15]. | same | same |
+
+**Reading the database counts.** The database lists only about a hundred accounting firms per country [E:A-WS1-15]. Building a list of accountants as referral partners would therefore rely on register extracts (EMTAK/NACE 69.20 filters in national business registers or Lursoft/Rekvizitai-type tools; WS4 covers the legality of these) and on association lists, not on enrichment tools.
 
 ### 4.5 Re-verification of prior lead: ELEA ≈65 members
 

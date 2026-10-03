@@ -326,6 +326,15 @@ Ukrainian business communities: UNKNOWN. Resolve with the UA queries in §3.3, p
 | U13 | UNKNOWN: chamber membership fees (cost column of the channel ranking) | EE, LV, LT | koda.ee, chamber.lv, chambers.lt and the Vilnius chamber's membership pages. |
 | U14 | UNKNOWN: member counts for LAFF, EML and the accountants' bodies (overlaps WS1) | EE, LV, LT | Count rows on public lists; association "about" pages. |
 
+**If the search cap is raised, resume in this order** (most decision-relevant first):
+1. U1 (RU/LT/EN community sizes): the only direct test of the trilingual channel claim.
+2. U2 (outreach benchmarks; label vendor reports as secondary).
+3. U10 (LV events and LV/LT accountants).
+4. U5 (foreign chambers for G2).
+5. U9 (EDIH provider registration, starting with dih.lv).
+
+Each needs only the queries already written in this file.
+
 ---
 
 ## 8. Synthesis inputs
@@ -338,7 +347,7 @@ Ukrainian business communities: UNKNOWN. Resolve with the UA queries in §3.3, p
 | EE | G1 wholesale/trade | Kaubanduskoda directory: ~3,402 [V:WS6-001] · ASYNC · €0 to browse | Kaubanduse aastakongress, 7 Oct: 275 listed [V:WS6-012] · DAY · UNKNOWN | EVEA: >6,000 represented [V:WS6-006] · ASYNC · fee UNKNOWN |
 | EE | G1 manufacturing | Tööstuse Äriplaan 2027, 18 Nov: 165 listed [V:WS6-013] · DAY · UNKNOWN | Puidutööstuse Äriplaan 2027, 15 Oct: 140 listed [V:WS6-012] · DAY · UNKNOWN | Kaubanduskoda directory filtered to manufacturers: sector size UNKNOWN · ASYNC · €0 |
 | EE | G1 accounting / prof. services | PwC conference, 25–26 Nov: ~500 [V:WS6-011] · DAY · UNKNOWN | "Mis muutub raamatupidaja töös 2027?", 10 Dec: 170 listed [V:WS6-014] · DAY · UNKNOWN | RUP.ee, 17 Nov: size UNKNOWN · DAY/remote · €239–349 [V:WS6-010] |
-| EE | G2 | sTARTUp Day, 27–29 Jan · DAY · €109–169 [V:WS6-019] | Pipedrive/HubSpot directories (inbound) [V:WS3-012][V:WS3-021] · ASYNC · eligibility UNKNOWN | Foreign chambers: UNKNOWN |
+| EE | G2 | sTARTUp Day, 27–29 Jan · DAY · €109–169 [V:WS6-019] | Pipedrive/HubSpot directories as an inbound route for foreign firms (inference) [V:WS3-012][V:WS3-021] · ASYNC · eligibility UNKNOWN | Foreign chambers: UNKNOWN |
 | LV | G1 logistics | LAFF list: count UNKNOWN [V:WS6-009] · ASYNC · €0 | LTRK: 6,000 incl. associations [V:WS6-003] · MIXED · fee UNKNOWN | Logistics events: UNKNOWN |
 | LV | G1 wholesale / manufacturing / services | RIGA COMM, 8–9 Oct: 2,700+ [V:WS6-021] · DAY · UNKNOWN | dih.lv EDIC catalogue [V:WS3-019][V:WS3-020] · ASYNC · listing terms UNKNOWN | LTRK [V:WS6-003] · MIXED · UNKNOWN |
 | LV | G1 accounting | UNKNOWN | UNKNOWN | UNKNOWN |
@@ -346,7 +355,7 @@ Ukrainian business communities: UNKNOWN. Resolve with the UA queries in §3.3, p
 | LT | G1 logistics | Transport Innovation Forum, 14–15 Oct: 800+ [V:WS6-024] · DAY · UNKNOWN | LINEKA: 42 [V:WS6-008] · ASYNC · €0 | ALCCIC regional chambers (incl. Klaipėda): ~2,000 total [V:WS6-004] · MIXED · UNKNOWN |
 | LT | G1 owners (wholesale / manufacturing / services) | GROW BEYOND, 26–27 Nov [V:WS6-027] · DAY · UNKNOWN | ALCCIC ~2,000 [V:WS6-004] / Vilnius CCIC 550+ [V:WS6-005] · MIXED · UNKNOWN | LiMA DAY'26, 19 Nov [V:WS6-025] · DAY · UNKNOWN (C buyers) |
 | LT | G1 accounting | LBAA (LEAD) [WS6-032] · ASYNC · UNKNOWN | Accountants' day conference (LEAD) [WS6-028] · DAY | UNKNOWN |
-| LT | G2 | Transport Innovation Forum, 20+ countries [V:WS6-024] · DAY | Pipedrive/HubSpot directories [V:WS3-014][V:WS3-023] · ASYNC | Foreign chambers: UNKNOWN |
+| LT | G2 | Transport Innovation Forum, 20+ countries [V:WS6-024] · DAY | Pipedrive/HubSpot directories as an inbound route (inference) [V:WS3-014][V:WS3-023] · ASYNC | Foreign chambers: UNKNOWN |
 
 ### 8.2 Async/evening-fit score per component (scale 1–5, 5 = fully async-compatible; rubric [E:A-WS6-05])
 
