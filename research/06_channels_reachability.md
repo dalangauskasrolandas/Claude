@@ -327,11 +327,11 @@ Ukrainian business communities: UNKNOWN. Resolve with the UA queries in §3.3, p
 | U14 | UNKNOWN: member counts for LAFF, EML and the accountants' bodies (overlaps WS1) | EE, LV, LT | Count rows on public lists; association "about" pages. |
 
 **If the search cap is raised, resume in this order** (most decision-relevant first):
-1. U1 (RU/LT/EN community sizes): the only direct test of the trilingual channel claim.
-2. U2 (outreach benchmarks; label vendor reports as secondary).
-3. U10 (LV events and LV/LT accountants).
-4. U5 (foreign chambers for G2).
-5. U9 (EDIH provider registration, starting with dih.lv).
+1. U1, UNKNOWN RU/LT/EN community sizes: the only direct test of the trilingual channel claim.
+2. U2, UNKNOWN outreach benchmarks (label vendor reports as secondary).
+3. U10, UNKNOWN LV events and LV/LT accountants.
+4. U5, UNKNOWN foreign chambers for G2.
+5. U9, UNKNOWN EDIH provider registration, starting with dih.lv.
 
 Each needs only the queries already written in this file.
 
