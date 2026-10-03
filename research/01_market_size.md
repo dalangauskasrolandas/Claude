@@ -318,6 +318,7 @@ Also needed are regional counts for Ida-Virumaa (EE: Statistics Estonia county t
 | LV | "ekonomiski aktīvo uzņēmumu skaits 2024 pēc lieluma grupām"; "tirgus sektora ekonomiski aktīvo uzņēmumu skaits 2024" | Table IDs UZS020, UZS030/UZS031, UZS041, UZS011 (WS1-029, WS1-030) | Any LV size-class values (PxWeb tables are not readable via search) |
 | LT | "veikiančių ūkio subjektų skaičius 2025 m. pradžioje pagal darbuotojų skaičių"; "Verslas Lietuvoje 2025 …"; "Lietuva skaičiais 2025 …" | Registrų centras legal-entity counts via duomenugalia.lt (WS1-038); conflicting operating-entity LEADs (WS1-040) | VDA 2024/2025 size-class values |
 | RU | none run (budget exhausted) | — | Russian-language business-community and language-use evidence is entirely open |
+| (API, not search) | Hunter.io Discover natural-language company queries, run by the lead analyst (`db_coverage.csv`) | Database-coverage counts by country × headcount × industry (WS1-046 to WS1-094) | CRM-technology split (filter not supported) |
 
 ---
 
@@ -349,7 +350,11 @@ All scores are 1–5, where 5 = most favourable to the operator. Scores are sugg
 |---|---|---|---|
 | Enterprises 10–249, total | 7,579 (2024) [E:A-WS1-01] | 7,820 (2024 est.) [E:A-WS1-02] | ≈15,444 (2022) [E:A-WS1-06] |
 | Target-sector counts 10–49 / 50–249 | UNKNOWN (U1) | UNKNOWN (U1) | UNKNOWN (U1) |
-| G1 funnel endpoint | UNKNOWN; ceiling ≤7,579 [E:A-WS1-01] | UNKNOWN; ceiling ≤7,820 [E:A-WS1-02] | UNKNOWN; ceiling ≤≈15,444 [E:A-WS1-06] |
+| G1 funnel endpoint (statistical route) | UNKNOWN; ceiling ≤7,579 [E:A-WS1-01] | UNKNOWN; ceiling ≤7,820 [E:A-WS1-02] | UNKNOWN; ceiling ≤≈15,444 [E:A-WS1-06] |
+| G1 database-reachable target-sector firms, 11–200 staff, ≥1 email (before language and sanctions screens) | 1,485–1,810 [E:A-WS1-14] | 1,201–1,383 [E:A-WS1-14] | 2,117–2,410 [E:A-WS1-14] |
+| Same, with a named (personal) email | 1,092–1,331 [E:A-WS1-14] | 883–1,017 [E:A-WS1-14] | 1,556–1,772 [E:A-WS1-14] |
+| Database coverage of the statistical 10–249 band | 61.7% (inflated) [E:A-WS1-10] | 41.8% [E:A-WS1-10] | 39.6% [E:A-WS1-10] |
+| Accounting firms listed in database (1–200 staff) | 103 [E:A-WS1-15] | 67 [E:A-WS1-15] | 131 [E:A-WS1-15] |
 | Suggested market-size score (G1 ceiling only) | 2 (ceiling under 8k; basis [E:A-WS1-01]) | 2 (ceiling under 8k; basis [E:A-WS1-02]) | 3 (about twice EE/LV; basis [E:A-WS1-06]) |
 | G2 estimate | UNKNOWN (U8) | UNKNOWN (U8) | UNKNOWN (U8) |
 | Russian-speaking share | UNKNOWN (U4) | UNKNOWN (U4) | UNKNOWN (U4) |
