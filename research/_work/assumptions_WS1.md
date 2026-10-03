@@ -30,7 +30,7 @@ Note on IDs: source IDs WS1-005 … WS1-024 are retired (rows written into the W
 - Confidence: medium
 - Used in: 01_market_size.md §3.1, §3.6 (step 2 caveat)
 
-### A-WS1-04 — Lithuania: small enterprises (10–49) in 2022
+### A-WS1-04 — Lithuania: small enterprises (10–49) in 2022 (pre-2023)
 - Value: ≈ 12,815 (range 12,651–12,980)
 - Formula: 0.039 × 328,600 = 12,815; range from share rounding: 0.0385 × 328,600 = 12,651 to 0.0395 × 328,600 = 12,980
 - Inputs: [V:WS1-033] 328.6 thousand enterprises in operation (2022); [V:WS1-034] small = 3.9% of non-financial enterprises (2022)
@@ -38,7 +38,7 @@ Note on IDs: source IDs WS1-005 … WS1-024 are retired (rows written into the W
 - Confidence: medium
 - Used in: 01_market_size.md §3.1, §3.6, §8
 
-### A-WS1-05 — Lithuania: medium enterprises (50–249) in 2022
+### A-WS1-05 — Lithuania: medium enterprises (50–249) in 2022 (pre-2023)
 - Value: ≈ 2,629 (range 2,465–2,793)
 - Formula: 0.008 × 328,600 = 2,629; range 0.0075 × 328,600 = 2,465 to 0.0085 × 328,600 = 2,793
 - Inputs: [V:WS1-033], [V:WS1-034]
@@ -46,7 +46,7 @@ Note on IDs: source IDs WS1-005 … WS1-024 are retired (rows written into the W
 - Confidence: medium-low
 - Used in: 01_market_size.md §3.1, §3.6, §8
 
-### A-WS1-06 — Lithuania: enterprises with 10–249 persons employed (2022)
+### A-WS1-06 — Lithuania: enterprises with 10–249 persons employed (2022, pre-2023)
 - Value: ≈ 15,444 (range 15,116–15,773)
 - Formula: (0.039 + 0.008) × 328,600 = 15,444; range (0.046 to 0.048) × 328,600
 - Inputs: [E:A-WS1-04], [E:A-WS1-05]

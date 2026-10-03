@@ -11,8 +11,8 @@ It covers outreach law (e-mail, calls, LinkedIn), the GDPR legitimate-interest b
 
 | Label | Meaning |
 |---|---|
-| `[V:WS4-0xx]` | VERIFIED. The id points to `research/_work/sources_WS4.csv` (URL, quote of 25 words or fewer, date accessed). |
-| `[E:A-WS4-01]` | ESTIMATE/judgement. The rubric is in `research/_work/assumptions_WS4.md`. |
+| `[V:id]` (e.g. `WS4-001`) | VERIFIED. The id points to `research/_work/sources_WS4.csv` (URL, quote of 25 words or fewer, date accessed). |
+| `[E:id]` (e.g. `A-WS4-01`) | ESTIMATE/judgement. The rubric is in `research/_work/assumptions_WS4.md`. |
 | `UNKNOWN (resolve: …)` | Not established in this session. The cheapest resolution is given. |
 | `UNKNOWN-P` | Not verified in this session. The analyst's prior reading of the law is given **for orientation only** and must be checked before anyone relies on it. It is not evidence and must not be scored as such. |
 | `LEAD` | A source was found (title/URL) but its content could not be read. It is listed in the CSV with label LEAD. |
@@ -67,9 +67,9 @@ The verification agent should treat every `UNKNOWN-P` as a claim still to be che
 
    AI Act duties for this kind of service look light (AI literacy; telling people when they are talking to a chatbot). All of this is UNKNOWN-P, including the status of the Digital Omnibus amendments.
 10. **Suggested legal-risk scores** (5 = lowest risk) [E:A-WS4-01]:
-    - **C (outbound lead generation):** LT 4 (provisional), EE 3, LV 3 (low confidence).
-    - **B (automation):** 3 in all three countries.
-    - **A (CRM setup):** 4 in all three countries.
+    - **C (outbound lead generation):** LT 4 (provisional), EE 3, LV 3 (low confidence) [E:A-WS4-01].
+    - **B (automation):** 3 in all three countries [E:A-WS4-01].
+    - **A (CRM setup):** 4 in all three countries [E:A-WS4-01].
 
 ---
 
@@ -142,7 +142,7 @@ The verification agent should treat every `UNKNOWN-P` as a claim still to be che
 #### Lithuania (LT)
 
 **The statute and its numbering.**
-- The Law on Electronic Communications (Elektroninių ryšių įstatymas, ERĮ) is still act `IX-2135`. Law `XIV-635`, adopted 11 Nov 2021 and in force from 1 Dec 2021, restated it in full to transpose the European Electronic Communications Code [V:WS4-027] [V:WS4-026].
+- The Law on Electronic Communications (Elektroninių ryšių įstatymas, ERĮ) is still act `IX-2135`. Law `XIV-635`, adopted 11 Nov 2021 and in force from 1 Dec 2021, restated it in full to transpose the European Electronic Communications Code [V:WS4-027] [V:WS4-026]. The edition history on e-TAR shows the act is still being amended in 2026 (LEAD [WS4-043]), so always check the consolidated version in force on the day.
 - The direct-marketing article is now **Art. 81** [V:WS4-028]. Older material cites the pre-restatement number, Art. 69(1) (LEAD [WS4-047]). Do not rely on guidance that cites Art. 69.
 
 **General rule (Art. 81):** using electronic communications services, including e-mail, for direct marketing needs the **prior consent of the subscriber or registered user**. There is a soft opt-in for the sender's own customers and similar goods [V:WS4-028].
@@ -157,6 +157,8 @@ The verification agent should treat every `UNKNOWN-P` as a claim still to be che
 **Before 22 Apr 2026:** VDAI held that legal entities are "subscribers", so e-mail marketing to a legal entity needed the prior consent of its manager or an authorised person [V:WS4-033]. That position is superseded for legal entities. Older guidance (2019 FAQ, 2020 leaflet; LEAD [WS4-042]) should no longer be used for B2B campaigns.
 
 **The GDPR still applies to named employees** [V:WS4-037].
+
+Further Lithuanian commentary was found but not read: a member article published by the Kaunas Chamber of Commerce, Industry and Crafts, and a note by Ecovis Lithuania on VDAI's updated guidance (LEAD [WS4-044] [WS4-045]). Chamber-published compliance content may also interest WS6 as a channel signal.
 
 ### 3.2 B2B cold calling
 
@@ -175,7 +177,7 @@ Calling needs business hours. That is an operational, not a legal, constraint fo
   - If it does count, a LinkedIn account is registered to an **individual**, not to the employer. The Lithuanian legal-entity exception (subscriber or registered user is a legal entity [V:WS4-036]) would then probably **not** cover it.
   - Estonia's role-relevance test [V:WS4-005] might.
 - **GDPR (UNKNOWN-P):** using profile data to prospect is processing personal data. It needs a legitimate-interest basis, an Art. 14 notice and respect for objections.
-- **LinkedIn's own terms:** see §4.4. Manual, personalised connection requests are the lowest-risk form. Automated sequences and data extraction are high risk (breach of contract plus GDPR).
+- **LinkedIn's own terms:** see the LinkedIn User Agreement subsection under *Added beyond the brief*. Manual, personalised connection requests are the lowest-risk form. Automated sequences and data extraction are high risk (breach of contract plus GDPR).
 
 ### 3.4 GDPR legitimate interest — the shared EU layer (EE, LV, LT)
 
@@ -211,7 +213,7 @@ None of the GDPR text could be re-read this session (UNKNOWN-P). The analyst's r
 | Apollo/Hunter-type enrichment tools | **risky** | **risky** | **risky** | Third parties compiled the named-person data. You must disclose the source (Art. 14), keep it accurate and cover the non-EU transfer. EU precedents: France's DPA (CNIL) sanctioned the contact-extraction tool KASPR in 2024; Poland's DPA (UODO) ruled against Bisnode in 2019 (pre-2020) over Art. 14 notices for register-derived data. Details and amounts were not re-verified, so none are stated here. | UNKNOWN-P |
 | Scraped data | **mixed** | **mixed** | **mixed** | Generic company addresses taken from company websites are lower risk (not personal data), subject to the site's terms. Scraping named individuals, especially from LinkedIn, breaches LinkedIn's contract and carries high GDPR risk. | UNKNOWN-P |
 
-**Rule of thumb.** The national e-marketing rules (§3.1) decide whether you may *contact* someone. The GDPR decides whether you may *hold and use* their data. Buying a list does not transfer the seller's compliance to you.
+**Rule of thumb.** The national e-marketing rules (the e-mail subsection above) decide whether you may *contact* someone. The GDPR decides whether you may *hold and use* their data. Buying a list does not transfer the seller's compliance to you.
 
 ### 3.7 Obligations of a solo provider (A, B, and C when run for a client)
 
@@ -226,7 +228,7 @@ Everything in this subsection is EU-level law that could not be re-read this ses
 **Liability.**
 - Under Art. 82(2) a processor is liable for damage only where it breached its own processor obligations or acted outside or against lawful instructions. Where both parties caused the damage, Art. 82(4) makes them jointly and severally liable, with recourse under Art. 82(5). UNKNOWN-P.
 - An Estonian FIE trades in the owner's own name, so personal assets are exposed. UNKNOWN-P (resolve: RIK/EMTA guidance on FIE liability; WS5 covers the FIE setup).
-- See also §4.5 on liability caps and insurance.
+- See also the liability-caps and insurance subsection under *Added beyond the brief*.
 
 **EU AI Act (Regulation (EU) `2024/1689`).** All points are UNKNOWN-P unless marked otherwise.
 - **Provider or deployer?**
@@ -274,7 +276,7 @@ Verdicts: **ALLOWED** (permitted if you meet the stated conditions), **RISKY** (
 | 2 | E-mail to a named employee's work address, offer relevant to their role | RISKY (unsettled; no DVI position) | A named address identifies a natural person; DVI says Art. 9 protects natural persons. Ask DVI in writing before scaling. GDPR applies. | UNKNOWN; [V:WS4-019] [V:WS4-017] |
 | 3 | E-mail to private addresses, or to sole traders (IK / self-employed) | FORBIDDEN without prior consent (except soft opt-in) | Natural persons | [V:WS4-011] [V:WS4-019] |
 | 4 | Marketing your own similar products to existing customers | ALLOWED | The customer did not object at collection; opt-out in each message | [V:WS4-012] |
-| 5 | Cold call to a company's general number | ALLOWED (per DVI material) | Keep a do-not-call list | LEAD [WS4-020] |
+| 5 | Cold call to a company's general number | ALLOWED (per DVI material) | Keep a do-not-call list | LEAD [WS4-020]; UNKNOWN until the DVI text is read |
 | 6 | Cold call to a named employee's mobile | RISKY | Commercial communications to natural persons through public e-comms services need prior explicit consent | [V:WS4-013] |
 | 7 | Calls/SMS to private persons; automatic calling | FORBIDDEN without prior consent | | [V:WS4-011] [V:WS4-013] |
 | 8 | Manual LinkedIn connection request or message | RISKY (unsettled) | Ask DVI whether it counts as e-mail; GDPR applies | UNKNOWN |
@@ -376,7 +378,7 @@ All UNKNOWN-P: linkedin.com was blocked and no search quota remained.
   - fake profiles.
 - LinkedIn enforces through account restriction and termination, and has sued scrapers in the US.
 - Sales Navigator is LinkedIn's own sanctioned prospecting product, but its data-export limits apply.
-- Using LinkedIn data is also GDPR processing (§3.3).
+- Using LinkedIn data is also GDPR processing (see the LinkedIn outreach subsection).
 - Resolve: read the current User Agreement and Professional Community Policies at linkedin.com/legal and note the section numbers and their effective date.
 
 ### 4.5 Liability caps and professional-indemnity insurance for a solo provider in Estonia
@@ -398,3 +400,99 @@ All UNKNOWN-P: linkedin.com was blocked and no search quota remained.
   - LV: State Language Law (Valsts valodas likums);
   - LT: Law on the State Language and Law on Advertising.
 - For the operator: cold B2B e-mails in English, Russian or Lithuanian face no statutory bar that was identified. Any public advertising or website aimed at the market would need checking.
+
+---
+
+## 5. Conflicts between sources
+
+| # | Topic | Source A | Source B | Trusted | Why |
+|---|---|---|---|---|---|
+| 1 | LT: is consent needed for e-mail to legal entities? | VDAI 2022 seminar: yes, the manager's consent [V:WS4-033] | VDAI 2026 news: rules simplified from 22 Apr 2026 [V:WS4-031]; secondary sources: no prior consent, opt-out instead [V:WS4-034] [V:WS4-036] | **B** | A later statutory amendment (`XV-815`) [V:WS4-029] supersedes the earlier guidance. All pre-April-2026 LT material is obsolete for legal entities. |
+| 2 | LT: date of the change | e-Seimas/tagidas: law `XV-815` dated 16 April 2026; tagidas calls it "effective" from that date [V:WS4-029] [V:WS4-030] | VDAI: in force 22 Apr 2026 [V:WS4-031] | **B** (in-force date) | 16 April is most likely the adoption date and 22 April the entry into force. VDAI is the regulator. Which date is which in the official gazette is UNKNOWN (resolve: e-TAR publication record of `XV-815`). |
+| 3 | LV: is B2B e-mail consent-based? | Statute: consent of the "service recipient" [V:WS4-011]; DLA Piper: "prior express consent", no B2B distinction [V:WS4-025] | DVI: Art. 9 prohibitions apply to natural persons; a legal entity's e-mail needs no consent if Art. 9(4) is met [V:WS4-016] [V:WS4-019] | **B**, with residual risk | The regulator's interpretation governs enforcement in practice. However, the statutory definition of "service recipient" (ISPL Art. 1) was not extracted, and guidance does not bind courts (UNKNOWN). |
+| 4 | EE: how authoritative is the guidance? | AKI guidance dates from 2015, before the GDPR [V:WS4-004] | ESS § 103¹, current English translation [V:WS4-001] | **Both, consistent** | They agree on opt-out for legal persons. AKI's named-address test predates the GDPR, so GDPR duties must be added on top. |
+| 5 | LT: named employees' work addresses | Pre-2026 VDAI: consent from the legal entity or the specific employee [V:WS4-033] | Post-2026 secondary sources: covered by the legal-entity opt-out [V:WS4-034] [V:WS4-036] | **B, provisionally** | It matches the stated purpose of the amendment [V:WS4-032]. Confirm against VDAI's FAQ (UNKNOWN). |
+
+---
+
+## 6. Search-language log
+
+| Language | Example queries | Found | Not found |
+|---|---|---|---|
+| ET | "Elektroonilise side seadus § 103¹ elektroonilise kontaktandmete kasutamine otseturustuseks juriidiline isik"; "Andmekaitse Inspektsioon otseturustus juriidilise isiku e-post nõusolek ESS 103¹ juhend" | ESS § 103¹ text (legal persons; soft opt-in) [V:WS4-003]; AKI 2015 guidance [V:WS4-004]; AKI 2020 precept (LEAD) | Current subsection numbering; any post-GDPR AKI e-marketing guidance; enforcement or fines |
+| LV | "Informācijas sabiedrības pakalpojumu likums 9. pants komercpaziņojumu sūtīšana…"; "Datu valsts inspekcija komercpaziņojumi juridiskām personām e-pasts…" | ISPL Art. 9 / Art. 9(4) / Art. 1 [V:WS4-011] [V:WS4-015]; DVI 2021 note [V:WS4-016]; DVI explainer [V:WS4-019]; telemarketing leads | The Art. 1 definition of "service recipient"; a DVI position on named-employee addresses; enforcement |
+| LT | "naujas Elektroninių ryšių įstatymas tiesioginė rinkodara…"; "Pokyčiai: tiesioginė rinkodara juridinių asmenų atžvilgiu…"; "XV-815 … 81 straipsnio…" | The 2026 Art. 81 reform [V:WS4-031]; the `XIV-635` restatement [V:WS4-027]; the RRT news item [V:WS4-026]; ExpertLab commentary [V:WS4-034]; VDAI 2025 decisions (LEAD) | The amended Art. 81 wording verbatim; the text of VDAI's 2026 FAQ |
+| EN | "Electronic Communications Act Estonia § 103¹ 'Use of electronic contact details for direct marketing'…"; "Lithuania electronic communications law amendment April 2026…"; "Electronic marketing Latvia legal persons…" | ESS English translation [V:WS4-001]; emailexpert.com [V:WS4-036]; DLA Piper LV [V:WS4-025] | EU-level texts (EUR-Lex blocked); the LinkedIn User Agreement (blocked) |
+| RU | none run | — | **Gap:** the search budget ran out before any Russian-language queries. Russian-language compliance guidance and community practice remain unsearched (UNKNOWN). |
+
+The LT-language queries were the most productive: they surfaced the decisive 2026 reform. The LV-language queries were the only route to DVI's B2B position. The EN queries mainly duplicated these findings.
+
+---
+
+## 7. UNKNOWNs and the cheapest way to resolve each
+
+1. **The amended LT Art. 81 wording, and whether VDAI's FAQ confirms that named employees' work e-mails and phones are covered.** Resolve with WebSearch `allowed_domains ["vdai.lrv.lt","e-seimas.lrs.lt"]`, query `DUK 81 straipsnio pakeitimai juridiniai asmenys darbuotojo darbo el. pašto adresas atsisakymas`. Or ask VDAI in writing (free).
+2. **LV named-employee work addresses.** Send a written enquiry to DVI (the question drafted in the Latvia e-mail subsection). A search alternative: `["dvi.gov.lv"]` "darbinieka e-pasta adrese komercpaziņojums juridiskai personai".
+3. **EE § 103¹ subsection numbering, the natural-person clause, and whether live voice calls are covered.** Resolve on Riigi Teataja (current ESS) plus the phone-call section of AKI's guidance; WebSearch `["riigiteataja.ee"]` `103¹ füüsilisest isikust kliendi elektrooniliste kontaktandmete kasutamine otseturustuseks eelneval nõusolekul`.
+4. **Enforcement cases and fines, 2020–2026, in all three countries.**
+   - AKI annual reports 2021–2025 (`["aki.ee"]` "aastaraamat otseturustus rikkumine").
+   - DVI decisions and annual reports (`["dvi.gov.lv"]` "lēmums komercpaziņojumi sods").
+   - VDAI 2025 review [WS4-041] and decisions [WS4-039] [WS4-040].
+5. **Whether a LinkedIn message counts as "electronic mail" under each national rule.** Ask AKI, DVI and VDAI the same written question (drafted in the LinkedIn outreach subsection).
+6. **The AI Act timeline and Digital Omnibus status in October 2026.** EUR-Lex/OEIL procedure file for the "Digital Omnibus on AI"; WebSearch `["eur-lex.europa.eu","europarl.europa.eu"]`.
+7. **The DPF appeal status.** curia.europa.eu case search "Latombe".
+8. **The exact services prohibited by sanctions.** Consolidated Reg. 833/2014 Art. 5n and the Belarus equivalent in Reg. 765/2006, on EUR-Lex.
+9. **Employment Contracts Act § 23 and § 24 text, plus the operator's own contract.** Riigi Teataja, and the contract checklist in the side-business subsection.
+10. **Professional-indemnity insurance: availability and premium for an IT/marketing FIE.** Quotes from insurers active in Estonia.
+11. **Which national rule applies to cross-border campaigns** (EE sender, LV/LT recipients), and which authority acts. Written enquiry to AKI, plus the e-Commerce Directive annex on EUR-Lex.
+12. **Whether register and commercial-database data may lawfully be used for prospecting.** Read DVI's note on register data [WS4-022] and VDAI's note on buying databases [WS4-038]; CNIL's KASPR decision for the enrichment-tool comparison.
+13. **The GDPR layer** (Art. 6(1)(f), Recital 47, Art. 14, Art. 21, Art. 28, Art. 30, Art. 33, Art. 82), **CJEU C-621/22**, and **whether EDPB Guidelines `1/2024` are final.** Re-read on EUR-Lex, curia.europa.eu and edpb.europa.eu. These are stable texts, so a single check confirms them.
+14. **Russian-language sources.** Not searched; run at least two RU queries, e.g. "прямой маркетинг e-mail юридическим лицам Литва 2026 согласие" and "коммерческие сообщения DVI Латвия юридические лица".
+15. **Language law for commercial communications.** Defer to WS1.
+
+**Note for the verifier.** The WebSearch budget for this session is exhausted. Re-verifying anything requires the lead analyst to raise `CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`. Items one to four matter most for decisions.
+
+---
+
+## 8. Synthesis inputs
+
+### 8.1 Legal-risk score per country × component (scale one to five; five = lowest risk)
+
+| Country | A — CRM setup | B — AI/workflow automation | C — outbound lead generation | Main reason (C) | Key citations |
+|---|---|---|---|---|---|
+| EE | 4 [E:A-WS4-01] | 3 [E:A-WS4-01] | 3 [E:A-WS4-01] | Opt-out for legal persons is in the statute. Named addresses depend on AKI's role/product test (2015 guidance). Natural persons and FIEs need consent. LinkedIn is unsettled. | [V:WS4-001] [V:WS4-004] [V:WS4-005] |
+| LV | 4 [E:A-WS4-01] | 3 [E:A-WS4-01] | 3, low confidence (could be 2) [E:A-WS4-01] | Legal-entity e-mail is allowed per DVI. There is no position on named employees. Calls to natural persons need consent. The statute is consent-based. | [V:WS4-016] [V:WS4-019] [V:WS4-013] [V:WS4-011] |
+| LT | 4 [E:A-WS4-01] | 3 [E:A-WS4-01] | 4, provisional (3 if VDAI's FAQ narrows the employee scope) [E:A-WS4-01] | The 2026 statutory opt-out for legal entities reportedly includes work contacts. The rule is new and there is no enforcement practice yet. | [V:WS4-031] [V:WS4-034] [V:WS4-036] |
+
+- **A and B scores are the same in all three countries** because they rest on EU-level processor and AI Act duties (UNKNOWN-P this session).
+- **B scores one point below A** because of the sub-processor chain, US transfers and the uncertain Digital Omnibus timing (UNKNOWN-P).
+
+### 8.2 Allowed / risky / forbidden summary matrix
+
+| Activity | EE | LV | LT | Evidence |
+|---|---|---|---|---|
+| E-mail to a generic company address | ALLOWED (opt-out) | ALLOWED (valid stop-address; honour requests) | ALLOWED since 22 Apr 2026 (opt-out) | [V:WS4-001] [V:WS4-016] [V:WS4-031] |
+| E-mail to a named employee's work address | RISKY (role/product test) | RISKY (unsettled) | ALLOWED with opt-out (secondary) | [V:WS4-005] [V:WS4-019] [V:WS4-034] |
+| E-mail/SMS to natural persons or sole traders | FORBIDDEN without consent (UNKNOWN-P) | FORBIDDEN without consent | FORBIDDEN without consent | [V:WS4-011] [V:WS4-028] |
+| Cold call to a company line | ALLOWED, likely (UNKNOWN-P) | ALLOWED (LEAD [WS4-020]) | ALLOWED (opt-out) | [V:WS4-034] |
+| Call to a named person's mobile | RISKY (UNKNOWN) | RISKY | ALLOWED if a work phone (secondary) | [V:WS4-013] [V:WS4-034] |
+| Manual LinkedIn message | RISKY (UNKNOWN) | RISKY (UNKNOWN) | RISKY (UNKNOWN) | — |
+| LinkedIn automation or scraping | FORBIDDEN (contract; UNKNOWN-P) | FORBIDDEN (UNKNOWN-P) | FORBIDDEN (UNKNOWN-P) | — |
+| Register data for targeting | RISKY-LOW (UNKNOWN-P) | RISKY-LOW (UNKNOWN-P) | RISKY-LOW (UNKNOWN-P) | LEAD [WS4-010] [WS4-022] |
+| Bought lists or enrichment tools | RISKY (UNKNOWN-P) | RISKY (UNKNOWN-P) | RISKY (UNKNOWN-P) | LEAD [WS4-038] |
+| Processing client data (A/B) | ALLOWED with Art. 28 DPA (UNKNOWN-P) | same | same | — |
+| Russia/Belarus clients | FORBIDDEN (UNKNOWN-P) | FORBIDDEN (UNKNOWN-P) | FORBIDDEN (UNKNOWN-P) | — |
+
+### 8.3 Notes for other workstreams
+
+- **WS3 (competitors) and WS6 (channels).** Any agency, vendor or blog claim about Lithuanian B2B e-mail dated before 22 Apr 2026 describes the old consent regime [V:WS4-033]. Since that date, Lithuania is arguably the *most permissive* of the three for e-mail and calls to company contacts [V:WS4-031] [V:WS4-034].
+- **WS6.** Cold calling is legally feasible to company lines in all three countries (with caveats; §3.2), but it needs daytime hours. LinkedIn outreach is legally unsettled at the national level, and its automation is barred by LinkedIn's contract (UNKNOWN-P).
+- **WS1.** Language-law constraints on B2B communication were not verified here (see the language subsection under *Added beyond the brief*). Please confirm or correct them from WS1's own sources.
+- **WS5.** Budget for compliance overheads:
+  - a DPA template and sub-processor register;
+  - a suppression/opt-out list that works across all clients;
+  - privacy notices in each outreach language;
+  - possibly professional-indemnity insurance (UNKNOWN cost).
+  
+  These are time costs rather than tool costs, except insurance.
+- **All workstreams.** The shared WebSearch budget is exhausted. The brief's verification step cannot run until it is raised.

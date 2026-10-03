@@ -17,10 +17,10 @@
 
 ## 1. Key findings
 
-1. **The G1 universe is small and hard-capped.** Across the three states there are only ≈30,800 enterprises in the 10–249 size band (range 30,515–31,172; mixed reference years 2022–2024) [E:A-WS1-07]. That band is the closest published proxy for the brief's 5–100-staff ICP. Every later funnel filter (sector, exclusions, reachability, language) can only shrink it.
+1. **The G1 universe is small and hard-capped.** Across the three states there are only ≈30,800 enterprises in the 10–249 size band (range 30,515–31,172; mixed reference years 2022–2024, LT part pre-2023) [E:A-WS1-07]. That band is the closest published proxy for the brief's 5–100-staff ICP. Every later funnel filter (sector, exclusions, reachability, language) can only shrink it.
 2. **Estonia: 7,579 enterprises with 10–249 employees in 2024** (6,461 small + 1,118 medium) [V:WS1-003] [E:A-WS1-01], out of 158,378 economically active enterprises [V:WS1-001]. 95.1% have fewer than 10 employees [E:A-WS1-01]. The size classes sum exactly to the total, so this is a reliable count.
 3. **Latvia: 7,820 enterprises with 10–249 persons employed (2024 EC/JRC estimate)** (6,457 small + 1,363 medium) [V:WS1-025] [E:A-WS1-02]. The average Latvian "medium" firm employs ≈98.5 persons [E:A-WS1-03], so a material part of the 50–249 class is above the brief's 100-staff ceiling. No CSB national figure could be extracted. The tables are identified (UZS030/UZS031) [V:WS1-030]. Activity is concentrated: the Riga region produced 65.8% of Latvia's GDP in 2023 [V:WS1-032].
-4. **Lithuania has about twice the Estonian or Latvian band: ≈12,800 small and ≈2,600 medium enterprises (2022)** [E:A-WS1-04] [E:A-WS1-05]. That gives ≈15,400 in the 10–249 band [E:A-WS1-06], derived from the State Data Agency's total (328.6 thousand enterprises in 2022) [V:WS1-033] and its size shares (3.9% small, 0.8% medium) [V:WS1-034]. An unconfirmed EC 2024 estimate is about 12% lower (LEAD WS1-039; see §5). Lithuania is also the only market where the operator speaks the state language (operator profile, BRIEF §2).
+4. **Lithuania has about twice the Estonian or Latvian band: ≈12,800 small and ≈2,600 medium enterprises (2022, pre-2023)** [E:A-WS1-04] [E:A-WS1-05]. That gives ≈15,400 in the 10–249 band [E:A-WS1-06], derived from the State Data Agency's total (328.6 thousand enterprises in 2022) [V:WS1-033] and its size shares (3.9% small, 0.8% medium) [V:WS1-034]. An unconfirmed EC 2024 estimate is about 12% lower (LEAD WS1-039; see §5). Lithuania is also the only market where the operator speaks the state language (operator profile, BRIEF §2).
 5. **The pool reachable through a standard enrichment tool is a few thousand firms, not tens of thousands.** Hunter lists target-sector firms with 11–200 staff and at least one indexed email as follows [E:A-WS1-14]:
 
    | Country | Firms with ≥1 indexed email | With a named (personal) email |
@@ -70,7 +70,7 @@
 
 ### 3.1 Active enterprises by size class — EE / LV / LT
 
-| Size class | EE (2024, national, by employees) | LV (2024, EC SME Fact Sheet 2025 = JRC estimate, SBS scope, persons employed) | LT (2022, VDA, persons employed) |
+| Size class | EE (2024, national, by employees) | LV (2024, EC SME Fact Sheet 2025 = JRC estimate, SBS scope, persons employed) | LT (2022 (pre-2023), VDA, persons employed) |
 |---|---|---|---|
 | 0–9 | 150,612 [V:WS1-002] | 99,066 [V:WS1-025] | share 95.2% [V:WS1-034] |
 | 10–49 | 6,461 [V:WS1-003] | 6,457 [V:WS1-025] | ≈12,815 (12,651–12,980) [E:A-WS1-04]; share 3.9% [V:WS1-034] |
@@ -87,9 +87,9 @@
   - The LT total includes very small units such as natural persons engaged in business.
 
   For the 10–249 band these differences matter less than for the micro class, but they do not vanish.
-- **Reference years differ.** EE is 2024 (observed); LV is 2024 (model estimate from 2008–2023 data [V:WS1-027]); LT is 2022 (observed shares × observed total).
+- **Reference years differ.** EE is 2024 (observed); LV is 2024 (model estimate from 2008–2023 data [V:WS1-027]); LT is 2022 (pre-2023; observed shares × observed total).
 - **The LV persons-employed data show the medium class sits near the ICP ceiling.** Small firms average ≈20.4 persons and medium firms ≈98.5 [E:A-WS1-03]; underlying data [V:WS1-026].
-- **LT is stable over time.** The 2021 cross-check gives ≈12,550 small and ≈2,390 medium (shares 4.2% and 0.8% of 298.8 thousand) [V:WS1-035] [E:A-WS1-04] [E:A-WS1-05]. Growth in the LT total comes from very small units, not from the 10–249 band.
+- **LT is stable over time.** The 2021 (pre-2023) cross-check gives ≈12,550 small and ≈2,390 medium (shares 4.2% and 0.8% of 298.8 thousand) [V:WS1-035] [E:A-WS1-04] [E:A-WS1-05]. Growth in the LT total comes from very small units, not from the 10–249 band.
 - **Eurostat harmonised alternative.** `sbs_sc_ovw` (Enterprise statistics by size class and NACE Rev. 2 activity, from 2021 onwards) holds 2021–2024 data, last updated 15/09/2026 [V:WS1-028]. Its values could not be extracted. It is the single best source to replace all three columns with one methodology (see §7, U1).
 
 Other LT context (not used in calculations):
@@ -165,7 +165,7 @@ Analyst prior, **not evidence, do not score on it:** Russian-speaking shares are
   - Pipedrive: added Latvian in 2022 [V:WS0-001].
   - Zoho: Estonian, Latvian and Lithuanian only partially supported [V:WS0-004].
 
-  An operator configuring CRMs will therefore often work in English or in a local-language UI they cannot read (ET/LV). This is a delivery risk for the operator in EE/LV.
+  Interface language is typically a per-user setting (verify per vendor), so the operator can usually work in an English UI. The delivery risk in EE/LV lies in the client's own content: field and stage names, email templates, quotes and documents written in Estonian or Latvian, which the operator cannot read.
 - **Competitors already sell multilingual Baltic coverage including Russian:** Fontakt [V:WS3-002], Ripe Leads [V:WS3-009], a Riga Pipedrive partner [V:WS3-013].
 - **LLM quality in Baltic languages** is relevant if AI drafts ET/LV copy the operator cannot proof-read. Benchmarks (WS0) show strong but model-dependent performance [V:WS0-005] [V:WS0-006] [V:WS0-007]. They do not measure business-writing quality (UNKNOWN; resolve: native-speaker review of AI drafts in a test campaign).
 
@@ -182,8 +182,8 @@ The brief's order is total → sectors → size. Here size is applied first beca
 
 | Step | EE | LV | LT |
 |---|---|---|---|
-| 1. All enterprises (scope differs, §3.1) | 158,378 (2024) [V:WS1-001] | 107,091 (2024 est., SBS scope) [E:A-WS1-02] | 328.6 thousand (2022) [V:WS1-033] |
-| 2. Right size (proxy 10–249) | 7,579 (2024) [E:A-WS1-01] | 7,820 (2024 est.) [E:A-WS1-02] | ≈15,444 (15,116–15,773; 2022) [E:A-WS1-06] |
+| 1. All enterprises (scope differs, §3.1) | 158,378 (2024) [V:WS1-001] | 107,091 (2024 est., SBS scope) [E:A-WS1-02] | 328.6 thousand (2022, pre-2023) [V:WS1-033] |
+| 2. Right size (proxy 10–249) | 7,579 (2024) [E:A-WS1-01] | 7,820 (2024 est.) [E:A-WS1-02] | ≈15,444 (15,116–15,773; 2022, pre-2023) [E:A-WS1-06] |
 | 3. Target sectors (share s, §2) | UNKNOWN (resolve: §3.2 / §7 U1) | UNKNOWN | UNKNOWN |
 | 4. Minus hard exclusions (Russia/Belarus trade, share x; H50 and H52.22 already removed by definition) | UNKNOWN (resolve: §7 U3) | UNKNOWN | UNKNOWN |
 | 5. Plausibly reachable | See the database route below; the language filter l is still UNKNOWN (§7 U5) | same | same |
@@ -300,7 +300,7 @@ Also needed are regional counts for Ida-Virumaa (EE: Statistics Estonia county t
 
 | Topic | Value A | Value B | Which we trust and why |
 |---|---|---|---|
-| LT enterprises 10–249 | ≈15,444 (2022) from VDA total × VDA shares [E:A-WS1-06] | 13,592 (2024 est.) from EC SME Fact Sheet 2025, LEAD WS1-039, not tied to a URL; 13,265 (c.2018) from 2019 SBA fact sheet [V:WS1-036] (pre-2023) | **VDA-based estimate**, because it is an observed national count, consistent with 2021 (≈14,940 [V:WS1-035]). The EC figures are model estimates; the 2025 one is unverified. The ~12% gap may reflect different population definitions. Resolve with Eurostat `sbs_sc_ovw` for 2023–2024 (§7 U1). |
+| LT enterprises 10–249 | ≈15,444 (2022, pre-2023) from VDA total × VDA shares [E:A-WS1-06] | 13,592 (2024 est.) from EC SME Fact Sheet 2025, LEAD WS1-039, not tied to a URL; 13,265 (c.2018) from 2019 SBA fact sheet [V:WS1-036] (pre-2023) | **VDA-based estimate**, because it is an observed national count, consistent with 2021 (pre-2023: ≈14,940 [V:WS1-035]). The EC figures are model estimates; the 2025 one is unverified. The ~12% gap may reflect different population definitions. Resolve with Eurostat `sbs_sc_ovw` for 2023–2024 (§7 U1). |
 | LT "operating economic entities" | 122,458 at 1 Jan 2023 (+7.9%) (LEAD; extract from osp.stat.gov.lt, page not identified) | 151,868 at start of 2025 (+6.2%) (LEAD WS1-040) | Neither used. Growth from A to B implies about +24% in two years, which is inconsistent with +6.2% p.a. The definitions likely differ (legal entities vs all entities). |
 | LTRK membership | 6,000 members incl. associations and business clubs [V:WS6-003] | ~3,000 enterprises + ~3,000 via associations, or >2,600 individual members + ~60 associations (LEAD WS6-030) | Use **"≈2,600–3,000 direct company members"** as the working range for list-building, with low confidence. The 6,000 headline includes indirect members. |
 | Kaubanduskoda membership | ~3,402 listed on the members page [V:WS6-001] | "over 3,500 direct members" [V:WS6-002] | **~3,400 listed** for list-building (observable); the 3,500 claim may be older or rounded. |
@@ -348,7 +348,7 @@ All scores are 1–5, where 5 = most favourable to the operator. Scores are sugg
 
 | Item | EE | LV | LT |
 |---|---|---|---|
-| Enterprises 10–249, total | 7,579 (2024) [E:A-WS1-01] | 7,820 (2024 est.) [E:A-WS1-02] | ≈15,444 (2022) [E:A-WS1-06] |
+| Enterprises 10–249, total | 7,579 (2024) [E:A-WS1-01] | 7,820 (2024 est.) [E:A-WS1-02] | ≈15,444 (2022, pre-2023) [E:A-WS1-06] |
 | Target-sector counts 10–49 / 50–249 | UNKNOWN (U1) | UNKNOWN (U1) | UNKNOWN (U1) |
 | G1 funnel endpoint (statistical route) | UNKNOWN; ceiling ≤7,579 [E:A-WS1-01] | UNKNOWN; ceiling ≤7,820 [E:A-WS1-02] | UNKNOWN; ceiling ≤≈15,444 [E:A-WS1-06] |
 | G1 database-reachable target-sector firms, 11–200 staff, ≥1 email (before language and sanctions screens) | 1,485–1,810 [E:A-WS1-14] | 1,201–1,383 [E:A-WS1-14] | 2,117–2,410 [E:A-WS1-14] |
