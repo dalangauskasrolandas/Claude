@@ -51,7 +51,7 @@ Every model input used in `research/05_pricing_unit_economics.md` and `research/
 ### A-WS5-06 — Entrepreneur-account variant (foreign clients only; eligibility UNKNOWN)
 - Value: tax = 20% of gross receipts (22% with the 2% II pillar). Costs are not deductible. Receipts must stay ≤ €40,000/year. Net = 0.80 × receipts − costs.
 - Formula: net = R × (1 − 0.20) − C
-- Inputs: [V:WS5-018]. A conflicting LEAD is [V:WS5-019] (a July 2025 act version gave 22% from 2026; EMTA's 2026 page says 20%, and EMTA is trusted).
+- Inputs: [V:WS5-018]. A conflicting LEAD is WS5-019 (a July 2025 act version gave 22% from 2026; EMTA's 2026 page says 20%, and EMTA is trusted).
 - Basis/rationale: Estonian resident legal persons paying into the account owe an extra 22/78 (28.2%) on top [V:WS5-018], which makes it unusable for Estonian B2B clients. EMTA's wording targets resident payers. Several points are UNKNOWN: whether foreign (LV/LT) legal persons may pay into the account without restriction, whether it can coexist with FIE registration, and any other activity restrictions.
 - Confidence: low (eligibility)
 - Used in: 05 §6.4, §8.2; WS5_models.py `tax_entre_account()`

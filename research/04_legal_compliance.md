@@ -59,7 +59,7 @@ The verification agent should treat every `UNKNOWN-P` as a claim still to be che
 7. **No enforcement case or fine from 2020–2026 could be verified in EE, LV or LT (UNKNOWN).**
    - Leads: an AKI precept-warning of 2020 [WS4-007, LEAD], two VDAI decisions of 2025 [WS4-039, WS4-040, LEAD] and VDAI's 2025 annual review [WS4-041, LEAD].
    - DVI states that it regularly receives complaints about commercial e-mail and SMS [V:WS4-018].
-8. **The highest-risk practices in component C are LinkedIn automation/scraping and US-style enrichment databases** (Apollo/Hunter type). No Baltic source on either was verified. UNKNOWN-P: LinkedIn's User Agreement bans bots and scraping, and EU DPAs have sanctioned contact-scraping tools.
+8. **The highest-risk practices in component C are LinkedIn automation/scraping and third-party enrichment databases** (Apollo/Hunter type). No Baltic source on either was verified. UNKNOWN-P: LinkedIn's User Agreement bans bots and scraping, and EU DPAs have sanctioned contact-scraping tools.
 9. **Components A and B are legally routine processor work**, but they need:
    - an Art. 28 data-processing agreement;
    - a sub-processor list;
@@ -79,7 +79,7 @@ The verification agent should treat every `UNKNOWN-P` as a claim still to be che
    - EE: ESS § 103¹ [V:WS4-001];
    - LV: ISPL Art. 9 [V:WS4-011];
    - LT: ERĮ Art. 81 [V:WS4-028].
-2. **GDPR.** It applies as soon as the recipient is identifiable (a named employee). It governs the lawful basis, transparency (Art. 14), the right to object (Art. 21) and security. DVI states explicitly that the ISPL and the GDPR must be applied together [V:WS4-017]. Lithuanian commentary on the 2026 reform says the same [V:WS4-037].
+2. **GDPR.** It applies as soon as the recipient is identifiable (a named employee). It governs the lawful basis, transparency (Art. 14), the right to object (Art. 21) and security. DVI states explicitly that the ISPL and the GDPR must be applied together [V:WS4-017]. Trade-media commentary on the Lithuanian 2026 reform says the same [V:WS4-037].
 
 **Which country's rule applies to a campaign sent from Estonia to Latvian or Lithuanian recipients?** UNKNOWN-P.
 - The analyst's prior view:
@@ -245,11 +245,11 @@ Everything in this subsection is EU-level law that could not be re-read this ses
 
 ---
 
-## 3.8 Deliverable — allowed / risky / forbidden, per country (plain language)
+### 3.8 Deliverable — allowed / risky / forbidden, per country (plain language)
 
 Verdicts: **ALLOWED** (permitted if you meet the stated conditions), **RISKY** (defensible but unsettled, or depends on facts), **FORBIDDEN** (prohibited unless the stated exception applies). Each row's last column gives its evidence status.
 
-### Estonia
+#### Estonia
 
 | # | Activity | Verdict | What you must do / why | Citation / status |
 |---|---|---|---|---|
@@ -268,7 +268,7 @@ Verdicts: **ALLOWED** (permitted if you meet the stated conditions), **RISKY** (
 | 13 | AI chatbot or AI-drafted replies built for a client | ALLOWED with disclosure | Chatbots must say they are AI (AI Act Art. 50, from 2 Aug 2026) | UNKNOWN-P |
 | 14 | Clients established in Russia or Belarus; Baltic clients trading with them | FORBIDDEN / EXCLUDED | EU services bans (§4.2); hard exclusion in the brief | UNKNOWN-P |
 
-### Latvia
+#### Latvia
 
 | # | Activity | Verdict | What you must do / why | Citation / status |
 |---|---|---|---|---|
@@ -287,13 +287,13 @@ Verdicts: **ALLOWED** (permitted if you meet the stated conditions), **RISKY** (
 | 13 | AI chatbot or AI-drafted replies built for a client | ALLOWED with disclosure | AI Act Art. 50, from 2 Aug 2026 | UNKNOWN-P |
 | 14 | Clients established in Russia or Belarus; Baltic clients trading with them | FORBIDDEN / EXCLUDED | §4.2; hard exclusion | UNKNOWN-P |
 
-### Lithuania
+#### Lithuania
 
 | # | Activity | Verdict | What you must do / why | Citation / status |
 |---|---|---|---|---|
 | 1 | E-mail to a generic company address | **ALLOWED since 22 Apr 2026** (FORBIDDEN without consent before then) | Free opt-out in every message; stop immediately on opt-out; keep proof | [V:WS4-031] [V:WS4-035] [V:WS4-036]; old rule [V:WS4-033] |
 | 2 | E-mail to a named employee's work address on the company domain | ALLOWED with opt-out (secondary sources); the employee can opt out personally | Plus GDPR legitimate interest and an Art. 14 notice; confirm against VDAI's FAQ | [V:WS4-034] [V:WS4-036] [V:WS4-037]; FAQ UNKNOWN |
-| 3 | E-mail to private addresses / natural persons, including sole traders with individual-activity status | FORBIDDEN without prior consent (except soft opt-in) | The Art. 81 general rule | [V:WS4-028] |
+| 3 | E-mail to private addresses / natural persons, including sole traders with individual-activity status | FORBIDDEN without prior consent (except soft opt-in) | The Art. 81 general rule. An *individuali įmonė* (IĮ) is itself a legal person and would fall under the legal-entity exception (UNKNOWN-P) | [V:WS4-028] |
 | 4 | Marketing your own similar products to existing customers | ALLOWED | Clear, free opt-out | [V:WS4-028] |
 | 5 | Cold call to a company's general number | ALLOWED with opt-out since 22 Apr 2026 | | [V:WS4-034] |
 | 6 | Cold call to a work phone the employer assigned to an employee | ALLOWED with opt-out (secondary) | Confirm against VDAI's FAQ | [V:WS4-034]; FAQ UNKNOWN |
