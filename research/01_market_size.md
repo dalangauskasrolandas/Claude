@@ -2,7 +2,7 @@
 
 **Scope:** how many Baltic B2B buyers exist and how they are structured (size, sector, exports, associations, language), per country (EE / LV / LT), plus G1 funnels and a G2 sizing method.
 
-> **Status: PARTIAL.** The session-wide WebSearch budget (shared by all six workstream agents) ran out early in this workstream's run, and direct page fetching (WebFetch/curl) is blocked in this environment. Everything marked **UNKNOWN** below was **not researched**, which is different from "searched and not found". Each UNKNOWN names the exact table, filter or query that resolves it. Most can be resolved in under 30 minutes by a person with a normal browser (see §7 and Appendix A). The "plausibly reachable" step uses the lead analyst's Hunter.io database-coverage counts (`research/_work/data/db_coverage.csv`, 2026-10-03), which arrived during this run.
+> **Status: PARTIAL.** The session-wide WebSearch budget (shared by all six workstream agents) ran out early in this workstream's run, and direct page fetching (WebFetch/curl) is blocked in this environment. Everything marked **UNKNOWN** below was **not researched**, which is different from "searched and not found". Each UNKNOWN names the exact table, filter or query that resolves it. Most can be resolved in a short session by a person with a normal browser (see §7 and Appendix A). The "plausibly reachable" step uses the lead analyst's Hunter.io database-coverage counts (`research/_work/data/db_coverage.csv`, 2026-10-03), which arrived during this run.
 
 **Legend**
 - `[V:WS1-0xx]` = VERIFIED, row in `research/_work/sources_WS1.csv`. `[V:WS6-0xx]`, `[V:WS3-0xx]`, `[V:WS0-0xx]` = VERIFIED by another workstream or by the lead analyst (WS0). These rows are cited by ID rather than copied (all merge into `sources.csv`).
@@ -25,10 +25,10 @@
 
    | Country | Firms with ≥1 indexed email | With a named (personal) email |
    |---|---|---|
-   | EE | 1,485–1,810 | 1,092–1,331 |
-   | LV | 1,201–1,383 | 883–1,017 |
-   | LT | 2,117–2,410 | 1,556–1,772 |
-   | Baltic total | 4,803–5,603 | 3,531–4,120 |
+   | EE | 1,485–1,810 [E:A-WS1-14] | 1,092–1,331 [E:A-WS1-14] |
+   | LV | 1,201–1,383 [E:A-WS1-14] | 883–1,017 [E:A-WS1-14] |
+   | LT | 2,117–2,410 [E:A-WS1-14] | 1,556–1,772 [E:A-WS1-14] |
+   | Baltic total | 4,803–5,603 [E:A-WS1-14] | 3,531–4,120 [E:A-WS1-14] |
 
    These counts come before the language and sanctions screens. Hunter covers only ≈42% (LV) and ≈40% (LT) of the statistical 10–249 band, and 62% for EE, where the figure is inflated by internationally run Estonian-registered firms [E:A-WS1-10]. Vendor-database counts are a reachability proxy, not market size.
 6. **Accounting firms are thin in the database:** Hunter lists only 103 (EE), 67 (LV) and 131 (LT) accounting records with 1–200 staff [E:A-WS1-15]. Outreach to accountants (the brief's planned client and referral segment) would need register or association lists rather than enrichment tools. The statistical M69.20 population is UNKNOWN (§4.4).
@@ -114,7 +114,7 @@ Other LT context (not used in calculations):
 - indicator = number of enterprises
 - latest year (2023 or 2024)
 
-Then use the national tables only for 4-digit splits (M69.20, H52.22, M71.2, N77.34). This takes about 15 minutes in a browser. Note that Eurostat SBS excludes K (finance) and most of A, which is fine for these sectors.
+Then use the national tables only for 4-digit splits (M69.20, H52.22, M71.2, N77.34). This is a single short browser session. Note that Eurostat SBS excludes K (finance) and most of A, which is fine for these sectors.
 
 ### 3.3 Exporters
 
@@ -290,7 +290,7 @@ Also needed are regional counts for Ida-Virumaa (EE: Statistics Estonia county t
 
 **Reading the database counts.** The database lists only about a hundred accounting firms per country [E:A-WS1-15]. Building a list of accountants as referral partners would therefore rely on register extracts (EMTAK/NACE 69.20 filters in national business registers or Lursoft/Rekvizitai-type tools; WS4 covers the legality of these) and on association lists, not on enrichment tools.
 
-### 4.5 Re-verification of prior lead: ELEA ≈65 members
+### 4.5 Re-verification of prior lead: ELEA member count
 
 **Confirmed.** ELEA lists 65 members, including 13 associate members, on a public members page (2026) [V:WS6-007]. WS6 verified this, and WS1 re-checked the row.
 
@@ -314,7 +314,7 @@ Also needed are regional counts for Ida-Virumaa (EE: Statistics Estonia county t
 | Language | Example queries | Found | Not found |
 |---|---|---|---|
 | EN | "Statistics Estonia number of economically active enterprises 2024 by number of persons employed 10-49 50-249" (stat.ee); "CSB Latvia economically active enterprises 2024 … size group" (stat.gov.lv); "SME country fact sheet 2025 Latvia …" (ec.europa.eu); "SMEs in operation Lithuania …" (osp.stat.gov.lt); "Eurostat sbs_sc_ovw …" | EE totals and size classes (WS1-001–004); LV EC fact sheet (WS1-025–027); Eurostat `sbs_sc_ovw` metadata (WS1-028); LT *Business in Lithuania* totals and shares (WS1-033–036); LV trade and Riga GDP releases (WS1-031, WS1-032); EMTAK 2025 pointers (WS1-044, WS1-045) | CSB national size counts; LT 2024/2025 counts; EE and LT 2025 SME fact sheets |
-| ET | "majanduslikult aktiivsed ettevõtted 2024 tööga hõivatud isikute arv statistikaamet"; "Eesti ettevõtted 2024 töötajate arvu järgi 10–49 50–249" | The EE 10–49 count of 6,461 was first surfaced by the ET query; trade-by-size release title (WS1-041) | 50–249 count (found later via EN) |
+| ET | "majanduslikult aktiivsed ettevõtted 2024 tööga hõivatud isikute arv statistikaamet"; "Eesti ettevõtted 2024 töötajate arvu järgi 10–49 50–249" | The EE 10–49 count of 6,461 [V:WS1-003] was first surfaced by the ET query; trade-by-size release title (WS1-041) | 50–249 count (found later via EN) |
 | LV | "ekonomiski aktīvo uzņēmumu skaits 2024 pēc lieluma grupām"; "tirgus sektora ekonomiski aktīvo uzņēmumu skaits 2024" | Table IDs UZS020, UZS030/UZS031, UZS041, UZS011 (WS1-029, WS1-030) | Any LV size-class values (PxWeb tables are not readable via search) |
 | LT | "veikiančių ūkio subjektų skaičius 2025 m. pradžioje pagal darbuotojų skaičių"; "Verslas Lietuvoje 2025 …"; "Lietuva skaičiais 2025 …" | Registrų centras legal-entity counts via duomenugalia.lt (WS1-038); conflicting operating-entity LEADs (WS1-040) | VDA 2024/2025 size-class values |
 | RU | none run (budget exhausted) | — | Russian-language business-community and language-use evidence is entirely open |
@@ -326,16 +326,16 @@ Also needed are regional counts for Ida-Virumaa (EE: Statistics Estonia county t
 
 | # | Unknown | Countries | Cheapest resolution |
 |---|---|---|---|
-| U1 | Target-sector × size counts (C, G46, H49–H53 minus H50/H52.22, M69/M69.20, M70–M74, N77–N82) | EE, LV, LT | Eurostat `sbs_sc_ovw` [V:WS1-028], about 15 minutes in a browser (filters in §3.2). 4-digit splits from EE ER025 [V:WS1-004], LV UZS030/UZS031 [V:WS1-030], LT VDA indicators database. |
+| U1 | Target-sector × size counts (C, G46, H49–H53 minus H50/H52.22, M69/M69.20, M70–M74, N77–N82) | EE, LV, LT | Eurostat `sbs_sc_ovw` [V:WS1-028], a single short browser session (filters in §3.2). 4-digit splits from EE ER025 [V:WS1-004], LV UZS030/UZS031 [V:WS1-030], LT VDA indicators database. |
 | U2 | National 2024/2025 size counts for LV (replacing the EC model estimate) and LT (replacing the 2022 estimate) | LV, LT | CSB UZS031 (2024) and VDA "operating enterprises at the beginning of 2025 by personnel group". One browser session each. |
 | U3 | Exporting SMEs, destination markets, and the share trading with RU/BY (exclusion filter x) | EE, LV, LT | Eurostat TEC tables (size class × exporters; partner tables incl. RU/BY); national annual trade releases (EE, LV [V:WS1-031], LT) |
 | U4 | Russian-speaking share (2021 census) | EE, LV, LT | National census tables (mother tongue / home language); one search per country with allowed_domains = national statistics office |
-| U5 | Language actually used by SMEs for sales and internal operations, by segment | EE, LV, LT | Interview question: "In which language do you (a) sell to Baltic customers, (b) run your CRM and internal documents, (c) prefer to buy services?" Plus an A/B test: the same cold sequence in EN vs RU vs local language to about 50 target firms per arm (a WS6 benchmark is needed to size it). |
+| U5 | Language actually used by SMEs for sales and internal operations, by segment | EE, LV, LT | Interview question: "In which language do you (a) sell to Baltic customers, (b) run your CRM and internal documents, (c) prefer to buy services?" Plus an A/B test: the same cold sequence in EN vs RU vs local language to a few dozen target firms per arm (size the arms with WS6 reply-rate benchmarks). |
 | U6 | English and Russian proficiency | EE, LV, LT | Eurostat AES 2022 language tables; Special Eurobarometer "Europeans and their languages" (2024) country factsheets |
 | U7 | Legal constraints on language in private B2B communication | EE, LV, LT | WS4 item 6; check whether state-language obligations extend beyond public, consumer and employment contexts |
 | U8 | G2 size | EE, LV, LT | §3.7 routes 1–3; start with CSB UZG030 [V:WS1-042] and VDA foreign-owned enterprises [V:WS1-043] |
 | U9 | Accounting firms M69.20 by size; certified/licensed accountants | EE, LV, LT | §4.4 tables; LV State Revenue Service licence register for outsourced accountants (lead to verify) |
-| U10 | Database reachability: **partly resolved** with Hunter counts (§3.6 database route; [E:A-WS1-14]). Still open: (a) email rates for large segments, where only upper bounds exist; (b) Apollo coverage (not in the supplied file); (c) the share of statistical target-sector firms *absent* from databases, which needs U1 sector counts as the denominator | EE, LV, LT | (a)/(b) A 50-firm random sample per country from a register extract (not ranked by email count), checked in Hunter/Apollo. This gives an unbiased hit rate. (c) U1 |
+| U10 | Database reachability: **partly resolved** with Hunter counts (§3.6 database route; [E:A-WS1-14]). Still open: (a) email rates for large segments, where only upper bounds exist; (b) Apollo coverage (not in the supplied file); (c) the share of statistical target-sector firms *absent* from databases, which needs U1 sector counts as the denominator | EE, LV, LT | (a)/(b) A small random sample (a few dozen firms) per country from a register extract (not ranked by email count), checked in Hunter/Apollo. This gives an unbiased hit rate. (c) U1 |
 | U11 | Foreign chambers' member counts | EE, LV, LT | One search per body (§4.2) |
 | U12 | Russian-/Ukrainian-owned SME counts; regional counts (Ida-Virumaa, Riga, Vilnius) | EE, LV, LT | Register statistics (§4.3); EE county tables; CSB UZS030/031; VDA county tables |
 | U13 | LAFF member count; LTRK direct company count; LT chamber direct counts; accountants' and exporters' associations | LV, LT, EE | Count rows on the public lists (LAFF [V:WS6-009]); ask the associations directly |
@@ -368,7 +368,7 @@ All scores are 1–5, where 5 = most favourable to the operator. Scores are sugg
 
 ## Appendix A — Follow-up query plan (to close UNKNOWNs if the search budget is raised)
 
-These are listed in priority order; together they need roughly 30–40 searches.
+These are listed in priority order; together they need a few dozen searches.
 1. `allowed_domains=["ec.europa.eu"]`: "sbs_sc_ovw Estonia Latvia Lithuania number of enterprises 10-49 manufacturing wholesale G46 2023". Then repeat per sector.
 2. `["stat.gov.lv"]`: "UZS031 2024 10-49 50-249 nodarbināto" and the CSB annual press release on economically active enterprises (LV).
 3. `["osp.stat.gov.lt"]`: "veikiančių įmonių skaičius 2025 m. pradžioje darbuotojų skaičiaus grupės 10–19 20–49 50–99 100–249".

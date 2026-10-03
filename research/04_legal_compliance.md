@@ -191,3 +191,210 @@ None of the GDPR text could be re-read this session (UNKNOWN-P). The analyst's r
   - LV: DVI's note on how the ISPL and GDPR interact [V:WS4-017] and its SME guide (LEAD [WS4-023]).
   - LT: VDAI's 2026 Art. 81 FAQ (not read) [V:WS4-032] and older direct-marketing FAQs (LEAD [WS4-042]).
 - **What this means per named prospect:** (1) the offer is relevant to the person's role; (2) only minimal data is used (name, title, work e-mail, company); (3) the first e-mail says who you are, where the data came from, why you are writing and how to object; (4) one suppression list is kept across all clients and campaigns; (5) data is deleted after a set period. Items (3) and (4) reflect requirements verified at national level ([V:WS4-006] [V:WS4-015] [V:WS4-035]); the GDPR-specific parts are UNKNOWN-P.
+
+### 3.5 Supervisory authorities and enforcement, 2020–2026
+
+| Country | Who supervises e-marketing rules (evidence) | Verified cases / fines 2020–2026 | Cheapest resolution |
+|---|---|---|---|
+| EE | AKI publishes the ESS § 103¹ guidance [V:WS4-004]. It issued a precept-warning on use of electronic contact data in 2020, with the addressee anonymised (LEAD [WS4-007]). The ESS provision that gives AKI this competence was not extracted. | UNKNOWN: none verified. UNKNOWN-P: Estonia has historically punished GDPR breaches through misdemeanour procedure and penalty payments rather than administrative fines. Whether a 2025–2026 reform changed this is UNKNOWN. | AKI annual reports (aastaraamat) 2021–2025 and the precepts published on aki.ee |
+| LV | DVI regularly receives complaints about commercial e-mail and SMS [V:WS4-018] and interprets ISPL Art. 9 [V:WS4-016]. The role of PTAC (consumer authority) in this area is UNKNOWN. | UNKNOWN. DVI decision documents appeared in search results but could not be read. The companies are deliberately not named, so as not to imply wrongdoing. | DVI decisions page ("Lēmumi") and DVI annual public reports 2021–2025 |
+| LT | VDAI issues the Art. 81 guidance [V:WS4-031]. Two VDAI decisions of 2025 surfaced in direct-marketing searches (LEAD [WS4-039] [WS4-040]). VDAI's 2025 annual review was published on 2026-07-01 (LEAD [WS4-041]). The role of RRT (the communications regulator) under Art. 81 is UNKNOWN. | UNKNOWN: the subject and outcome of the 2025 decisions were not extracted. | Read the 2025 review [WS4-041] and the two decision PDFs |
+
+**What this means:** with no verified enforcement data, legal risk cannot be calibrated against expected fines. The §8 scores therefore rest on how clear the rules are, not on how hard they are enforced [E:A-WS4-01].
+
+### 3.6 Data sources for B2B prospecting
+
+| Source | EE | LV | LT | Conditions in plain language | Evidence |
+|---|---|---|---|---|---|
+| Official business register (company data plus board members) | e-Business Register: **risky-low** | Register of Enterprises: **risky-low** | Registrų centras / JAR: **risky-low** | Company-level data is not personal data and is free to use. Board members' names *are* personal data: you need a legitimate-interest basis and an Art. 14 notice at first contact. Do not guess private e-mail addresses. Registers publish data for legal certainty, not marketing, so bulk reuse could be challenged. | UNKNOWN-P. LEADs: EE register-act translation [WS4-010]; DVI note on data published in the Register of Enterprises [WS4-022] |
+| Commercial B2B databases (EE Inforegister/Teatmik; LV Lursoft/Firmas.lv; LT Rekvizitai/Creditinfo) | **risky** | **risky** | **risky**; read VDAI's note first | Once you import person-level data you become its controller. Check the vendor's lawful basis and what it tells data subjects, keep the source for your Art. 14 notice, and check accuracy. Company-only fields are low risk. | UNKNOWN-P. LEAD: VDAI note on offers to buy databases of legal entities [WS4-038] |
+| Apollo/Hunter-type enrichment tools | **risky** | **risky** | **risky** | Third parties compiled the named-person data. You must disclose the source (Art. 14), keep it accurate and cover the non-EU transfer. EU precedents: France's DPA (CNIL) sanctioned the contact-extraction tool KASPR in 2024; Poland's DPA (UODO) ruled against Bisnode in 2019 (pre-2020) over Art. 14 notices for register-derived data. Details and amounts were not re-verified, so none are stated here. | UNKNOWN-P |
+| Scraped data | **mixed** | **mixed** | **mixed** | Generic company addresses taken from company websites are lower risk (not personal data), subject to the site's terms. Scraping named individuals, especially from LinkedIn, breaches LinkedIn's contract and carries high GDPR risk. | UNKNOWN-P |
+
+**Rule of thumb.** The national e-marketing rules (§3.1) decide whether you may *contact* someone. The GDPR decides whether you may *hold and use* their data. Buying a list does not transfer the seller's compliance to you.
+
+### 3.7 Obligations of a solo provider (A, B, and C when run for a client)
+
+Everything in this subsection is EU-level law that could not be re-read this session (UNKNOWN-P), unless a source id is shown.
+
+| Service | Operator's usual GDPR role | Main obligations | Status |
+|---|---|---|---|
+| A — CRM setup, clean-up, migration | Processor for the client | An Art. 28 data-processing agreement (DPA): act only on documented instructions, confidentiality, Art. 32 security, help with data-subject rights, return or delete data at the end, audits. If the client contracts with the CRM vendor directly, the vendor is the client's processor, not the operator's. | UNKNOWN-P |
+| B — automation (n8n/Make, LLM APIs, e-mail tools) | Processor; vendors are the operator's sub-processors | Prior written authorisation of sub-processors and flow-down of terms (Art. 28(2) and (4)). A transfer basis for non-EU vendors (§4.3). A processor's record of processing (Art. 30(2)); the small-organisation exemption does not apply where processing is not occasional. Tell the client about a breach without undue delay (Art. 33(2)). | UNKNOWN-P |
+| C — lead generation for a client | **Unsettled.** Processor if the client sets the target profile, sources and messages. Possibly a joint controller (Art. 26), or an independent controller if the operator builds and reuses its own prospect database. | The role decides who gives the Art. 14 notice, who answers objections and who is liable. Resolve by allocating roles in the contract; if material, ask AKI in writing. | UNKNOWN-P (genuinely unsettled) |
+
+**Liability.**
+- Under Art. 82(2) a processor is liable for damage only where it breached its own processor obligations or acted outside or against lawful instructions. Where both parties caused the damage, Art. 82(4) makes them jointly and severally liable, with recourse under Art. 82(5). UNKNOWN-P.
+- An Estonian FIE trades in the owner's own name, so personal assets are exposed. UNKNOWN-P (resolve: RIK/EMTA guidance on FIE liability; WS5 covers the FIE setup).
+- See also §4.5 on liability caps and insurance.
+
+**EU AI Act (Regulation (EU) `2024/1689`).** All points are UNKNOWN-P unless marked otherwise.
+- **Provider or deployer?**
+  - A company that uses an AI system under its own authority in a professional capacity is a *deployer*. This covers the operator using Claude/GPT in its own work, and a client running an automation in its business.
+  - The operator would become a *provider* only by developing an AI system and placing it on the market, or putting it into service, under its own name or trademark (for example a branded chatbot product).
+  - A client-specific workflow that calls a third-party model most likely sits on the deployer/integration side. For custom builds sold to clients the line is unsettled (resolve: the Commission's guidelines on the AI-system definition and on roles; the AI Act service desk).
+- **Art. 4 AI literacy:** applies to providers and deployers from 2 Feb 2025. The Digital Omnibus on AI, proposed in November 2025, would turn this into a duty to encourage literacy. Whether it has been adopted is UNKNOWN.
+- **Art. 50 transparency, from 2 Aug 2026:**
+  - People must be told when they are interacting with an AI system such as a chatbot, unless it is obvious.
+  - Deployers must disclose AI-generated text published to inform the public on matters of public interest, unless a human reviewed it and takes editorial responsibility.
+  - AI-drafted B2B sales e-mails that a human checks and sends carry no specific AI Act labelling duty in the analyst's reading.
+- **High-risk systems (Annex III)** include AI used for recruitment and CV screening, worker management and creditworthiness. They carry heavy obligations and are best kept out of scope. When the Annex III obligations start, after the Digital Omnibus, is UNKNOWN (resolve: the Omnibus procedure file on EUR-Lex/OEIL).
+- **National AI Act authorities:** LT reportedly RRT (LEAD [WS4-046]); EE and LV UNKNOWN.
+
+---
+
+## 3.8 Deliverable — allowed / risky / forbidden, per country (plain language)
+
+Verdicts: **ALLOWED** (permitted if you meet the stated conditions), **RISKY** (defensible but unsettled, or depends on facts), **FORBIDDEN** (prohibited unless the stated exception applies). Each row's last column gives its evidence status.
+
+### Estonia
+
+| # | Activity | Verdict | What you must do / why | Citation / status |
+|---|---|---|---|---|
+| 1 | E-mail to a generic company address (info@, sales@) | ALLOWED | Offer a free, easy opt-out in every message; stop after a refusal; identify yourself | [V:WS4-001] [V:WS4-002] [V:WS4-004] [V:WS4-006] |
+| 2 | E-mail to a named employee's work address, offer relevant to their role | RISKY (defensible) | AKI weighs the recipient's position and the product; add a GDPR legitimate-interest assessment, an Art. 14 notice in the first e-mail, and honour objections | [V:WS4-005]; GDPR layer UNKNOWN-P |
+| 3 | E-mail to a named employee, offer unrelated to their role | FORBIDDEN without prior consent | Treated as marketing to a natural person | [V:WS4-005]; natural-person clause UNKNOWN-P |
+| 4 | E-mail/SMS to private addresses or to FIE sole traders | FORBIDDEN without prior consent (except soft opt-in) | Natural persons | UNKNOWN-P (implied by [V:WS4-004]) |
+| 5 | Marketing your own similar products to existing customers | ALLOWED | Offer an opt-out at collection and in each message | [V:WS4-003] |
+| 6 | Cold call to a company's general number | ALLOWED (likely) | Keep a do-not-call list | UNKNOWN-P |
+| 7 | Cold call to a named employee's work mobile | RISKY | GDPR legitimate interest; stop on objection | UNKNOWN (whether § 103¹ covers live calls) |
+| 8 | Manual LinkedIn connection request or message | RISKY (unsettled) | Unclear whether this is "electronic mail" (ask AKI); GDPR applies | UNKNOWN |
+| 9 | LinkedIn automation tools, or scraping profiles | FORBIDDEN by LinkedIn's contract; high GDPR risk | Account ban and data-protection exposure | UNKNOWN-P |
+| 10 | Business-register data to identify decision-makers | RISKY-LOW | Legitimate interest plus Art. 14 notice | UNKNOWN-P; LEAD [WS4-010] |
+| 11 | Bought lists or Apollo/Hunter enrichment | RISKY | Check the vendor; disclose the source; check accuracy and transfers | UNKNOWN-P |
+| 12 | Handling client CRM data and automations | ALLOWED | Art. 28 DPA, sub-processor list, security | UNKNOWN-P |
+| 13 | AI chatbot or AI-drafted replies built for a client | ALLOWED with disclosure | Chatbots must say they are AI (AI Act Art. 50, from 2 Aug 2026) | UNKNOWN-P |
+| 14 | Clients established in Russia or Belarus; Baltic clients trading with them | FORBIDDEN / EXCLUDED | EU services bans (§4.2); hard exclusion in the brief | UNKNOWN-P |
+
+### Latvia
+
+| # | Activity | Verdict | What you must do / why | Citation / status |
+|---|---|---|---|---|
+| 1 | E-mail to a generic company address | ALLOWED | Give a valid address for stop requests; honour every stop request (Art. 9(4)) | [V:WS4-016] [V:WS4-015] [V:WS4-019] |
+| 2 | E-mail to a named employee's work address, offer relevant to their role | RISKY (unsettled; no DVI position) | A named address identifies a natural person; DVI says Art. 9 protects natural persons. Ask DVI in writing before scaling. GDPR applies. | UNKNOWN; [V:WS4-019] [V:WS4-017] |
+| 3 | E-mail to private addresses, or to sole traders (IK / self-employed) | FORBIDDEN without prior consent (except soft opt-in) | Natural persons | [V:WS4-011] [V:WS4-019] |
+| 4 | Marketing your own similar products to existing customers | ALLOWED | The customer did not object at collection; opt-out in each message | [V:WS4-012] |
+| 5 | Cold call to a company's general number | ALLOWED (per DVI material) | Keep a do-not-call list | LEAD [WS4-020] |
+| 6 | Cold call to a named employee's mobile | RISKY | Commercial communications to natural persons through public e-comms services need prior explicit consent | [V:WS4-013] |
+| 7 | Calls/SMS to private persons; automatic calling | FORBIDDEN without prior consent | | [V:WS4-011] [V:WS4-013] |
+| 8 | Manual LinkedIn connection request or message | RISKY (unsettled) | Ask DVI whether it counts as e-mail; GDPR applies | UNKNOWN |
+| 9 | LinkedIn automation tools, or scraping profiles | FORBIDDEN by LinkedIn's contract; high GDPR risk | | UNKNOWN-P |
+| 10 | Register of Enterprises or Lursoft data to identify decision-makers | RISKY-LOW | Legitimate interest plus Art. 14 notice; read DVI's note on register data | UNKNOWN-P; LEAD [WS4-022] |
+| 11 | Bought lists or Apollo/Hunter enrichment | RISKY | Check the vendor; disclose the source | UNKNOWN-P |
+| 12 | Handling client CRM data and automations | ALLOWED | Art. 28 DPA, sub-processor list, security | UNKNOWN-P |
+| 13 | AI chatbot or AI-drafted replies built for a client | ALLOWED with disclosure | AI Act Art. 50, from 2 Aug 2026 | UNKNOWN-P |
+| 14 | Clients established in Russia or Belarus; Baltic clients trading with them | FORBIDDEN / EXCLUDED | §4.2; hard exclusion | UNKNOWN-P |
+
+### Lithuania
+
+| # | Activity | Verdict | What you must do / why | Citation / status |
+|---|---|---|---|---|
+| 1 | E-mail to a generic company address | **ALLOWED since 22 Apr 2026** (FORBIDDEN without consent before then) | Free opt-out in every message; stop immediately on opt-out; keep proof | [V:WS4-031] [V:WS4-035] [V:WS4-036]; old rule [V:WS4-033] |
+| 2 | E-mail to a named employee's work address on the company domain | ALLOWED with opt-out (secondary sources); the employee can opt out personally | Plus GDPR legitimate interest and an Art. 14 notice; confirm against VDAI's FAQ | [V:WS4-034] [V:WS4-036] [V:WS4-037]; FAQ UNKNOWN |
+| 3 | E-mail to private addresses / natural persons, including sole traders with individual-activity status | FORBIDDEN without prior consent (except soft opt-in) | The Art. 81 general rule | [V:WS4-028] |
+| 4 | Marketing your own similar products to existing customers | ALLOWED | Clear, free opt-out | [V:WS4-028] |
+| 5 | Cold call to a company's general number | ALLOWED with opt-out since 22 Apr 2026 | | [V:WS4-034] |
+| 6 | Cold call to a work phone the employer assigned to an employee | ALLOWED with opt-out (secondary) | Confirm against VDAI's FAQ | [V:WS4-034]; FAQ UNKNOWN |
+| 7 | Calls/SMS to private persons | FORBIDDEN without prior consent | | [V:WS4-028] |
+| 8 | Manual LinkedIn connection request or message | RISKY (unsettled) | The account is registered to the individual, so the legal-entity exception probably does not apply if the message counts as e-mail | UNKNOWN; reasoning from [V:WS4-036] |
+| 9 | LinkedIn automation tools, or scraping profiles | FORBIDDEN by LinkedIn's contract; high GDPR risk | | UNKNOWN-P |
+| 10 | Registrų centras / JAR data to identify decision-makers | RISKY-LOW | Legitimate interest plus Art. 14 notice | UNKNOWN-P |
+| 11 | Bought lists (Rekvizitai/Creditinfo) or Apollo/Hunter enrichment | RISKY | Read VDAI's note on buying databases of legal entities first | LEAD [WS4-038]; UNKNOWN-P |
+| 12 | Handling client CRM data and automations | ALLOWED | Art. 28 DPA, sub-processor list, security | UNKNOWN-P |
+| 13 | AI chatbot or AI-drafted replies built for a client | ALLOWED with disclosure | AI Act Art. 50; LT authority reportedly RRT | UNKNOWN-P; LEAD [WS4-046] |
+| 14 | Clients established in Russia or Belarus; Baltic clients trading with them | FORBIDDEN / EXCLUDED | §4.2; hard exclusion | UNKNOWN-P |
+
+---
+
+## 4. Added beyond the brief
+
+### 4.1 Running a side business while employed in Estonia (Employment Contracts Act, Töölepingu seadus)
+
+All UNKNOWN-P: the section numbers come from the lead analyst's assignment and were not re-verified this session.
+- **§ 23 and § 24 (non-compete agreements).** In the analyst's reading, an employee may run a side business unless:
+  - a written non-compete agreement covers it, during or after employment, under the validity conditions of § 24; or
+  - it breaches the general duties of loyalty and confidentiality.
+- **No general duty to get the employer's consent** for non-competing side work was identified. This is UNKNOWN-P (resolve: read the consolidated text on riigiteataja.ee; the Labour Inspectorate's (Tööinspektsioon) free legal advice is a further cheap check).
+
+**What to check in your own contract** (no personal data involved):
+1. Is there a non-compete clause, and how is its scope defined? Does "the employer's field of activity" stretch beyond maritime inspection to sales/BD consulting or CRM services?
+2. Is there a clause requiring consent for other paid work or a side business, or an internal policy (handbook) that says so?
+3. Does the confidentiality clause cover the employer's contact lists, CRM data, templates and know-how? None of these may be reused.
+4. Who owns work created during working time or with employer equipment or accounts (IP / work-product clause)?
+5. Are there conflict-of-interest rules covering the employer's clients and suppliers? Ship managers, shipowners and vessel brokering are already excluded by the brief.
+
+If a non-compete exists, written consent from the employer removes the risk.
+
+### 4.2 Sanctions compliance for a service provider
+
+All UNKNOWN-P: EUR-Lex was blocked and the search budget was exhausted.
+- **EU Regulation 833/2014, Art. 5n (as amended by successive packages)** prohibits providing a list of business services to the Russian government and to legal persons established in Russia. In the analyst's understanding the list includes:
+  - business and management consulting, public relations, accounting and tax consulting;
+  - IT consultancy, legal advisory, architectural and engineering services;
+  - market research and advertising;
+  - since the December 2023 package, software for enterprise management such as **CRM/ERP**.
+  
+  CRM setup, automation and lead generation therefore all map onto prohibited categories for Russian entities. The paragraph letters and the exemptions are UNKNOWN (resolve: consolidated Reg. 833/2014 on EUR-Lex).
+- **Belarus:** Reg. 765/2006 contains parallel services restrictions; the article number is UNKNOWN.
+- **National law:**
+  - EE: International Sanctions Act (Rahvusvahelise sanktsiooni seadus);
+  - LV: Law on International Sanctions and National Sanctions of the Republic of Latvia;
+  - LT: Law on the Implementation of Economic and Other International Sanctions.
+  
+  All three countries criminalise sanctions violations. These names and points are UNKNOWN-P (resolve: Riigi Teataja, likumi.lv, e-tar.lt).
+- **Practical screening:**
+  - check client entities and their owners (EU ownership/control test) against the EU consolidated sanctions list and the EU Sanctions Map;
+  - ask clients, especially in freight forwarding and wholesale, whether they sell to, buy from or route through Russia or Belarus;
+  - avoid supporting trade that could amount to circumvention.
+  
+  This matches the brief's hard exclusion.
+
+### 4.3 International transfers and the sub-processor chain (B, and C tooling)
+
+All UNKNOWN-P.
+- **EU–US Data Privacy Framework (DPF):**
+  - The adequacy decision was adopted in July 2023.
+  - The EU General Court dismissed the Latombe challenge (T-553/23) in September 2025.
+  - An appeal to the Court of Justice was reported; its status in October 2026 is UNKNOWN (resolve: curia.europa.eu case search "Latombe").
+  - DPF-certified US vendors can rely on the adequacy decision. For others, use the Standard Contractual Clauses plus a transfer impact assessment.
+- **The chain to disclose in each client DPA:**
+  - CRM vendor (where the operator contracts with it);
+  - automation platform (Make cloud, or n8n cloud vs self-hosted on an EU server);
+  - LLM APIs (for example Anthropic, OpenAI);
+  - e-mail sending, warm-up and verification tools;
+  - enrichment tools;
+  - hosting and logging.
+- **For each entry, state:** legal entity, location, transfer basis, purpose, retention, any use of data for model training (check the API data-use terms), and how the client is told about changes and can object.
+- **Data minimisation:** do not send special-category data, or more personal data than needed, to LLM prompts.
+
+### 4.4 LinkedIn User Agreement — automation and scraping
+
+All UNKNOWN-P: linkedin.com was blocked and no search quota remained.
+- In the analyst's reading, LinkedIn's User Agreement ("Dos and Don'ts") prohibits:
+  - software, scripts, bots, crawlers or browser plug-ins that scrape or copy profiles or other data;
+  - unauthorised automated methods for adding or downloading contacts or sending messages;
+  - fake profiles.
+- LinkedIn enforces through account restriction and termination, and has sued scrapers in the US.
+- Sales Navigator is LinkedIn's own sanctioned prospecting product, but its data-export limits apply.
+- Using LinkedIn data is also GDPR processing (§3.3).
+- Resolve: read the current User Agreement and Professional Community Policies at linkedin.com/legal and note the section numbers and their effective date.
+
+### 4.5 Liability caps and professional-indemnity insurance for a solo provider in Estonia
+
+- **Liability caps:** the Law of Obligations Act (Võlaõigusseadus) § 106 governs excluding and limiting liability. In the analyst's reading:
+  - B2B caps are generally possible;
+  - a clause cannot exclude or limit liability for intentional breach, or where that would be contrary to good faith;
+  - standard-terms control also applies to pre-formulated B2B terms.
+  
+  UNKNOWN-P (resolve: VÕS § 106 and the standard-terms provisions on riigiteataja.ee).
+- **GDPR damages:** liability to data subjects under Art. 82 cannot be contracted away. Indemnities and caps *between* operator and client can be negotiated. UNKNOWN-P.
+- **Professional-indemnity insurance** ("ametivastutuskindlustus" / professional liability): it is UNKNOWN whether Estonian insurers cover an FIE doing IT, automation or marketing services, and at what premium (resolve: ask several insurers active in Estonia, such as If, ERGO, Salva and BTA, for a quote; WS5 would cost it).
+
+### 4.6 Language requirements for commercial communications (cross-check with WS1)
+
+- UNKNOWN for EE, LV and LT: this session did not search language law; WS1 owns it.
+- UNKNOWN-P: in the analyst's reading, private B2B correspondence (e-mails and proposals between businesses) is not language-regulated in any of the three countries. Public-facing advertising and consumer information must be in the state language under:
+  - EE: Language Act (Keeleseadus);
+  - LV: State Language Law (Valsts valodas likums);
+  - LT: Law on the State Language and Law on Advertising.
+- For the operator: cold B2B e-mails in English, Russian or Lithuanian face no statutory bar that was identified. Any public advertising or website aimed at the market would need checking.
