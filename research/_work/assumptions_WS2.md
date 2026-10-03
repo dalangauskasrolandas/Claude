@@ -57,3 +57,43 @@ Format per CONVENTIONS.md. Every ESTIMATE used in `research/02_demand_signals.md
 - Basis/rationale: assumes the EUR 5.4M article refers to the EUR 27.6M programme. Neither article's date is visible, and [V:WS2-026] separately says "most of the funding already reserved", possibly for the earlier EUR 37.5M programme.
 - Confidence: low.
 - Used in: 02_demand_signals.md § 5.2 Latvia (demand signals)
+
+### A-WS2-08 — Latvia RRF digitalisation programme: sales-process share and average request
+- Value: about 49.4% of applications were for sales-process digitalisation (incl. websites, CRM, booking, payments); average request about EUR 12,687 per application.
+- Formula: 1,438 / 2,908 = 0.494; 36,892,501 / 2,908 = 12,687.
+- Inputs: [V:WS2-069] 2,908 applications, EUR 36,892,501 requested; [V:WS2-070] 1,438 sales-process applications.
+- Basis/rationale: CRM is only one item in the sales-process group, so the CRM-specific share is UNKNOWN (lower than 49.4%).
+- Confidence: medium (the two figures may come from two LIAA pages of slightly different dates).
+- Used in: 02_demand_signals.md § 1; § 5.2; § 12
+
+### A-WS2-09 — Lithuania AI-solutions call: capacity and implied project size
+- Value: about 53 projects at the EUR 70,000 maximum, up to 250 at the EUR 15,000 minimum; implied project size EUR 30,000–140,000.
+- Formula: 3,750,000 / 70,000 = 53.6; 3,750,000 / 15,000 = 250; 15,000 / 0.50 = 30,000; 70,000 / 0.50 = 140,000.
+- Inputs: [V:WS2-035] EUR 3.75M total, EUR 15,000–70,000 per project, up to 50%.
+- Basis/rationale: assumes aid at the 50% maximum; lower aid rates imply larger projects.
+- Confidence: medium.
+- Used in: 02_demand_signals.md § 5.3
+
+### A-WS2-10 — Lithuania small grants: number of firms fundable
+- Value: about 27 firms ("palydimosios subsidijos 2026") and about 166 firms (digital SME vouchers) at maximum grant.
+- Formula: 408,000 / 15,000 = 27.2; 1,000,000 / 6,000 = 166.7.
+- Inputs: [V:WS2-042] EUR 408,000 total, ≤ EUR 15,000 each; [V:WS2-043] EUR 1,000,000 total, ≤ EUR 6,000 each.
+- Basis/rationale: lower bounds on recipients; smaller grants mean more recipients.
+- Confidence: high (arithmetic).
+- Used in: 02_demand_signals.md § 5.3
+
+### A-WS2-11 — Estonia: consistency check 22% (2025) vs 34% (2026)
+- Value: about 33% expected for 2026 from 22% × 1.5, consistent with the published 34%.
+- Formula: 0.22 × 1.5 = 0.33.
+- Inputs: [V:WS2-049] 22% in 2025; [V:WS2-050] 34% in 2026, growth 1.5× among enterprises.
+- Basis/rationale: shows the two Statistics Estonia figures are successive survey years, not conflicting definitions (rounding explains 33% vs 34%).
+- Confidence: high.
+- Used in: 02_demand_signals.md § 2; § 9 (C7)
+
+### A-WS2-12 — Lithuania: AI-use growth multiple 2024 → 2025
+- Value: about 2.4× (21.3% / 8.8%), +12.5 pp.
+- Formula: 21.3 / 8.8 = 2.42; 21.3 − 8.8 = 12.5.
+- Inputs: [V:WS2-057] 8.8% (2024), 21.3% (2025); [V:WS2-054] Eurostat +12.5 pp for Lithuania.
+- Basis/rationale: the +12.5 pp matches Eurostat's published increase, which triangulates the LRT figures.
+- Confidence: medium-high.
+- Used in: 02_demand_signals.md § 1; § 2; § 9 (C8)

@@ -154,3 +154,91 @@ Note on IDs: source IDs WS1-005 … WS1-024 are retired (rows written into the W
 - Basis/rationale: Indicates how many accounting firms an enrichment tool can surface. The README notes misclassifications (for example, a security firm and a state audit office tagged Accounting). The statistical M69.20 population is UNKNOWN (U9), so database coverage of accountants cannot yet be expressed as a ratio.
 - Confidence: medium (counts), low (as a coverage indicator)
 - Used in: 01_market_size.md §4.4, §8
+
+---
+
+## Gap-fill pass (2026-10-03) — scope change to ≤50 staff
+
+Scope note: on 2026-10-03 the user narrowed the target to companies with **up to 50 staff**. From here on the in-scope size classes are 0–9 and 10–49 (statistics) and 1-10 and 11-50 (Hunter buckets). The 50–249 class (and Hunter 51-200) is out of scope and kept only for reference; A-WS1-06, A-WS1-07, A-WS1-10 to A-WS1-14 describe the earlier 10–249 / 11–200 proxy and are superseded for the funnel by A-WS1-16 to A-WS1-21. A-WS1-08's formula still applies, with N2_c = enterprises with ≤50 staff.
+
+### A-WS1-16 — Estonia: ≤50-staff universe (2025)
+- Value: 0–49 employees = 158,489 (0–9: 152,205; 10–49: 6,284); 10–49 = 3.93% of all 159,827 enterprises; reference only (out of scope): 10–249 = 7,435
+- Formula: 152,205 + 6,284 = 158,489; 6,284 / 159,827 = 3.93%; 6,284 + 1,151 = 7,435; check 152,205 + 6,284 + 1,151 + 187 = 159,827 (exact)
+- Inputs: [V:WS1-095]
+- Basis/rationale: Statistics Estonia economic-units page, 2025 reference year, by employees. The 0–9 class includes one-person firms and cannot be split at 5 employees from published data, so 10–49 is the conservative core. The 2024 values ([V:WS1-001], [V:WS1-003]) are superseded, not contradicted.
+- Confidence: high (counts)
+- Used in: 01_market_size.md §1, §3.1, §3.6, §8
+
+### A-WS1-17 — Estonia: target-sector envelope, 10–49 employees (2025)
+- Value: 1,191–3,481 enterprises (lower = manufacturing only; upper = sections C + G + H + M + N = 55.4% of the 10–49 class)
+- Formula: upper = 1,191 (C) + 1,036 (G) + 472 (H) + 407 (M) + 375 (N) = 3,481; 3,481 / 6,284 = 55.4%; lower = C = 1,191
+- Inputs: [V:WS1-096] (C, G, H), [V:WS1-097] (M, N), [E:A-WS1-16]
+- Basis/rationale: Only section C maps fully to a §2 target sector. Section totals for G, H, M and N include out-of-scope divisions (G45 motor trade and G47 retail; H50 water transport and H52.22, which are hard exclusions; M71.2 testing and M75 veterinary; N79 travel agencies), so they are upper bounds. Division-level counts (G46 etc.) remain UNKNOWN (resolve: ER025 at 2–4 digits). Micro class (0–9): sections M = 23,994 and N = 8,003 are known [V:WS1-097]; C, G and H micro counts are UNKNOWN, so no 0–9 envelope is computed.
+- Confidence: high (section counts); low (as a target-sector count)
+- Used in: 01_market_size.md §1, §3.2, §3.6, §8
+
+### A-WS1-18 — Latvia: ≤50-staff universe (2024 estimate)
+- Value: 105,523 enterprises (0–9: 99,066; 10–49: 6,457)
+- Formula: 99,066 + 6,457 = 105,523
+- Inputs: [V:WS1-025]
+- Basis/rationale: EC SME Fact Sheet 2025 (JRC model estimate for 2024, SBS business-economy scope, persons employed). No CSB value could be extracted.
+- Confidence: medium
+- Used in: 01_market_size.md §3.1, §3.6, §8
+
+### A-WS1-19 — Lithuania: ≤50-staff universe (2022, pre-2023)
+- Value: 0–9 ≈ 312,827 (312,663–312,992); 0–49 ≈ 325,643 (325,314–325,971); 10–49 ≈ 12,815 (A-WS1-04)
+- Formula: 0.952 × 328,600 = 312,827 (range 0.9515–0.9525 × 328,600); (0.952 + 0.039) × 328,600 = 325,643 (range 0.990–0.992 × 328,600)
+- Inputs: [V:WS1-033] (total 2022), [V:WS1-034] (size shares 2022), [E:A-WS1-04]
+- Basis/rationale: Same share × total method as A-WS1-04, with the same population caveat (shares of non-financial enterprises applied to all enterprises in operation; the total includes natural persons engaged in business). Cross-check for the 10–49 class: small firms were 12.2% of SMEs in 2022 [V:WS1-098]; with ≈100,000 legal-entity SMEs at the start of 2023 [V:WS1-037] that is ≈12,200, consistent with 12,815. The EC 2024 estimate (11,348 small) is still a LEAD (WS1-039; re-seen in a 2026-10-03 extract, URL not pinned).
+- Confidence: medium (10–49); low (0–9, population definition)
+- Used in: 01_market_size.md §3.1, §3.6, §8
+
+### A-WS1-20 — Database-reachable target-sector firms with ≤50 staff (Hunter buckets 1-10 + 11-50)
+- Value:
+  - Target-sector records, 1-10 + 11-50: EE 4,345–5,539; LV 2,729–3,336; LT 5,123–6,213 (11-50 alone: EE 1,355–1,670; LV 1,046–1,224; LT 1,845–2,130)
+  - With ≥1 indexed email (× 0.830): EE 3,606–4,598; LV 2,265–2,769; LT 4,252–5,157 (11-50 alone: EE 1,124–1,386; LV 868–1,016; LT 1,531–1,768)
+  - With a personal email (× 0.610): EE 2,650–3,379; LV 1,665–2,035; LT 3,125–3,790 (11-50 alone: EE 826–1,019; LV 638–747; LT 1,125–1,299)
+  - All-industry records 1-10 + 11-50: EE 11,930; LV 6,609; LT 12,794. Coverage indicator, 11-50 records ÷ statistical 10–49 class: EE 56.7%; LV 36.5%; LT 34.1%
+  - Accounting (industry 47) records, 1-10 + 11-50: EE 97; LV 63; LT 126
+- Formula: per bucket b ∈ {1-10, 11-50}: Logistics_ex(b) = results(b) − maritime_rows/sample × results(b); target(b) = Logistics_ex + Wholesale + Manufacturing + Admin + Professional Services × {2/3 (low), 1 (high)}; pool = Σ_b target(b) × email rate (A-WS1-13). Coverage = ALL(11-50) / N(10–49).
+- Inputs:
+  - EE 1-10: ALL 8,368 [V:WS1-134]; LOG 142, maritime 18/100 [V:WS1-135]; WHS 166 [V:WS1-136]; MFG 610 [V:WS1-137]; PRO 2,639 [V:WS1-138]; ADM 338 [V:WS1-139]. EE 11-50: ALL 3,562 [V:WS1-046]; LOG 107, maritime 18/100 [V:WS1-048]; WHS 105 [V:WS1-050]; MFG 414 [V:WS1-052]; PRO 945 [V:WS1-054]; ADM 118 [V:WS1-056]
+  - LV 1-10: ALL 4,250 [V:WS1-140]; LOG 116, maritime 14/100 [V:WS1-141]; WHS 113 [V:WS1-142]; MFG 416 [V:WS1-143]; PRO 1,285 [V:WS1-144]; ADM 198 [V:WS1-145]. LV 11-50: ALL 2,359 [V:WS1-061]; LOG 110, maritime 12/100 [V:WS1-063]; WHS 108 [V:WS1-065]; MFG 381 [V:WS1-067]; PRO 534 [V:WS1-069]; ADM 104 [V:WS1-071]
+  - LT 1-10: ALL 8,427 [V:WS1-146]; LOG 231, maritime 7/100 [V:WS1-147]; WHS 220 [V:WS1-148]; MFG 822 [V:WS1-149]; PRO 2,414 [V:WS1-150]; ADM 412 [V:WS1-151]. LT 11-50: ALL 4,367 [V:WS1-076]; LOG 199, maritime 0/100 [V:WS1-078]; WHS 170 [V:WS1-080]; MFG 740 [V:WS1-082]; PRO 855 [V:WS1-084]; ADM 166 [V:WS1-086]
+  - Accounting: [V:WS1-058] [V:WS1-059] (EE); [V:WS1-073] [V:WS1-074] (LV); [V:WS1-088] [V:WS1-089] (LT)
+  - Email rates [E:A-WS1-13]; statistical 10–49: [V:WS1-095], [V:WS1-025], [E:A-WS1-04]
+- Basis/rationale: Same method as A-WS1-11 to A-WS1-14, applied to the in-scope buckets. Hunter's 1-10 bucket contains firms with 10 staff (statistical class 10–49) and many one- to four-person firms that are unlikely buyers. The pooled email rates come mostly from 51-200 and accounting segments; the 1-10 accounting segments show lower personal-email rates (32.6–55.1%), so the ≤50 email pools lean high. LT logistics in 11-50 is an upper bound (no maritime rows in the top-100 sample of 199). Vendor database, not a register: reachability proxy, not market size.
+- Confidence: low-medium
+- Used in: 01_market_size.md §1, §3.6, §4.4, §8
+
+### A-WS1-21 — Latvia: Russia/Belarus exporter bound for the exclusion filter x
+- Value: 400–618 enterprises exported goods to Russia and/or Belarus in Jan–Nov 2023 = 0.38–0.59% of Latvia's ≤50-staff enterprises; even if every one of them were a 10–49 firm, ≤9.6% of that class
+- Formula: lower = max(400, 218) = 400 (full overlap); upper = 400 + 218 = 618 (no overlap); 400 / 105,523 = 0.38%; 618 / 105,523 = 0.59%; 618 / 6,457 = 9.6%
+- Inputs: [V:WS1-123], [E:A-WS1-18], [V:WS1-025]
+- Basis/rationale: Exporter counts cover firms of all sizes and goods only, so the shares are upper bounds for the share of in-scope firms trading with RU/BY in goods. Services trade and indirect links (re-export, Russian ownership) are not covered. Trend: 1,013 / 490 firms in 2021 [V:WS1-124]. EE and LT equivalents are UNKNOWN.
+- Confidence: medium (counts); low (as x for target sectors)
+- Used in: 01_market_size.md §1, §3.3, §3.6, §8
+
+### A-WS1-22 — Estonia: share of population able to speak Russian (2021)
+- Value: ≈68%
+- Formula: 29% (Russian mother tongue) + 39% (Russian spoken as a foreign language) = 68%
+- Inputs: [V:WS1-099], [V:WS1-100]
+- Basis/rationale: In the census, foreign languages are languages other than the respondent's mother tongue, so the two groups do not overlap (analyst reading of census definitions; rounding ±1 pp). Population of all ages, not business owners.
+- Confidence: medium
+- Used in: 01_market_size.md §1, §3.5, §4.1, §8
+
+### A-WS1-23 — Lithuania: Russian mother-tongue share, lower bound (2021)
+- Value: ≥ ≈4.6% (≈129,500 people)
+- Formula: 141,100 ethnic Russians × 0.918 = 129,530; population = 2,378,000 / 0.846 = 2,810,875; 129,530 / 2,810,875 = 4.61%
+- Inputs: [V:WS1-106]
+- Basis/rationale: Counts only ethnic Russians who declared Russian as mother tongue. People of other ethnicity (e.g., Poles, Belarusians, Ukrainians) with Russian as mother tongue are not included, so this is a lower bound.
+- Confidence: medium (as a lower bound)
+- Used in: 01_market_size.md §1, §3.5, §8
+
+### A-WS1-24 — G2 network route: verified foreign-chamber memberships (lower bound)
+- Value: ≈900 memberships, not de-duplicated
+- Formula: AHK Baltic 470 + Scandinavian Chamber EE 130 + Norwegian Chamber LV 100 + Norwegian-Lithuanian Chamber 100 + Swedish Chamber LT 100 = 900 ("more than", "about" and "close to" values taken at face value)
+- Inputs: [V:WS1-110], [V:WS1-112], [V:WS1-113], [V:WS1-114], [V:WS1-115]
+- Basis/rationale: Lower bound for the network route of A-WS1-09. Excluded for lack of a verified count: Finnish chambers (FCCL 36 corporate members in 2020 is a LEAD, WS1-116), Swedish and Danish chambers in LV, Polish and Ukrainian chambers ([V:WS1-117], [V:WS1-118], [V:WS1-119]), AmChams and investor councils. Members include Baltic-registered firms and large corporations; the ≤50-staff filter cannot be applied. Presence route context: 11% of Estonian enterprises are foreign-controlled (2023) [V:WS1-109].
+- Confidence: low
+- Used in: 01_market_size.md §1, §3.7, §4.2, §8
