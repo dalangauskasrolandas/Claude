@@ -24,7 +24,7 @@ D = {
  ('EE','A'): (2, 'D-EE-A', '[V:WS2-007][V:WS2-010]'),
  ('EE','B'): (4, 'D-EE-B', '[V:WS2-001][V:WS2-003][V:WS2-049][V:WS2-050]'),
  ('EE','C'): (1, 'D-EE-C', 'gap; [V:WS2-016]'),
- ('LV','A'): (4, 'D-LV-A', '[V:WS2-069][V:WS2-070][E:A-WS2-08][V:WS3-017]'),
+ ('LV','A'): (3, 'D-LV-A', '[V:WS2-069][V:WS2-070][E:A-WS2-08][V:WS2-020][V:VL-008] (subsidised up to 100%, programmes closed)'),
  ('LV','B'): (2, 'D-LV-B', '[V:WS2-060][V:WS2-062][V:WS2-054]'),
  ('LV','C'): (1, 'D-LV-C', 'gap'),
  ('LT','A'): (2, 'D-LT-A', '[V:WS2-059][V:WS2-042][V:WS2-043]'),
@@ -36,7 +36,7 @@ W = {
  ('EE','A'): (3, 'W-EE-A', '[V:WS3-005][E:A-WS2-05][V:WS2-007][V:WS2-009]'),
  ('EE','B'): (2, 'W-EE-B', '[V:WS3-005]'),
  ('EE','C'): (2, 'W-EE-C', '[V:WS3-004][V:WS3-003]'),
- ('LV','A'): (4, 'W-LV-A', '[V:WS3-017][V:WS3-018][V:WS3-019][V:WS2-020]'),
+ ('LV','A'): (3, 'W-LV-A', '[V:WS3-017][V:WS3-019][V:VL-008][V:VL-014] (historical, licence-inclusive list prices)'),
  ('LV','B'): (2, 'W-LV-B', '[V:WS2-022][V:WS3-046]'),
  ('LV','C'): (2, 'W-LV-C', '[V:WS3-009]'),
  ('LT','A'): (2, 'W-LT-A', '[V:WS3-025]'),
@@ -46,7 +46,7 @@ W = {
 # C = competition intensity, 5 = least competition (WS3 §12; 'p' = provisional, under-searched)
 C = {
  ('EE','A'): (2, 'C-EE-A', '[V:WS3-026][V:WS3-012][V:WS3-016][V:WS3-021][V:WS3-005][V:WS3-013]'),
- ('EE','B'): (3, 'C-EE-B(p)', '[V:WS3-021][V:WS3-005]'),
+ ('EE','B'): (2, 'C-EE-B', '[V:WS3-021][V:WS3-005][V:RT-005][V:RT-006][V:RT-007][V:RT-008]'),
  ('EE','C'): (2, 'C-EE-C', '[V:WS3-001][V:WS3-009]'),
  ('LV','A'): (2, 'C-LV-A', '[V:WS3-013][V:WS3-017][V:WS3-022][E:A-WS3-03]'),
  ('LV','B'): (3, 'C-LV-B(p)', '[V:WS3-013][E:A-WS3-03]'),
@@ -61,7 +61,7 @@ L = {
  ('EE','B'): (3, 'L-B', '[E:A-WS4-01]'), ('LV','B'): (3, 'L-B', '[E:A-WS4-01]'), ('LT','B'): (3, 'L-B', '[E:A-WS4-01]'),
  ('EE','C'): (3, 'L-EE-C', '[V:WS4-001][V:WS4-004][V:WS4-005]'),
  ('LV','C'): (3, 'L-LV-C', '[V:WS4-016][V:WS4-019][V:WS4-011]'),
- ('LT','C'): (4, 'L-LT-C(p)', '[V:WS4-031][V:WS4-034][V:WS4-036]'),
+ ('LT','C'): (3, 'L-LT-C', '[V:WS4-031][V:VL-001]; named-employee scope LEAD VL-002 (4 if regulator confirms)'),
 }
 # A = async/evening fit, 5 = fully async (WS6 §8.2 rubric reconciled with WS5 §7 daytime shares)
 ASYNC = {
@@ -174,3 +174,24 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+def basis_md():
+    out = ['| Code | Score | Evidence / rule |', '|---|---|---|']
+    seen = set()
+    def add(code, score, ev):
+        if code in seen: return
+        seen.add(code); out.append(f'| {code} | {score} [E:A-WS0-01] | {ev} |')
+    for tbl in (D, W, C, L):
+        for (_, _), (s, code, ev) in tbl.items(): add(code, s, ev)
+    for comp, (s, code, ev) in ASYNC.items(): add(code, s, ev + (' [E:A-WS0-02]' if comp == 'C' else ''))
+    for c, (s, code, ev) in G.items(): add(code, s, ev)
+    add(G_C_MOD[0], '−1', G_C_MOD[1])
+    add('Dm-acct-EE', '+1', 'B for accounting firms in EE: buyers may demand e-invoices since 1 Jul 2025 [V:WS2-073]; LV mandate only from 1 Jan 2028 [V:WS2-075], so no LV modifier')
+    for (dim, comp), (s, code, ev) in G2_ABS.items(): add(code, s, ev)
+    add('Cb-AB', 'min(A,B)', 'CRM partners already sell automation [V:WS3-013]; low-end automation vendors integrate CRMs [V:WS3-024]')
+    add('Cb-ABC(p)', 3, 'no single A+B+C provider found in a limited search (provisional) [V:WS3-005][V:WS3-013][V:WS3-024]')
+    add('min(…)', 'min', 'bundles: weakest component for demand, WTP, legal, async, language (no evidence of joint demand or joint WTP) [E:A-WS0-01]')
+    open(os.path.join(OUT_DIR, 'scorecard_basis.md'), 'w', encoding='utf-8').write('\n'.join(out) + '\n')
+
+if __name__ == '__main__':
+    basis_md()

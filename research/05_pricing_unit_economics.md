@@ -12,6 +12,8 @@
 
 **Method:** evidence was gathered via web-search extracts on 2026-10-03. Direct page fetching was blocked in this environment, except claude.com and GitHub, which were fetched directly. All model calculations are in `_work/data/WS5_models.py`, which is re-runnable and writes `_work/data/WS5_models.csv`.
 
+> **Verifier note (2026-10-03).** Recomputed: an independent re-implementation of the tax formula, unit economics, price floors and capacity reproduces `WS5_models.py` and `WS5_models.csv` exactly (VL-029; script `_work/data/VER_recompute.py`). Re-checked by search: the FIE tax mechanism, the income-tax rate and the advance-payment exemption (VL-018). Could not verify: the Estonian VAT-number duty for cross-border invoicing (VL-019) and the Upwatcher median (VL-020). Corrections: the Latvian price anchors come from a closed-grant regime (VL-008, VL-014), and neither the EIS consultant cap nor the model's low automation price is a usable market anchor (VL-029). The Pipedrive programme tiers are now known (RT-003). Entrepreneur-account terms and the VAT rate and threshold: documentary check only. The model outputs are conditional on estimated inputs; see `red_team.md` for the cold-start sales-hours sensitivity. See `verification_log.md`.
+
 > **Coverage warning — read first.** All six workstreams share one WebSearch budget for the session. It ran out after two dozen WS5 queries. Those queries went on the Estonian tax and VAT rules first, because every model depends on them.
 >
 > **Not researched in this run (UNKNOWN):**
@@ -33,21 +35,21 @@
 ## 2. Key findings
 
 1. **Tax: the operator keeps 58.65% of FIE profit.** Social tax is 33% of P/1.33, i.e. 24.81% of profit (P). Income tax is 22% of the remainder, i.e. 16.54% of P [V:WS5-002][V:WS5-006][V:WS5-007][E:A-WS5-01].
-   - No social-tax minimum or advances apply, provided his employer pays at least €877.14 a quarter in social tax for him. Any full-time salary at or above the €886 monthly rate does that [V:WS5-003][V:WS5-001].
+   - No social-tax minimum or advances apply, provided their employer pays at least €877.14 a quarter in social tax for them. Any full-time salary at or above the €886 monthly rate does that [V:WS5-003][V:WS5-001].
    - No basic exemption is left for FIE profit, because the 2026 flat €700/month is used by the salary [V:WS5-006][E:A-WS5-02].
    - The brief's tax assumption matches official 2026 rules only if "social tax deductible" means the statutory 1.33 divisor. A literal reading (S = 0.33 × P) understates net income by 6.4 percentage points: 52.26% instead of 58.65% [E:A-WS5-01].
 2. **Net €/h after tax, per unit, base hours:**
    - CRM setup: €16.8 / €34.9 / €69.8 at €1,200 / €2,500 / €5,000 per project [E:A-WS5-13][E:A-WS5-14].
    - Automation project: €9.4 / €25.4 / €63.8 at €450 / €1,200 / €3,000 per project [E:A-WS5-19][E:A-WS5-20].
    - Lead-gen retainer: €19.5 / €37.9 / €62.1 at €1,000 / €1,800 / €2,850 per month [E:A-WS5-25][E:A-WS5-26].
-3. **Price floors.** To net €25/h at base hours, the operator needs at least €1,790 per CRM setup, €1,182 per automation project, or €1,237/month per lead-gen client [E:A-WS5-36]. The bottom of the only published Baltic automation band (€450, LT [V:WS3-024]) nets under €10/h [E:A-WS5-19]. It is viable only with heavy template reuse.
+3. **Price floors.** To net €25/h at base hours, the operator needs at least €1,790 per CRM setup, €1,182 per automation project, or €1,237/month per lead-gen client [E:A-WS5-36]. The bottom of the only published Baltic automation band (€450, LT [V:WS3-024]) nets under €10/h [E:A-WS5-19]. It is viable only with heavy template reuse. (corrected — see VL-029: €450 is the bottom of the mid tier on that page, not the market floor; the same page starts at €300 [V:WS3-024] and an Estonian agency advertises from €100 [V:RT-005], so the model's low automation price is above the cheapest published offers.)
 4. **Published price anchors exist mainly in LV and LT; EE is thin.** All of these are supply-side list prices, not transaction prices.
    - LV: EDIH-catalogue CRM bundles cost €2,990–7,440 including licences and 12 h of implementation [V:WS3-017][V:WS3-018]. A generic CRM implementation package costs €5,000 [V:WS3-019].
    - LT: automation costs €300–3,000+ [V:WS3-024]. An outbound retainer costs €2,850/month after a €3,750 first month [V:WS3-008].
    - EE: agency setup work is €110–150/h [V:WS3-005]. EIS-procured digital mentoring works out at about €147–149/h [E:A-WS2-05].
 5. **Grants anchor prices but lock out a newcomer at first.**
-   - LV: LIAA pays 100% aid to micro/small firms when the project total is ≤ €5,000 [V:WS2-020]. The programme's late-2026 status is uncertain [V:WS2-019].
-   - EE: the EIS software-adoption grant caps consultant fees at 50% of an aid of €2,000–5,000 [V:WS2-007]. It also requires the "digital advisor" to have at least three similar projects in the prior four years [V:WS2-009]. So the operator's first projects cannot be grant-funded with him as the advisor.
+   - LV: LIAA pays 100% aid to micro/small firms when the project total is ≤ €5,000 [V:WS2-020]. (corrected — see VL-008: both LIAA programmes are closed, the first to applications since 17.06.2025 [V:WS2-069] and the follow-on since 07.11.2025 [V:WS2-071], so this 100%-aid price point no longer operates.)
+   - EE: the EIS software-adoption grant caps consultant fees at 50% of an aid of €2,000–5,000 [V:WS2-007]. It also requires the "digital advisor" to have at least three similar projects in the prior four years [V:WS2-009]. So the operator's first projects cannot be grant-funded with the operator as the advisor.
 6. **Capacity ceiling at 15 h/week** (supply side only, not a demand forecast) [E:A-WS5-38]:
    - about 14.7 CRM setups a year, or 22.5 automation projects, or 2.0 concurrent lead-gen clients (needing about 3.6 new clients a year at 15% monthly churn) [E:A-WS5-38];
    - all-in net at the mid price: €21.2k, €15.3k or €23.1k a year respectively [E:A-WS5-38].
@@ -93,7 +95,7 @@ Social tax itself is not a business expense [V:WS5-004]. Instead it reduces its 
 |---|---|---|
 | "22% income tax" | 22% from 1 Jan 2026 [V:WS5-006]. A 2025 plan to raise it to 24% (LEAD WS5-009) was cancelled (LEAD WS5-008). | none [E:A-WS5-01] |
 | "33% social tax on profit; social tax deductible" | 33% on business income after expenses, computed by dividing by 1.33 [V:WS5-002]. Income tax applies to income adjusted for social tax [V:WS5-007]. | Net = 58.65% of P. A literal S = 0.33 × P would give 52.26% [E:A-WS5-01]. |
-| "no quarterly social-tax advances (employed elsewhere)" | Correct, provided the employer pays at least €877.14/quarter in social tax for him, counted cumulatively over the year [V:WS5-003]. | No minimum. A non-employed FIE would owe at least €3,508.56 a year [E:A-WS5-03]. |
+| "no quarterly social-tax advances (employed elsewhere)" | Correct, provided the employer pays at least €877.14/quarter in social tax for them, counted cumulatively over the year [V:WS5-003]. | No minimum. A non-employed FIE would owe at least €3,508.56 a year [E:A-WS5-03]. |
 | Basic exemption (not in the brief) | 2026: flat €700/month (€8,400/year) regardless of income; the "tax hump" is abolished [V:WS5-006]. | Fully used by the salary, so the marginal rate on FIE profit is 22% [E:A-WS5-02]. |
 | II pillar (not in the brief) | If enrolled, the FIE pays 2% (or 4%/6%) of social-tax-adjusted business income, assessed by EMTA and due 1 October. The 2026 maximum at 2% is €2,234.40 [V:WS5-010]. | Net cash falls to 57.47% of P. The contribution is the operator's own pension saving [E:A-WS5-04]. |
 | Social-tax cap (not in the brief) | €36,867.60 FIE maximum for 2026 [V:WS5-002]. | Not binding [E:A-WS5-05]. |
@@ -131,7 +133,7 @@ Social tax itself is not a business expense [V:WS5-004]. Instead it reduces its 
 
 **AI API cost is immaterial.** One automation handling 300 inquiries a month (3,000 input + 800 output tokens each) costs $2.10 on Haiku 4.5, $4.20 on Sonnet 5.5 and $8.40 on Opus 5.5 per month [V:WS5-020][E:A-WS5-24]. These are pass-through running costs of a few euros a month, small next to project prices of €450–3,000 [E:A-WS5-24].
 
-**The n8n licence suits a consultant.** The licence FAQ permits "building, running, and maintaining workflows on your own n8n instance on behalf of clients … including charging consulting or development fees" [V:WS5-022]. It forbids hosting n8n as a service in which clients build their own workflows [V:WS5-022]. This allows a recurring managed-automation fee. Hosting client data on the operator's instance makes him a GDPR processor (see WS4).
+**The n8n licence suits a consultant.** The licence FAQ permits "building, running, and maintaining workflows on your own n8n instance on behalf of clients … including charging consulting or development fees" [V:WS5-022]. It forbids hosting n8n as a service in which clients build their own workflows [V:WS5-022]. This allows a recurring managed-automation fee. Hosting client data on the operator's instance makes the operator a GDPR processor (see WS4).
 
 ### 4.2 Fit with the start budget (BRIEF §2)
 
@@ -151,7 +153,7 @@ Social tax itself is not a business expense [V:WS5-004]. Instead it reduces its 
 
 | Programme | Requirements | Commission % | Duration | Status |
 |---|---|---|---|---|
-| Pipedrive (partner and affiliate) | tiers named in a WS3 extract (Authorized / Gold / Platinum); LEAD WS3-028 | not retrieved | not retrieved | UNKNOWN (resolve: SP-20) |
+| Pipedrive (partner and affiliate) | three tiers (Authorized, Gold, Platinum). Authorized needs one certified sales expert and one certified customer-support expert; Gold two sales, two support and one marketing expert; Platinum three sales, two support, one marketing and one customer-success expert; moving up needs a business plan and certified staff [V:RT-003] (corrected — see RT-003) | tier-based commission on referred customers and margins on licence resale; rates not shown in the extract | not retrieved | commission rates and duration UNKNOWN (resolve: SP-20) |
 | HubSpot Solutions Partner, HubSpot Affiliate | Solutions Partner Program "designed for service firms helping mid-market and enterprise customers" [V:WS3-032] | not retrieved | not retrieved | UNKNOWN (resolve: SP-21) |
 | Zoho (partner / affiliate) | not retrieved | not retrieved | not retrieved | UNKNOWN (resolve: SP-22) |
 | Make, n8n | not retrieved | not retrieved | not retrieved | UNKNOWN (resolve: SP-23) |
@@ -174,7 +176,7 @@ No commission rate is assumed in any model. Referral income is upside only, and 
 | Pay-per-meeting | UNKNOWN (resolve: SP-33) | UNKNOWN (resolve: SP-33) | UNKNOWN (resolve: SP-33) | UNKNOWN (resolve: SP-33) |
 | Publicly funded price anchors | EIS digital mentoring: €4,460 for 30 h, about €147–149/h [V:WS2-015][E:A-WS2-05]. EIS software-adoption aid €2,000–5,000, consultant share ≤ 50% [V:WS2-007]. | LIAA: 100% aid for micro/small firms if total project ≤ €5,000 [V:WS2-020]; grants up to €10,000 for new digital solutions [V:WS2-022]. | see WS2 (UNKNOWN here) | n/a |
 
-**Reading.** Most Latvian catalogue bundles sit at or below €5,000 (€2,990–5,000 [V:WS3-017][V:WS3-019]; a few run to €7,440–9,900 [V:WS3-018][V:WS3-043]). €5,000 is the LIAA 100%-aid ceiling for micro/small projects [V:WS2-020]. That is a policy-made price point, and it lasts only as long as the programme runs [V:WS2-019].
+**Reading.** Most Latvian catalogue bundles sit at or below €5,000 (€2,990–5,000 [V:WS3-017][V:WS3-019]; a few run to €7,440–9,900 [V:WS3-018][V:WS3-043]). €5,000 is the LIAA 100%-aid ceiling for micro/small projects [V:WS2-020]. That policy-made price point no longer operates (corrected — see VL-008 and VL-014): the programme stopped accepting applications on 17.06.2025 [V:WS2-069], and the catalogue listings carry no dates, so the bundle prices are historical list prices of a closed-grant regime.
 
 ### 5.2 Hourly rates
 
@@ -184,7 +186,7 @@ No commission rate is assumed in any model. Referral income is upside only, and 
 | LV | not found | UNKNOWN (resolve: SP-32) |
 | LT | not found | UNKNOWN (resolve: SP-32) |
 | FI, SE, PL, DE | not found | UNKNOWN (resolve: SP-32) |
-| Global marketplaces | Prior lead "Upwork AI-automation median about $29.50/h, May 2026, Upwatcher": **not re-verified** | UNKNOWN (resolve: SP-31) |
+| Global marketplaces | Prior lead "Upwork AI-automation median about $29.50/h, May 2026, Upwatcher": **not re-verified**; verifier: one search restricted to upwatcher.com returned no results (VL-020) | UNKNOWN (resolve: SP-31) |
 
 The models imply these billed rates per delivery hour [E:A-WS5-35]:
 - CRM: €48 / €100 / €200 [E:A-WS5-35]
@@ -298,7 +300,7 @@ Recompute: net per unit = (price − direct cost) × 0.5865, and net €/h = net
 | Lead-gen retainer (per month) | €802 | €1,237 | €1,889 | [E:A-WS5-36] |
 
 Compare these floors with the published anchors [E:A-WS5-36]:
-- **CRM:** the €2,500 EIS consultant cap [V:WS2-007] and the LV €2,990–5,000 bundles [V:WS3-017][V:WS3-019] clear the €25/h floor.
+- **CRM:** the €2,500 EIS consultant cap [V:WS2-007] and the LV €2,990–5,000 bundles [V:WS3-017][V:WS3-019] clear the €25/h floor. (corrected — see VL-029: the €2,500 is the most the grant can pay an advisor with at least three similar projects in four years [V:WS2-009], so it is not an anchor a newcomer can use; the LV bundles include licences, with a service share of about €1,990 [E:A-WS3-01], and belong to a closed-grant regime [V:WS2-069] [V:WS2-071].)
 - **Automation:** the LT €450–1,200 band [V:WS3-024] clears it only at its top.
 - **Lead gen:** the LT €2,850/month price [V:WS3-008] clears the €40/h floor by a wide margin.
 
@@ -354,7 +356,7 @@ Capacity is a supply-side ceiling: it assumes a full pipeline and is not a deman
 - **Rate.** Estonian standard VAT is 24% from 1 July 2025; other rates are 13%, 9% and 0% [V:WS5-011].
 - **Registration threshold.** Registration is mandatory once Estonian place-of-supply turnover exceeds €40,000 from the start of the year. The way the threshold is counted changed on 1 Jan 2025 [V:WS5-012].
 - **Selling to LV/LT businesses.** A B2B service to a taxable person in another Member State is taxed in the recipient's state under the general rule, i.e. reverse charge [V:WS5-014]. An accounting-firm guide says such services do not count toward the €40,000 threshold (secondary, LEAD WS5-017).
-- **Art. 214(1)(e).** EU law requires Member States to identify suppliers of services that are reverse-charged in another state under Art. 214(1)(e). The assignment's "(d)" refers to recipients [V:WS5-016]. Whether Estonia makes an unregistered FIE obtain a VAT ID before invoicing LV/LT clients is UNKNOWN (resolve: SP-36, or an EMTA phone consultation).
+- **Art. 214(1)(e).** EU law requires Member States to identify suppliers of services that are reverse-charged in another state under Art. 214(1)(e). The assignment's "(d)" refers to recipients [V:WS5-016]. Whether Estonia makes an unregistered FIE obtain a VAT ID before invoicing LV/LT clients is UNKNOWN (resolve: SP-36, or an EMTA phone consultation). (verifier note — see VL-019: one search of emta.ee and EUR-Lex did not settle it.)
 - **EU SME scheme.** Available from 2025 for total EU turnover ≤ €100,000 in the current and previous year; voluntary [V:WS5-013]. It is of little relevance to reverse-charged B2B services.
 - **Input VAT on tools.** An unregistered FIE that buys services from abroad self-assesses Estonian VAT as a "limited taxable person" [V:WS5-015], or pays VAT the supplier charges, with no deduction. The model therefore applies ×1.24 to tool costs [E:A-WS5-07].
 - **Voluntary registration.** It would recover tool VAT at the price of monthly returns. At the modelled tool spend of €80–300 per client-month, the VAT at stake is about €15–58 a month [E:A-WS5-07][E:A-WS5-30].
@@ -450,7 +452,7 @@ Fetched directly (not searched): claude.com/pricing; GitHub n8n `LICENSE.md` and
 | Country | A: CRM setup | B: Automation | C: Lead generation |
 |---|---|---|---|
 | EE | **3**: agency setup €110–150/h [V:WS3-005]; EIS mentor about €147–149/h [E:A-WS2-05]; EIS consultant fees ≤ 50% of €2,000–5,000 aid [V:WS2-007], but a newcomer is ineligible as advisor [V:WS2-009]; no package price | **2**: no EE automation price found; only the general development rate €110–150/h [V:WS3-005] | **2**: priced per conversation, amounts unpublished [V:WS3-004]; contact lists €140–1,590 + VAT [V:WS3-003] |
-| LV | **4**: catalogue bundles €2,990–7,440 [V:WS3-017][V:WS3-018]; €5,000 implementation [V:WS3-019]; LIAA 100% aid ≤ €5,000 [V:WS2-020], status uncertain [V:WS2-019] | **2**: funding exists (AI grants up to €200,000 [V:WS2-022]; EDIC testing ≤ €20,000 [V:WS3-046]) but no price list | **2**: no LV retainer price found; the LT agency covers LV [V:WS3-009] |
+| LV | **3** (corrected — see VL-008; was 4): catalogue bundles €2,990–7,440 [V:WS3-017][V:WS3-018]; €5,000 implementation [V:WS3-019]; LIAA 100% aid ≤ €5,000 [V:WS2-020] under a programme closed since 17.06.2025 [V:WS2-069] and a follow-on closed since 07.11.2025 [V:WS2-071] | **2**: funding exists (AI grants up to €200,000 [V:WS2-022]; EDIC testing ≤ €20,000 [V:WS3-046]) but no price list | **2**: no LV retainer price found; the LT agency covers LV [V:WS3-009] |
 | LT | **2**: only custom builds €9,500–15,000 [V:WS3-025]; configuration packages UNKNOWN | **3**: published €300–3,000+ [V:WS3-024]; the low band is not viable for a solo operator [E:A-WS5-19] | **3**: €2,850/month after a €3,750 first month, published [V:WS3-008]; one agency only |
 | G2 (foreign firms entering the Baltics) | n/a | n/a | Agencies sell Baltic market-entry outbound to foreign firms [V:WS3-053]; the retainer price above applies [V:WS3-008]; score as LT C (**3**) |
 
@@ -474,7 +476,7 @@ Fetched directly (not searched): claude.com/pricing; GitHub n8n `LICENSE.md` and
 - **WS3:** the model's price levels are built on WS3's published prices [V:WS3-005][V:WS3-008][V:WS3-017][V:WS3-019][V:WS3-024]. Any new published EE/LT CRM package, EE/LV retainer or pay-per-meeting price should replace A-WS5-13, A-WS5-19 or A-WS5-25, after which `WS5_models.py` should be re-run [E:A-WS5-13].
 - **WS6:** sales hours per win and churn are the weakest inputs [E:A-WS5-15][E:A-WS5-29]. WS6 reply, meeting and sales-cycle benchmarks should replace them.
 - **WS4:**
-  - The n8n licence lets the operator host client workflows [V:WS5-022], which makes him a processor (DPA, sub-processors).
+  - The n8n licence lets the operator host client workflows [V:WS5-022], which makes the operator a processor (DPA, sub-processors).
   - Lead generation relies on separate sending domains and mailboxes [E:A-WS5-30].
   - Art. 214(1)(e), not (d), is the supplier VAT-ID rule [V:WS5-016].
 - **WS2:** the EIS "digital advisor" rule (at least three similar projects in four years [V:WS2-009]) shuts the operator out of grant-funded EE projects at the start.

@@ -26,13 +26,15 @@ The session-wide WebSearch budget, shared by six parallel workstreams, ran out a
 
 The verification agent should treat every `UNKNOWN-P` as a claim still to be checked. A ready-made verification queue is in §7.
 
+> **Verifier note (2026-10-03).** Re-checked by search: the Lithuanian change of 22 April 2026 is confirmed on the VDAI page (VL-001). The named-employee scope could not be confirmed: four searches on vdai.lrv.lt and e-seimas.lrs.lt returned neither the FAQ nor the amended wording, and the consolidated text the index returned is the pre-amendment version (VL-002). The Estonian rule (VL-003) and the Latvian rule (VL-004) are confirmed. The LinkedIn ban on automation is confirmed by secondary summaries only (RT-004). Enforcement: an AKI precept-warning under the Electronic Communications Act (uploaded June 2024 per its file path) and a DVI decision document that surfaced in a commercial-notices search exist (LEAD VL-032, VL-033; contents not read), and VDAI publishes yearly decision lists (LEAD RT-010), but no fine amount was retrieved; enforcement stays UNKNOWN. No Russian-language search was run (the 30-search cap). See `verification_log.md`.
+
 ---
 
 ## 1. Key findings
 
 1. **Lithuania changed its rules on 22 Apr 2026.** Direct marketing to *legal entities* no longer needs prior consent. ERĮ Art. 81 was amended by law `XV-815` [V:WS4-029] [V:WS4-031].
    - The mechanism is an exception to the consent rule where the subscriber or registered user is a legal entity [V:WS4-036]. Every message must offer a free opt-out [V:WS4-035].
-   - Secondary sources say the exception also covers *named employees' work e-mails and work phone numbers* [V:WS4-034]. VDAI's own FAQ on this was not readable (UNKNOWN).
+   - Secondary sources say the exception also covers *named employees' work e-mails and work phone numbers* [V:WS4-034]. VDAI's own FAQ on this was not readable (UNKNOWN). (verifier note — see VL-002: four further searches could not retrieve the FAQ or the amended Art. 81 wording; the point stays secondary-source only.)
    - Before the change, VDAI required consent from the legal entity's manager [V:WS4-033]. Any Lithuanian guidance, vendor blog or agency claim written before April 2026 is therefore out of date.
 2. **Estonia: opt-out regime for legal persons.**
    - ESS § 103¹ allows e-marketing to legal persons if every message offers a free, easy refusal, and it bans further use once someone refuses [V:WS4-001] [V:WS4-002].
@@ -104,7 +106,7 @@ The verification agent should treat every `UNKNOWN-P` as a claim still to be che
 - **After a refusal:** use is prohibited once the user, subscriber or buyer has refused [V:WS4-002].
 - **Existing customers (soft opt-in):** contact data obtained from a buyer (natural or legal person) in a sale may be used for the seller's own *similar* products. An opt-out must be offered when the data is collected and in every message [V:WS4-003]. The search returned this text from an older consolidated version, and the current wording was not re-confirmed.
 - **Subsection numbering inside § 103¹:** not verified. The search extracts gave the content but not the subsection numbers (UNKNOWN; resolve: open § 103¹ on riigiteataja.ee and record which subsection covers legal persons, natural persons, the soft opt-in and sender identification).
-- **Natural persons:** prior consent required. UNKNOWN-P. This is implied by the legal-person carve-out and by AKI's guidance [V:WS4-004], but the natural-person clause itself was not extracted.
+- **Natural persons:** prior consent required. UNKNOWN-P. This is implied by the legal-person carve-out and by AKI's guidance [V:WS4-004], but the natural-person clause itself was not extracted. (verifier note — see VL-003: an older consolidated text (2017, pre-GDPR) returned by search states that a natural person's contact details need prior consent [LEAD VL-037]; the current wording was not seen.)
 
 **Generic vs named-employee addresses — AKI guidance.** This is Andmekaitse Inspektsioon's guidance on electronic contact data in direct marketing, last updated 2015 (pre-2023, pre-GDPR).
 - A legal entity's contact details may be used without prior consent, but the entity must be able to prohibit further use [V:WS4-004].
@@ -198,9 +200,9 @@ None of the GDPR text could be re-read this session (UNKNOWN-P). The analyst's r
 
 | Country | Who supervises e-marketing rules (evidence) | Verified cases / fines 2020–2026 | Cheapest resolution |
 |---|---|---|---|
-| EE | AKI publishes the ESS § 103¹ guidance [V:WS4-004]. It issued a precept-warning on use of electronic contact data in 2020, with the addressee anonymised (LEAD [WS4-007]). The ESS provision that gives AKI this competence was not extracted. | UNKNOWN: none verified. UNKNOWN-P: Estonia has historically punished GDPR breaches through misdemeanour procedure and penalty payments rather than administrative fines. Whether a 2025–2026 reform changed this is UNKNOWN. | AKI annual reports (aastaraamat) 2021–2025 and the precepts published on aki.ee |
-| LV | DVI regularly receives complaints about commercial e-mail and SMS [V:WS4-018] and interprets ISPL Art. 9 [V:WS4-016]. The role of PTAC (consumer authority) in this area is UNKNOWN. | UNKNOWN. DVI decision documents appeared in search results but could not be read. The companies are deliberately not named, so as not to imply wrongdoing. | DVI decisions page ("Lēmumi") and DVI annual public reports 2021–2025 |
-| LT | VDAI issues the Art. 81 guidance [V:WS4-031]. Two VDAI decisions of 2025 surfaced in direct-marketing searches (LEAD [WS4-039] [WS4-040]). VDAI's 2025 annual review was published on 2026-07-01 (LEAD [WS4-041]). The role of RRT (the communications regulator) under Art. 81 is UNKNOWN. | UNKNOWN: the subject and outcome of the 2025 decisions were not extracted. | Read the 2025 review [WS4-041] and the two decision PDFs |
+| EE | AKI publishes the ESS § 103¹ guidance [V:WS4-004]. It issued a precept-warning on use of electronic contact data in 2020, with the addressee anonymised (LEAD [WS4-007]). The ESS provision that gives AKI this competence was not extracted. | UNKNOWN: no fine verified. AKI precept-warnings under the Electronic Communications Act are published for 2020 and, by file path, June 2024 (LEAD VL-032; contents not read). UNKNOWN-P: Estonia has historically punished GDPR breaches through misdemeanour procedure and penalty payments rather than administrative fines. Whether a 2025–2026 reform changed this is UNKNOWN. | AKI annual reports (aastaraamat) 2021–2025 and the precepts published on aki.ee |
+| LV | DVI regularly receives complaints about commercial e-mail and SMS [V:WS4-018] and interprets ISPL Art. 9 [V:WS4-016]. The role of PTAC (consumer authority) in this area is UNKNOWN. | UNKNOWN. DVI decision documents appeared in search results but could not be read (LEAD VL-033). The companies are deliberately not named, so as not to imply wrongdoing. | DVI decisions page ("Lēmumi") and DVI annual public reports 2021–2025 |
+| LT | VDAI issues the Art. 81 guidance [V:WS4-031]. Two VDAI decisions of 2025 surfaced in direct-marketing searches (LEAD [WS4-039] [WS4-040]). VDAI's 2025 annual review was published on 2026-07-01 (LEAD [WS4-041]). The role of RRT (the communications regulator) under Art. 81 is UNKNOWN. | UNKNOWN: the subject and outcome of the 2025 decisions were not extracted; VDAI's 2025 decision list exists (LEAD RT-010) but fine amounts were not retrieved. | Read the 2025 review [WS4-041] and the two decision PDFs |
 
 **What this means:** with no verified enforcement data, legal risk cannot be calibrated against expected fines. The §8 scores therefore rest on how clear the rules are, not on how hard they are enforced [E:A-WS4-01].
 
@@ -371,7 +373,7 @@ All UNKNOWN-P.
 
 ### 4.4 LinkedIn User Agreement — automation and scraping
 
-All UNKNOWN-P: linkedin.com was blocked and no search quota remained.
+All UNKNOWN-P: linkedin.com was blocked and no search quota remained. (corrected — see RT-004: a secondary summary of section 8.2 of the User Agreement confirms the ban on scraping software, bots, plug-ins and unauthorised automated methods [V:RT-004]; the primary text was still not read.)
 - In the analyst's reading, LinkedIn's User Agreement ("Dos and Don'ts") prohibits:
   - software, scripts, bots, crawlers or browser plug-ins that scrape or copy profiles or other data;
   - unauthorised automated methods for adding or downloading contacts or sending messages;

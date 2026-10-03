@@ -22,12 +22,14 @@
 
 So a competitor missing from this file is **not** evidence of a gap unless stated. Prices exclude VAT unless stated. Languages and coverage are the competitors' own claims; their actual delivery capacity is UNKNOWN.
 
+> **Verifier note (2026-10-03).** Re-checked by search: Fontakt, Ripe Leads and eXpanby coverage and the Ripe Leads prices (VL-010 to VL-013) and the Latvian catalogue prices (VL-014); all confirmed. Added: eXpanby is a Pipedrive Platinum Partner (VL-013); the Pipedrive tier rules (RT-003); four Estonian automation agencies (RT-005 to RT-008). Corrections: Estonian automation is no longer unsearched, and the Latvian catalogue prices are historical list prices (VL-014). Documentary check only: aigentas.lt prices (VL-026). See `verification_log.md`.
+
 ---
 
 ## 1. Key findings
 1. **The claimed edge is already taken.** At least three firms already claim to cover all three Baltic states in English, Russian and the local languages:
-   - Fontakt (Tallinn; founded 2007; about 100 staff [V:WS3-001]) represents clients in ET/LV/LT/RU/EN, plus FI/SV/DE [V:WS3-002].
-   - Ripe Leads (Vilnius) runs campaigns in LT/LV/ET/RU/EN, plus PL/CS/SK/DE [V:WS3-009].
+   - Fontakt (Tallinn; founded 2007; about 100 staff [V:WS3-001]) represents clients in ET/LV/LT/RU/EN, plus FI/SV/DE [V:WS3-002]. (verifier note — see VL-010: on Fontakt's Baltic outsourcing page Russian is listed as a calling language, not among the native or fluent agent languages [V:VL-010].)
+   - Ripe Leads (Vilnius) runs campaigns in LT/LV/ET/RU/EN, plus PL/CS/SK/DE [V:WS3-009]. (verifier note — see VL-012: another Ripe Leads page says "outreach in 7 languages" (LEAD VL-012), so the Russian-language claim rests on one page.)
    - Pipedrive partner eXpanby (Riga) lists EN/ET/LV/LT/RU/UK [V:WS3-013].
 
    All three also offer Estonian and Latvian, which the operator does not.
@@ -88,7 +90,7 @@ Partners also sell across borders, so each country's real supply is larger than 
 |---|---|---|---|---|---|
 | Dominate Sales OÜ | EE (Tallinn) | Pipedrive | EN, ET, LV | Results-based implementation with a 60-day commitment; free first consultation; price not published | [V:WS3-012, WS3-015, WS3-029] |
 | TechPeer | UNKNOWN | Pipedrive | ET page | Installation, customisation, optimisation; price not published in extract | [V:WS3-016] |
-| eXpanby SIA | LV (Riga) | Pipedrive | EN, ET, LV, LT, RU, UK | Implementation, migration, API work, sales automation, training; industries include logistics & transport and manufacturing; price not published | [V:WS3-013] |
+| eXpanby SIA | LV (Riga) | Pipedrive | EN, ET, LV, LT, RU, UK | Implementation, migration, API work, sales automation, training; industries include logistics & transport and manufacturing; price not published; Pipedrive Platinum Partner, the top tier [V:VL-035] (verifier note — see VL-013) | [V:WS3-013] [V:VL-013] |
 | Squalio | UNKNOWN (sells in LV) | Pipedrive | LV (catalogue) | €2,990 / €3,990 / €4,490 / €4,990 for 12 months; €7,440 for 24 months; licences + 12 h implementation + 1 h/month support | [V:WS3-017, WS3-018] |
 | IDEAPORT RIGA | LV (Riga) | HubSpot | UNKNOWN | About 90 staff; enterprise CRM; clients in the Nordics, Baltics, UK, NL, DE and CH; price not published | [V:WS3-022] |
 | Pivot Marketing OÜ | EE | HubSpot | UNKNOWN | Marketing and sales automation; price not published | [V:WS3-021] |
@@ -140,7 +142,7 @@ The LEAD rows come from Fontakt's own "Top 5" blog lists, which are competitor-a
 | Fontakt | EE | CRM development work | €110/h; advanced €150/h | [V:WS3-005] |
 
 **By country**
-- **Estonia:** no dedicated Estonian AI/automation agency with published prices was identified. UNKNOWN (resolve: ET queries "protsesside automatiseerimine hind", "tehisintellekti lahendused ettevõttele", "Make partner Eesti", "n8n Eesti"; the Make partner directory filtered to Estonia).
+- **Estonia:** (corrected — see RT-005) at least four Estonian agencies advertise AI or workflow automation: Growlinee, advertised from EUR 100 [V:RT-005]; WebSystems [V:RT-006]; ADLAB [V:RT-007]; Agentify [V:RT-008]. A search answer also gave about EUR 300 for a simple workflow and about EUR 800 for multi-system workflows (LEAD RT-009). Prices of the other three, and whether any covers LV or LT, are UNKNOWN (resolve: open the four service pages; the Make partner directory filtered to Estonia).
 - **Latvia:** the EDIH catalogue's business-process sections list at least 45 providers [E:A-WS3-03]. Which of them sell workflow automation, and at what price, is UNKNOWN (resolve: read the dih.lv "Biznesa procesi" item pages; LV query "procesu automatizācija cena").
 - **Lithuania:** the most visible low-end market. At least 3 AI-implementation sellers were verified [V:WS3-024, WS3-034, WS3-035], with entry prices from €300 [V:WS3-024].
 - **Freelancers (aggregate only):** UNKNOWN (resolve: Upwork/Fiverr talent search filtered by country for "Pipedrive", "HubSpot", "n8n", "Make", "lead generation"; record counts only, no names; overlaps with WS2). Estonian Pipedrive searches also turned up individual consultants' personal sites; per the personal-data rule they are not named or counted.
@@ -170,12 +172,12 @@ The LEAD rows come from Fontakt's own "Top 5" blog lists, which are competitor-a
 |---|---|---|---|---|
 | CRM setup / implementation | Fontakt own-CRM setup €110/h [V:WS3-005]. Pipedrive/HubSpot partner prices not published [V:WS3-012, WS3-016, WS3-021]. Grant-funded projects: up to about €10,000 in total, with up to €2,500 of the aid usable for a consultant [E:A-WS3-04] | Pipedrive licences + 12 h implementation + 1 h/month support: €2,990–4,990 (12 months), €7,440 (24 months) [V:WS3-017, WS3-018]. Implied service value about €1,990, i.e. about €83/h [E:A-WS3-01]. Generic CRM implementation €5,000 [V:WS3-019]. Packaged CRM: €5,880 one-off, or €9,900 with implementation [V:WS3-045, WS3-043] | Custom CRM €9,500–15,000 (basic), €15,000–25,000 (mid-level) [V:WS3-025]. Partner prices for ready-made CRM not published [V:WS3-014, WS3-023]. Typical implementation 4–8 weeks (vendor claim) [V:WS3-057] | — |
 | CRM support / retainer | Fontakt CRM €449–1,349/month including software, i.e. €89.80–134.90 per user-month [V:WS3-005] [E:A-WS3-06] | 1 h/month support bundled in catalogue packages [V:WS3-017]. Meemo CRM+ €2,376 for 2 years including updates and support [V:WS3-044] | UNKNOWN (resolve: quote requests to Sonaro / Deeps) | — |
-| Automation project | Fontakt development work €110–150/h [V:WS3-005]. Agency packages UNKNOWN | UNKNOWN (resolve: dih.lv business-process items) | €300 entry; €450–1,200; €1,500–3,000+ [V:WS3-024] | — |
+| Automation project | Fontakt development work €110–150/h [V:WS3-005]. Estonian agencies advertise from EUR 100 [V:RT-005]; EUR 300 simple and EUR 800 multi-system are a LEAD RT-009 (corrected — see RT-005) | UNKNOWN (resolve: dih.lv business-process items) | €300 entry; €450–1,200; €1,500–3,000+ [V:WS3-024] | — |
 | Lead-gen retainer | Fontakt: per meaningful conversation, rate not published [V:WS3-004] | As Estonia (Fontakt). Local telemarketing prices UNKNOWN | Ripe Leads €3,750 for month 1, then €2,850/month [V:WS3-008] | Ripe Leads covers all three countries: about €35,100 in year 1, averaging €2,925/month [E:A-WS3-02] |
 | Pay-per-meeting | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN (resolve: quote requests; WS5) |
 | Contact data | Fontakt Estonian lists €140–1,590 per department list [V:WS3-003] | UNKNOWN (Lursoft / Firmas.lv not searched) | UNKNOWN (Rekvizitai not searched) | Fontakt claims 668,000+ companies (vendor claim) [V:WS3-006] |
 
-**Recency flag:** the dih.lv items show no visible publication date in the extracts. The Pipedrive packages use the plan names Essential / Advanced / Professional, so they may predate a plan rename and reflect pre-2025 prices. UNKNOWN (resolve: check the item pages for dates).
+**Recency flag:** the dih.lv items show no visible publication date in the extracts. The Pipedrive packages use the plan names Essential / Advanced / Professional, so they may predate a plan rename and reflect pre-2025 prices. UNKNOWN (resolve: check the item pages for dates). (corrected — see VL-014: the 2026-10-03 re-check returned the same prices, still undated; both LIAA programmes behind the catalogue are closed [V:WS2-069][V:WS2-071], so these are historical list prices of a closed-grant regime, and the Pipedrive bundles include licences.)
 
 ---
 
@@ -252,7 +254,7 @@ WS2 also covers the use of Russian-origin CRMs.
 ## 9. Conflicts between sources
 - **Fontakt's language list:** the about-us extract lists seven languages (no German); the presales page lists eight, including German [V:WS3-002]. Both include EN, RU, ET, LV and LT, so the conclusion is unaffected. I trust the presales page as more specific.
 - **Fontakt's age:** founded in 2007 [V:WS3-001] versus "20+ years of experience" [V:WS3-050]. I trust the founding year because it is specific; the "20+" is marketing rounding or the founders' prior experience.
-- **Pipedrive partner tiers:** "Authorized, Gold, Platinum" (from a search answer) [LEAD:WS3-028] versus Dominate Sales described as an "Elite" partner [V:WS3-015]. Unresolved (the tiers may have been renamed); not decision-critical.
+- **Pipedrive partner tiers:** "Authorized, Gold, Platinum" (from a search answer) [LEAD:WS3-028] versus Dominate Sales described as an "Elite" partner [V:WS3-015]. Unresolved (the tiers may have been renamed); not decision-critical. (verifier note — see RT-003: Authorized, Gold and Platinum are confirmed on Pipedrive's programme page [V:RT-003] and eXpanby is Platinum [V:VL-035]; "Elite" does not appear on that page.)
 - **Pipedrive in Lithuanian:** a Lithuanian-language search answer claimed Pipedrive offers Lithuanian-language support but gave no source URL, so it was not recorded. The lead analyst did not find Lithuanian in Pipedrive's UI language list [LEAD:WS0-002]. I trust neither until the Pipedrive support article is checked.
 - **dih.lv "CRM sistēma":** there are two listings (items 206 and 339). The €5,000 price is confirmed for item 339 only [V:WS3-019]; item 206's price is UNKNOWN.
 
@@ -292,7 +294,7 @@ Competition intensity score: 1–5, where 5 = least competition (rubric in [E:A-
 | Country | Component | Competition score | Rationale (source ids) | Published price band | Trilingual all-Baltic player present? |
 |---|---|---|---|---|---|
 | EE | A — CRM setup | 2 [E:A-WS3-05] | Pipedrive hub in Tallinn [V:WS3-026]; Estonian Pipedrive providers [V:WS3-012, WS3-016]; HubSpot partners including foreign ones [V:WS3-021, WS3-031]; Fontakt CRM [V:WS3-005]; eXpanby works in Estonian [V:WS3-013] | €110/h (Fontakt) [V:WS3-005]; partner prices not published | Yes: eXpanby (claimed) [V:WS3-013]; Fontakt [V:WS3-002] |
-| EE | B — automation | 3, provisional [E:A-WS3-05] | Not searched; only Pivot Marketing [V:WS3-021] and Fontakt's development work [V:WS3-005] seen | €110–150/h (Fontakt development) [V:WS3-005]; packages UNKNOWN | UNKNOWN |
+| EE | B — automation | 3 [E:A-WS3-05] (corrected — see RT-005: no longer "not searched"; four agencies found, none verified as all-Baltic EN + RU + local, so the rubric for 2 is not met) | Pivot Marketing [V:WS3-021], Fontakt's development work [V:WS3-005] and four agencies [V:RT-005] [V:RT-006] [V:RT-007] [V:RT-008] | €110–150/h (Fontakt development) [V:WS3-005]; packages UNKNOWN | UNKNOWN |
 | EE | C — lead gen | 2 [E:A-WS3-05] | Fontakt HQ, about 100 staff [V:WS3-001]; Ripe Leads works in Estonian [V:WS3-009] | €2,850–3,750/month (Ripe Leads) [V:WS3-008]; Fontakt per conversation, not published [V:WS3-004]; lists €140–1,590 [V:WS3-003] | Yes: Fontakt, Ripe Leads [V:WS3-002, WS3-009] |
 | LV | A — CRM setup | 2 [E:A-WS3-05] | eXpanby HQ (six languages) [V:WS3-013]; Squalio packages [V:WS3-017]; IDEAPORT RIGA [V:WS3-022]; at least 45 catalogue providers [E:A-WS3-03]; Pipedrive Latvian entity [V:WS3-027] | €2,990–7,440 including licences [V:WS3-017, WS3-018]; €5,000–9,900 [V:WS3-019, WS3-043]; about €83/h implied [E:A-WS3-01] | Yes: eXpanby [V:WS3-013] |
 | LV | B — automation | 3, provisional [E:A-WS3-05] | eXpanby offers sales automation and API work [V:WS3-013]; the catalogue suggests many providers [E:A-WS3-03]; agencies not searched | UNKNOWN | UNKNOWN |

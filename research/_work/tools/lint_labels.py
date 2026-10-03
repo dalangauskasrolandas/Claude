@@ -10,6 +10,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 
 LABEL_RE = re.compile(r'\[(?:V|E):[^\]]+\]|UNKNOWN|VERIFIED|ESTIMATE|\[V\]|\[E\]')
 STRIP_PATTERNS = [
+    r'§\s*\d+(?:\.\d+)*',
     r'https?://\S+', r'\[(?:V|E):[^\]]+\]', r'`[^`]*`',
     r'\bA-WS\d-\d+\b', r'\bWS\d-\d+\b', r'\bWS\d\b', r'\bVL-\d+\b', r'\bRT-\d+\b',
     r'\b[a-z]{2,}(?:_[a-z0-9]+)+\b',                  # dataset codes like isoc_eb_ai
@@ -28,7 +29,7 @@ STRIP_PATTERNS = [
     r'\bQ[1-4]\b', r'\bH[12]\b', r'\bG[12]\b', r'\bB2[BC]\b', r'\bn8n\b', r'\b365\b(?=\s|$)', r'\b[0-9]+G\b',
     r'\bEU-?2[78]\b', r'\bA\+B(?:\+C)?\b', r'\bS[1-9]\b', r'\bS(?:9|10)\b',
     r'^\s*\d+[.)]\s', r'^#+\s*[\d.]+\s', r'^\s*[-*]\s*\d+[.)]\s',
-    r'\bISO\s?\d+\b', r'\b(?:GPT|Claude|Llama)[- ]?\d[\w.]*\b', r'\bWeb\d\b', r'\bv\d+(?:\.\d+)*\b',
+    r'\bISO\s?\d+\b', r'\bBitrix24\b', r'\b[UK]\d+\b', r'\bSP-\d+\b', r'\b0[0-6]\b', r'§\s*\d+(?:\.\d+)*', r'\b(?:GPT|Claude|Llama)[- ]?\d[\w.]*\b', r'\bWeb\d\b', r'\bv\d+(?:\.\d+)*\b',
     r'\b(?:Pillar|pillar)\s+(?:II|2)\b', r'\bII\b', r'\b1st|2nd|3rd|\d+th\b',
 ]
 STRIP_RE = [re.compile(p, flags=re.I if i not in (6,7) else 0) for i, p in enumerate(STRIP_PATTERNS)]

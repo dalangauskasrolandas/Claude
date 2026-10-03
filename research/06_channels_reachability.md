@@ -22,6 +22,8 @@
 
 Nothing below is filled from memory. Where WS2 or WS3 had already verified a source on an overlapping topic (EDIH catalogue, Estonian grant rules, CRM partner directories), I cite it by id instead of duplicating it.
 
+> **Verifier note (2026-10-03).** Re-checked by search: the ELEA and LINEKA member counts, both corrected (VL-021, VL-022). Documentary check plus calendar computation: all verified events fall on weekdays, with minor label corrections (VL-030). Corrections: the Latvian EDIC catalogue has lost its LIAA-funded buyers while both LIAA programmes are closed (VL-008). Added: the Pipedrive partner tiers and certification staffing (RT-003). The 15–20 interviews per country need several association lists, not one. Online communities, outreach benchmarks and sales-cycle data stay UNKNOWN; the only reply-rate figure found is a vendor claim (LEAD RT-001). See `verification_log.md`.
+
 **Process note for the lead analyst.** Rows WS1-005 to WS1-013 in `sources_WS1.csv` duplicate WS6-001 to WS6-009. They were written there by the WS6 agent through a helper-script name collision in the shared scratchpad, and removing them was not permitted. The WS6 copies are canonical for this file.
 
 ---
@@ -29,15 +31,15 @@ Nothing below is filled from memory. Where WS2 or WS3 had already verified a sou
 ## 1. Key findings
 
 1. **Every verified in-window event is a weekday daytime event.** 19 of 19 verified events fall on Tue–Fri, and none on a weekend [E:A-WS6-01]. In-person networking is therefore a DAY channel that costs annual leave: even a minimal 7-event shortlist covering all three countries needs 8–11 working days off [E:A-WS6-02].
-2. **Event tickets compete with the whole budget.** The lowest published tickets at the three events with known prices add up to €707, against a total budget of €200–500 [E:A-WS6-03]. Examples: TechChill General pass €359 [V:WS6-023]; RUP.ee accountants' conference €239–349 [V:WS6-010]; sTARTUp Day €109–169 [V:WS6-019].
-3. **Estonia has the densest verified calendar for the target segments, but it is in Estonian.** 13 of the 19 verified events are in EE [E:A-WS6-01]. This is partly an artefact: one organiser's media kit lists many events, and LV was searched least. 12 of the 13 EE events are listed in Estonian [V:WS6-010][V:WS6-011][V:WS6-012][V:WS6-013][V:WS6-014]; programme language is UNKNOWN (resolve: programme pages). This is where the operator's lack of Estonian bites (inference).
+2. **Event tickets compete with the whole budget.** The lowest published tickets at the three events with known prices add up to €707, against a total budget of €200–500 [E:A-WS6-03]; with regular or visitor tickets the total is €837 [E:A-WS9-05] (verifier note — see VL-030). Examples: TechChill General pass €359 [V:WS6-023]; RUP.ee accountants' conference €239–349 [V:WS6-010]; sTARTUp Day €109–169 [V:WS6-019].
+3. **Estonia has the densest verified calendar for the target segments, but it is in Estonian.** 13 of the 19 verified events are in EE [E:A-WS6-01]. This is partly an artefact: one organiser's media kit lists many events, and LV was searched least. 11 of the 13 EE events are listed in Estonian, one has an Estonian/English title and one is in English (corrected — see VL-030) [V:WS6-010][V:WS6-011][V:WS6-012][V:WS6-013][V:WS6-014]; programme language is UNKNOWN (resolve: programme pages). This is where the operator's lack of Estonian bites (inference).
 4. **Accounting firms (a client segment and a referral pool) gather in EE in Nov–Dec 2026:**
    - PwC conference, 25–26 Nov, ~500 participants [V:WS6-011]
    - RUP.ee conference, 17 Nov, with an online option [V:WS6-010]
    - two Bonnier accountant events with 100 and 170 listed participants (11 Nov, 10 Dec) [V:WS6-013][V:WS6-014]
 
    LT accountant events are LEAD only [WS6-028]; LV is UNKNOWN (resolve: LV accountants' association and event search).
-5. **Logistics:** the largest verified gathering is LT's Transport Innovation Forum (14–15 Oct 2026, LITEXPO Vilnius, 800+ participants from 20+ countries) [V:WS6-024]. It is relevant to G1 logistics and to G2. EE's Logistika aastakonverents is on 9 Dec, with 105 listed participants [V:WS6-014][V:WS6-015]. Logistics associations are small: ELEA has 65 members [V:WS6-007] and LINEKA 42 [V:WS6-008]; LAFF's list is public but its count is UNKNOWN [V:WS6-009].
+5. **Logistics:** the largest verified gathering is LT's Transport Innovation Forum (14–15 Oct 2026, LITEXPO Vilnius, 800+ participants from 20+ countries) [V:WS6-024]. It is relevant to G1 logistics and to G2. EE's Logistika aastakonverents is on 9 Dec, with 105 listed participants [V:WS6-014][V:WS6-015]. Logistics associations are small: ELEA has 65–68 members [V:WS6-007] (LEAD VL-021) and LINEKA 42 in an undated report [V:WS6-008] versus 60 in a report dated 17 Apr 2021 [V:VL-022] (corrected — see VL-021, VL-022); ELEA's members average 91 employees (LEAD VL-021), so many are above the up-to-fifty scope; LAFF's list is public but its count is UNKNOWN [V:WS6-009].
 6. **The async channels with verified scale are member directories:**
    - Kaubanduskoda: ~3,402 listed members [V:WS6-001]
    - LTRK: 6,000 members, including member associations [V:WS6-003]
@@ -46,7 +48,7 @@ Nothing below is filled from memory. Where WS2 or WS3 had already verified a sou
 
    They support evening list-building. A single sector association, though, cannot yield 15–20 interviews unless 23–48% of members accept [E:A-WS6-04].
 7. **EDIH routing differs sharply by country:**
-   - **LV:** the EDIC (dih.lv, run by Latvia IT Cluster) is a mandatory first step before LIAA digitalisation support [V:WS3-020]. Its public catalogue lists priced third-party CRM packages at €2,990–7,440 excl. VAT [V:WS3-017][V:WS3-018]. This is a live async routing channel if an outside provider can list there (UNKNOWN).
+   - **LV:** the EDIC (dih.lv, run by Latvia IT Cluster) is a mandatory first step before LIAA digitalisation support [V:WS3-020]. Its public catalogue lists priced third-party CRM packages at €2,990–7,440 excl. VAT [V:WS3-017][V:WS3-018]. This is an async routing channel if an outside provider can list there (UNKNOWN), but its LIAA-funded buyers are absent while both programmes are closed (corrected — see VL-008) [V:WS2-069] [V:WS2-071]; EDIC's own test-before-invest service may still run (availability UNKNOWN [V:WS3-046]).
    - **EE:** grant-funded advisors need ≥3 similar projects in the previous 4 years [V:WS2-009][V:WS2-011], which shuts out a newcomer.
    - **LT:** UNKNOWN.
 8. **CRM vendor directories already list Baltic partners.** Pipedrive lists partners in Tallinn, Riga and Kaunas [V:WS3-012][V:WS3-013][V:WS3-014]; HubSpot lists partners in EE, LV and LT [V:WS3-021][V:WS3-022][V:WS3-023]. These are competitors as much as channels; whether vendors route leads to new partners is UNKNOWN (resolve: WS5 partner-programme terms).
@@ -59,7 +61,7 @@ Nothing below is filled from memory. Where WS2 or WS3 had already verified a sou
 | | Estonia (EE) | Latvia (LV) | Lithuania (LT) |
 |---|---|---|---|
 | Cross-sector chambers / SME bodies | Kaubanduskoda ~3,402 listed [V:WS6-001]; EVEA >6,000 represented [V:WS6-006] | LTRK 6,000 incl. associations [V:WS6-003] | ALCCIC ~2,000 [V:WS6-004]; Vilnius CCIC 550+ [V:WS6-005] |
-| Logistics association | ELEA 65 (2026) [V:WS6-007] | LAFF list public; count UNKNOWN [V:WS6-009] | LINEKA 42 [V:WS6-008] |
+| Logistics association | ELEA 65–68 (2026) [V:WS6-007] (corrected — see VL-021) | LAFF list public; count UNKNOWN [V:WS6-009] | LINEKA 42 (undated) to 60 (2021) [V:WS6-008] [V:VL-022] (corrected — see VL-022) |
 | Verified in-window events | 13 [E:A-WS6-01] | 2 [E:A-WS6-01] | 4 [E:A-WS6-01] |
 | Online communities (RU/LT/EN) | UNKNOWN | UNKNOWN | UNKNOWN |
 | EDIH / grant routing | Grant-funded advice needs ≥3 prior similar projects [V:WS2-009] | EDIC gateway + public provider catalogue [V:WS3-020][V:WS3-019] | UNKNOWN |
@@ -77,7 +79,7 @@ Nothing below is filled from memory. Where WS2 or WS3 had already verified a sou
 |---|---|---|---|---|---|
 | Eesti Kaubandus-Tööstuskoda (Chamber of Commerce and Industry) | cross-sector, mostly SMEs | ~3,402 members listed (n.d.) [V:WS6-001]; states ">3,500 direct members", mostly SMEs [V:WS6-002] | Yes, member page [V:WS6-001] | Directory ASYNC; events DAY | Membership fee UNKNOWN (resolve: koda.ee membership page). |
 | EVEA (SME association) | cross-sector SMEs | represents >6,000 enterprises through direct and collective members [V:WS6-006]; size-class split is LEAD [WS6-031] | Member page exists [V:WS6-006]; completeness UNKNOWN | ASYNC | Collective members are other associations, so 6,000 is represented reach, not direct reach [V:WS6-006]. |
-| ELEA (logistics & freight forwarding) | G1 logistics | 65 members incl. 13 associates (2026) [V:WS6-007] | Yes [V:WS6-007] | ASYNC | Consistent with the brief's prior lead of ~65 [V:WS6-007]. |
+| ELEA (logistics & freight forwarding) | G1 logistics | 65 members incl. 13 associates (2026) [V:WS6-007]; 68 incl. 17 associates and an average of 91 employees per member on another ELEA page (LEAD VL-021) (corrected — see VL-021) | Yes [V:WS6-007] | ASYNC | Consistent with the brief's prior lead of ~65 [V:WS6-007]. |
 | Eesti Masinatööstuse Liit (machinery industry) | G1 manufacturing exporters | UNKNOWN (resolve: emliit.ee members page) | UNKNOWN | events DAY | Runs an annual export-management conference; the 2026 edition was 15 Jan 2026 [V:WS6-017]. |
 | Accountants' professional body | accounting firms | UNKNOWN (resolve: search "Eesti Raamatupidajate Kogu liikmete arv") | UNKNOWN | — | Accountants were found via conferences instead (§3.2). |
 
@@ -96,7 +98,7 @@ Nothing below is filled from memory. Where WS2 or WS3 had already verified a sou
 |---|---|---|---|---|---|
 | Association of Lithuanian Chambers of Commerce, Industry and Crafts (ALCCIC) | cross-sector; regional chambers in Kaunas, Klaipėda, Šiauliai, Panevėžys | ~2,000 members (n.d.) [V:WS6-004] | UNKNOWN | Directory/regional events: MIXED | The four regional chambers listed do not include Vilnius [V:WS6-004]. |
 | Vilnius Chamber of Commerce, Industry and Crafts | cross-sector, Vilnius | 550+ companies and education institutions (older site, n.d.) [V:WS6-005] | UNKNOWN | MIXED | Counted separately from ALCCIC; overlap UNKNOWN. |
-| LINEKA (forwarders & logistics) | G1 logistics | 42 members (41 companies + 1 school) [V:WS6-008] | Activity report public [V:WS6-008]; member list UNKNOWN | ASYNC | — |
+| LINEKA (forwarders & logistics) | G1 logistics | 42 members (41 companies + 1 school) in an undated report [V:WS6-008]; 60 members in a report dated 17 Apr 2021 [V:VL-022]; "over 40" on the About page [V:VL-031] (corrected — see VL-022) | Activity report public [V:WS6-008]; member list UNKNOWN | ASYNC | — |
 | LBAA (accountants & auditors) | accounting | UNKNOWN; Facebook page exists (LEAD) [WS6-032] | UNKNOWN | ASYNC (FB) | Resolve: LBAA site and Facebook follower count. |
 | LiMA (marketing association); Lithuanian Sales Association | sales/marketing buyers (component C) | UNKNOWN | — | events DAY | Event organisers [V:WS6-025]; sales-association event is LEAD [WS6-026]. |
 
@@ -120,7 +122,7 @@ All weekdays were computed from the verified dates. Bonnier B2B participant figu
 | EE-12 | "Mis muutub raamatupidaja töös 2027?" (accountants) | 10 Dec 2026 (Thu) | EE | accountants → clients + referral partners | 170 listed [V:WS6-014] | UNKNOWN | ET | DAY |
 | EE-13 | sTARTUp Day 2027 | 27–29 Jan 2027 (Wed–Fri) | Tartu | startups, "traditional entrepreneurs", investors → G1 general, G2 | UNKNOWN (Dealroom's 3,000+ is LEAD [WS6-020]) | €109–169 incl. VAT [V:WS6-019] | EN | DAY [V:WS6-018] |
 | LV-1 | RIGA COMM 2026 (business-technology fair) | 8–9 Oct 2026 (Thu–Fri), 10:00–17:00 / 10:00–16:00 | Ķīpsala, Riga | entrepreneurs, executives buying business tech → A/B demand; the exhibition covers digital business solutions and services, so competitors are likely among exhibitors (inference) | 2,700+ [V:WS6-021] | UNKNOWN | LV/EN site | DAY |
-| LV-2 | TechChill 2027 | 17 Mar (side events), 18–19 Mar 2027 (Wed–Fri) | Riga | startup founders, investors → G2/tech; low SME-buyer relevance | UNKNOWN | €359 General [V:WS6-023] | EN | DAY |
+| LV-2 | TechChill 2027 | 17 Mar (Wed, side events), 18–19 Mar 2027 (Thu–Fri) (corrected — see VL-030) | Riga | startup founders, investors → G2/tech; low SME-buyer relevance | UNKNOWN | €359 General [V:WS6-023] | EN | DAY |
 | LT-1 | Transport Innovation Forum 2026 | 14–15 Oct 2026 (Wed–Thu) | LITEXPO, Vilnius | transport & logistics → G1 logistics, G2 (international) | 800+ from 20+ countries [V:WS6-024] | UNKNOWN | EN/LT | DAY |
 | LT-2 | LiMA MarTech'26 | 15 Oct 2026 (Thu) | LT, venue UNKNOWN | marketing technology → B/C buyers | UNKNOWN | UNKNOWN | LT | DAY [V:WS6-025] |
 | LT-3 | LiMA DAY'26 | 19 Nov 2026 (Thu), 09:00–19:00 | LT, venue UNKNOWN | marketers → C buyers | UNKNOWN | UNKNOWN | LT | DAY [V:WS6-025] |
@@ -184,13 +186,13 @@ Fit: ASYNC (reading and posting can be done in the evening).
 **CRM vendors**
 - Pipedrive's service-partner directory lists partners in Tallinn [V:WS3-012], Riga [V:WS3-013] and Kaunas [V:WS3-014]. HubSpot's marketplace lists Solutions Partners in EE [V:WS3-021], LV [V:WS3-022] and LT [V:WS3-023].
 - These directories are buyer-facing, so they are an inbound discovery channel (ASYNC once listed). They also show established incumbents competing for the same buyers.
-- Unknowns: the tier or certification needed to be listed, and whether vendors pass leads to partners (resolve: WS5 partner-programme terms; Pipedrive, HubSpot and Zoho partner pages).
+- Unknowns: whether vendors pass leads to partners, and the tiers for HubSpot and Zoho (resolve: WS5 partner-programme terms; HubSpot and Zoho partner pages). (verifier note — see RT-003: for Pipedrive, the Authorized tier needs one certified sales expert and one certified customer-support expert, so a one-person operator may not meet the entry tier; whether one person can hold both certifications is UNKNOWN [V:RT-003].)
 
 **Web agencies**
 - UNKNOWN in EE, LV and LT; not searched (resolve: 5 B2B web agencies per country that do not list CRM or automation services; ask in discovery whether clients request CRM integration).
 
 **EDIHs and grant intermediaries**
-- **LV:** LIAA digitalisation-support applicants must first do an EDIC digital-maturity test and roadmap [V:WS3-020]. The EDIC catalogue lists priced third-party packages: Pipedrive with partner implementation support at €2,990 excl. VAT [V:WS3-017], up to €7,440 [V:WS3-018], and a generic CRM implementation at €5,000 [V:WS3-019]. The catalogue is therefore a live, async routing point. Whether a foreign (Estonian FIE) provider can list is UNKNOWN (resolve: dih.lv provider-registration terms).
+- **LV:** LIAA digitalisation-support applicants must first do an EDIC digital-maturity test and roadmap [V:WS3-020]. The EDIC catalogue lists priced third-party packages: Pipedrive with partner implementation support at €2,990 excl. VAT [V:WS3-017], up to €7,440 [V:WS3-018], and a generic CRM implementation at €5,000 [V:WS3-019]. The catalogue would be an async routing point, but its LIAA-funded buyers are absent while both programmes are closed (corrected — see VL-008) [V:WS2-069] [V:WS2-071]; EDIC's own test-before-invest service may still run (availability UNKNOWN [V:WS3-046]). Whether a foreign (Estonian FIE) provider can list is UNKNOWN (resolve: dih.lv provider-registration terms).
 - **EE:** EIS roadmap advisory and development support is open (max €35,000; 30–50% self-financing; main-activity revenue ≥€200,000) [V:WS2-005]. But external consultants need ≥3 similar projects in the previous 4 years [V:WS2-011], and "digital advisors" need ≥3 similar advisory projects in the 4 years before the project [V:WS2-009]. The operator cannot be the funded advisor at first. Whether a newcomer can act as a subcontracted implementer is UNKNOWN.
 - **LT:** UNKNOWN (resolve: Inovacijų agentūra EDIH list and each EDIH's test-before-invest service page).
 
@@ -228,11 +230,11 @@ When resolving, label quality as follows:
 The brief's target is 15–20 owner interviews per country [E:A-WS6-04]. **Public evidence on what works** (acceptance rates for interview requests, incentives, best channel) was not retrieved: UNKNOWN in all three countries. The verified channel structure does support a ranking of cheap sampling frames (inference, not a measured result):
 
 1. **Public member directories (ASYNC, no cost: the lists are public):**
-   - EE: Kaubanduskoda ~3,402 listed [V:WS6-001]; ELEA 65 [V:WS6-007]
+   - EE: Kaubanduskoda ~3,402 listed [V:WS6-001]; ELEA 65–68 [V:WS6-007] (LEAD VL-021)
    - LV: LAFF list [V:WS6-009]
-   - LT: LINEKA 42 [V:WS6-008]; chamber lists UNKNOWN
+   - LT: LINEKA 42–60 [V:WS6-008] [V:VL-022]; chamber lists UNKNOWN
 
-   A single sector list is too small. Reaching 15–20 interviews from ELEA alone needs 23–31% acceptance, and from LINEKA alone 36–48% [E:A-WS6-04]. Several lists per country must therefore be combined.
+   A single sector list is too small. Reaching 15–20 interviews from ELEA alone needs 22–31% acceptance, and from LINEKA alone 25–48% (corrected — see VL-021, VL-022) [E:A-WS9-04]; the earlier figures were 23–31% and 36–48% [E:A-WS6-04]. Several lists per country must therefore be combined.
 2. **Owner-dense events (DAY, Nov 2026):** EE family-business conference, 12 Nov, 175 listed [V:WS6-013]; LT GROW BEYOND, 26–27 Nov [V:WS6-027]; LV UNKNOWN. These also cost leave and tickets [E:A-WS6-02][E:A-WS6-03].
 3. **Accounting-firm owners via accountants' events (EE)** [V:WS6-010][V:WS6-011][V:WS6-013][V:WS6-014]. This doubles as discovery of the brief's referral-partner idea; LV and LT are UNKNOWN.
 
@@ -343,7 +345,7 @@ Each needs only the queries already written in this file.
 
 | Country | Group | Best channel | Second channel | Third channel |
 |---|---|---|---|---|
-| EE | G1 logistics | ELEA list: 65 [V:WS6-007] · ASYNC · €0 | Logistika aastakonverents, 9 Dec: 105 listed [V:WS6-014] · DAY · ticket UNKNOWN | Ostujuhtimise aastakonverents, 3 Nov: 120 listed [V:WS6-013] · DAY · UNKNOWN |
+| EE | G1 logistics | ELEA list: 65–68 [V:WS6-007] (corrected — see VL-021) · ASYNC · €0 | Logistika aastakonverents, 9 Dec: 105 listed [V:WS6-014] · DAY · ticket UNKNOWN | Ostujuhtimise aastakonverents, 3 Nov: 120 listed [V:WS6-013] · DAY · UNKNOWN |
 | EE | G1 wholesale/trade | Kaubanduskoda directory: ~3,402 [V:WS6-001] · ASYNC · €0 to browse | Kaubanduse aastakongress, 7 Oct: 275 listed [V:WS6-012] · DAY · UNKNOWN | EVEA: >6,000 represented [V:WS6-006] · ASYNC · fee UNKNOWN |
 | EE | G1 manufacturing | Tööstuse Äriplaan 2027, 18 Nov: 165 listed [V:WS6-013] · DAY · UNKNOWN | Puidutööstuse Äriplaan 2027, 15 Oct: 140 listed [V:WS6-012] · DAY · UNKNOWN | Kaubanduskoda directory filtered to manufacturers: sector size UNKNOWN · ASYNC · €0 |
 | EE | G1 accounting / prof. services | PwC conference, 25–26 Nov: ~500 [V:WS6-011] · DAY · UNKNOWN | "Mis muutub raamatupidaja töös 2027?", 10 Dec: 170 listed [V:WS6-014] · DAY · UNKNOWN | RUP.ee, 17 Nov: size UNKNOWN · DAY/remote · €239–349 [V:WS6-010] |
@@ -352,7 +354,7 @@ Each needs only the queries already written in this file.
 | LV | G1 wholesale / manufacturing / services | RIGA COMM, 8–9 Oct: 2,700+ [V:WS6-021] · DAY · UNKNOWN | dih.lv EDIC catalogue [V:WS3-019][V:WS3-020] · ASYNC · listing terms UNKNOWN | LTRK [V:WS6-003] · MIXED · UNKNOWN |
 | LV | G1 accounting | UNKNOWN | UNKNOWN | UNKNOWN |
 | LV | G2 | TechChill, 18–19 Mar: €359 [V:WS6-023] · DAY | RIGA COMM [V:WS6-021] · DAY | Foreign chambers: UNKNOWN |
-| LT | G1 logistics | Transport Innovation Forum, 14–15 Oct: 800+ [V:WS6-024] · DAY · UNKNOWN | LINEKA: 42 [V:WS6-008] · ASYNC · €0 | ALCCIC regional chambers (incl. Klaipėda): ~2,000 total [V:WS6-004] · MIXED · UNKNOWN |
+| LT | G1 logistics | Transport Innovation Forum, 14–15 Oct: 800+ [V:WS6-024] · DAY · UNKNOWN | LINEKA: 42–60 [V:WS6-008] [V:VL-022] (corrected — see VL-022) · ASYNC · €0 | ALCCIC regional chambers (incl. Klaipėda): ~2,000 total [V:WS6-004] · MIXED · UNKNOWN |
 | LT | G1 owners (wholesale / manufacturing / services) | GROW BEYOND, 26–27 Nov [V:WS6-027] · DAY · UNKNOWN | ALCCIC ~2,000 [V:WS6-004] / Vilnius CCIC 550+ [V:WS6-005] · MIXED · UNKNOWN | LiMA DAY'26, 19 Nov [V:WS6-025] · DAY · UNKNOWN (C buyers) |
 | LT | G1 accounting | LBAA (LEAD) [WS6-032] · ASYNC · UNKNOWN | Accountants' day conference (LEAD) [WS6-028] · DAY | UNKNOWN |
 | LT | G2 | Transport Innovation Forum, 20+ countries [V:WS6-024] · DAY | Pipedrive/HubSpot directories as an inbound route (inference) [V:WS3-014][V:WS3-023] · ASYNC | Foreign chambers: UNKNOWN |

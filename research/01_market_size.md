@@ -7,13 +7,40 @@
 > **Gap-fill pass (2026-10-03):** stopped by the user after 41 of 60 searches. It added Estonia's 2025 size and sector counts, census/survey language data for all three states, the scope of the Latvian and Estonian language laws, Latvian Russia/Belarus exporter counts, export partners, and foreign-chamber and accounting-body counts. **Scope change (user, 2026-10-03): only companies with up to 50 staff are in scope.** The funnel and synthesis inputs now use the 0–9 and 10–49 classes (Hunter buckets 1-10 and 11-50); the 50–249 class (Hunter 51-200) is shown for reference only and marked out of scope. ESTIMATE ids A-WS1-16 to A-WS1-24 and sources WS1-095 to WS1-151 come from this pass.
 
 **Legend**
-- `[V:WS1-0xx]` = VERIFIED, row in `research/_work/sources_WS1.csv`. `[V:WS6-0xx]`, `[V:WS3-0xx]`, `[V:WS0-0xx]` = VERIFIED by another workstream or by the lead analyst (WS0). These rows are cited by ID rather than copied (all merge into `sources.csv`).
-- `[E:A-WS1-0x]` = ESTIMATE; formula and inputs in `research/_work/assumptions_WS1.md` (short formula also shown inline).
+- `[V:WS1-nnn]` = VERIFIED, row in `research/_work/sources_WS1.csv`. `[V:WS6-nnn]`, `[V:WS3-nnn]`, `[V:WS0-nnn]`, `[V:VL-nnn]` = VERIFIED by another workstream, by the lead analyst (WS0) or by the verifier (VL). These rows are cited by ID rather than copied (all merge into `sources.csv`).
+- `[E:A-WS1-nn]` = ESTIMATE; formula and inputs in `research/_work/assumptions_WS1.md` (short formula also shown inline). `[E:A-WS9-nn]` = ESTIMATE added by the verifier (`research/_work/assumptions_VER.md`). `(corrected — see VL-nn)` marks text changed by the verification pass and `(verifier note — see VL-nn)` marks an added caveat; both point to `verification_log.md`.
 - `LEAD` = seen in a search extract but not tied to a confirmable URL, so not used as evidence.
 - `UNKNOWN (resolve: …)` = not established.
-- Size-class labels (0–9, 10–49, 50–249, 250+) and the brief's ICP definition (5–100 staff) are category definitions, not statistics.
+- Size-class labels (`0–9`, `10–49`, `50–249`, `250+`) and the brief's ICP definition (`5–100` staff) are category definitions, not statistics.
 
 **Method note:** Evidence gathered via web-search extracts on 2026-10-03; direct page fetching was blocked in this environment. Searches used `allowed_domains` to force primary sources (stat.ee, andmed.stat.ee, stat.gov.lv, data.stat.gov.lv, osp.stat.gov.lt, ec.europa.eu, single-market-economy.ec.europa.eu, eimin.lrv.lt), in EN, ET, LV and LT. No RU-language searches could be run before the budget ran out. Derived numbers were computed in code. Database-coverage rows (Hunter.io Discover, run by the lead analyst; vendor database = secondary; method `api-query`) are cited row by row via their permalinks (WS1-046 to WS1-094).
+
+---
+
+## 0. Scope: companies with up to fifty staff — G1 funnel recomputed by the verifier
+
+*Verifier recomputation, 2026-10-03; method, checks and what changed are in `verification_log.md`. Inputs: statistical size classes `0–9` and `10–49`, Hunter buckets `1-10` and `11-50`, maritime-tagged logistics rows removed. Raw counts: `research/_work/data/db_coverage.csv`; script: `research/_work/data/VER_recompute.py`. Database rows are a reachability proxy, not market size. The original WS1 funnel stays in the funnel section below for comparison.*
+
+| Step | EE | LV | LT |
+|---|---|---|---|
+| 1. All enterprises | 159,827 (2025) [V:WS1-095] | 107,091 (2024 est., SBS scope) [E:A-WS1-02] | 328.6 thousand (2022, pre-2023) [V:WS1-033] |
+| 2. Up to fifty staff (`0–9` + `10–49`) | 158,489 [E:A-WS1-16] | 105,523 [E:A-WS1-18] | ≈325.6 thousand [E:A-WS1-19] |
+| 2a. of which `10–49` (core) | 6,284 [V:WS1-095] [V:VL-015] | 6,457 (JRC estimate for 2024) [V:WS1-025] [V:VL-016] | 11.3–12.8 thousand; treat 12,815 as a ceiling (corrected — see VL-017) [E:A-WS9-03] |
+| 3. Target sectors within `10–49` | 1,191–3,481 (section level; upper bounds) [E:A-WS1-17] | UNKNOWN (resolve: Eurostat `sbs_sc_ovw`, U1) | UNKNOWN (resolve: Eurostat `sbs_sc_ovw`, U1) |
+| 4. Database records in target sectors, `1-10` + `11-50`, maritime-tagged logistics removed | 4,345–5,539 [E:A-WS1-20] | 2,729–3,336 [E:A-WS1-20] | 5,123–6,213 [E:A-WS1-20] |
+| 5. ... with at least one indexed e-mail | 3,606–4,598 [E:A-WS1-20] | 2,265–2,769 [E:A-WS1-20] | 4,252–5,157 [E:A-WS1-20] |
+| 6. ... with a named (personal) e-mail (corrected — see VL-027) | 2,254–3,381 [E:A-WS9-02] | 1,416–2,036 [E:A-WS9-02] | 2,657–3,793 [E:A-WS9-02] |
+| 7. Likelier buyers: `11-50` bucket with a named e-mail (**funnel endpoint**) | **703–1,019** [E:A-WS9-02] | **542–747** [E:A-WS9-02] | **957–1,300** [E:A-WS9-02] |
+| 8. After language-workability and Russia/Belarus screens | UNKNOWN (resolve: U3, U5) | UNKNOWN; share of firms trading goods with RU/BY at most 0.6% [E:A-WS1-21] | UNKNOWN (resolve: U3, U5) |
+
+**How to read the endpoint.** Step 7 is the largest pool that is both in the likelier size band and reachable by a named e-mail in the vendor database: about 0.7–1.0 thousand firms in EE, 0.5–0.7 thousand in LV and 1.0–1.3 thousand in LT [E:A-WS9-02]. It is an upper bound for outbound lists built from this database, because the language filter, the sanctions screen, maritime-adjacent firms outside the logistics industry and duplicate domains are not applied (share UNKNOWN). The statistical core in step 2a is larger, but its target-sector share is known only for EE (at most 55.4% [E:A-WS1-17]).
+
+**What changed against the original funnel.**
+- Named-e-mail pools are lower. The pooled 61.0% personal-e-mail rate [E:A-WS1-13] was computed mostly from segments in the out-of-scope 51-200 bucket; restricted to in-scope segments it is 51.9% [E:A-WS9-01] (corrected — see VL-027).
+- The Lithuanian `10–49` count is a ceiling, not a point estimate (corrected — see VL-017).
+- All other arithmetic reproduces: totals, bucket sums, the maritime adjustment and the sector sums match the WS1 values within rounding of ±2 [E:A-WS1-20].
+
+**G2 (foreign sellers into the Baltics), up to fifty staff: UNKNOWN** (resolve: the three routes in the G2 section). The only quantity is a ceiling of about 900 chamber memberships, all sizes, not de-duplicated [E:A-WS1-24]. The sum 470 + 130 + 100 + 100 + 100 was recomputed and holds. The up-to-fifty cut cannot be applied, so the G2 count can only be at most that ceiling.
 
 ---
 
@@ -22,10 +49,10 @@
 1. **In-scope universe (≤50 staff): the core 10–49 class is small.** Firms with 10–49 staff: EE 6,284 (2025) [V:WS1-095]; LV 6,457 (2024 est.) [V:WS1-025]; LT ≈12,815 (2022, pre-2023) [E:A-WS1-04]. Adding micro firms (0–9) gives EE 158,489 [E:A-WS1-16], LV 105,523 [E:A-WS1-18] and LT ≈325,600 (pre-2023) [E:A-WS1-19], but that class is dominated by one-person firms and cannot be cut at 5 staff in EE/LV data. The 50–249 class (EE 1,151 [V:WS1-095]; LV 1,363 [V:WS1-025]; LT ≈2,629 [E:A-WS1-05]) is now out of scope.
 2. **Estonia, 2025, firms with 10–49 employees by section:** manufacturing 1,191 [V:WS1-096]; trade (section G) 1,036 [V:WS1-096]; transport (H) 472 [V:WS1-096]; professional/scientific (M) 407 [V:WS1-097]; admin/support (N) 375 [V:WS1-097]. The target-sector envelope is 1,191–3,481 firms, at most 55% of the class [E:A-WS1-17]. Only manufacturing maps fully to a target sector; the other sections also contain retail, water transport, veterinary and travel agencies.
 3. **Latvia:** 6,457 small enterprises (2024 EC/JRC estimate) [V:WS1-025]. No CSB sector × size values could be extracted (tables UZS030/UZS031 [V:WS1-030]), so the LV sector step stays UNKNOWN. The Riga region produced 65.8% of GDP in 2023 [V:WS1-032].
-4. **Lithuania has about twice the EE/LV 10–49 class:** ≈12,815 (2022, pre-2023) [E:A-WS1-04]. A VDA cross-check fits (small firms = 12.2% of SMEs in 2022) [V:WS1-098]. No newer national figure was found; the EC 2024 estimate (11,348) is still a LEAD (WS1-039). LT is the only market where the operator speaks the state language (BRIEF §2).
-5. **Database-reachable pool with ≤50 staff (Hunter 1-10 + 11-50, target sectors, ≥1 indexed email):** EE 3,606–4,598; LV 2,265–2,769; LT 4,252–5,157 [E:A-WS1-20]. In the 11-50 bucket alone (the likelier buyers): EE 1,124–1,386; LV 868–1,016; LT 1,531–1,768 [E:A-WS1-20]. These counts come before the language and sanctions screens. They are vendor-database counts (a reachability proxy), not market size.
+4. **Lithuania has about twice the EE/LV 10–49 class:** ≈12,815 (2022, pre-2023) [E:A-WS1-04]. A VDA cross-check fits (small firms = 12.2% of SMEs in 2022) [V:WS1-098]. No newer national figure was found; the EC 2024 estimate (11,348) is still a LEAD (WS1-039). LT is the only market where the operator speaks the state language (BRIEF §2). (corrected — see VL-017): treat ≈12,815 as a ceiling; working range 11.3–12.8 thousand [E:A-WS9-03]; the re-check on 2026-10-03 found no newer VDA edition [V:VL-017].
+5. **Database-reachable pool with ≤50 staff (Hunter 1-10 + 11-50, target sectors, ≥1 indexed email):** EE 3,606–4,598; LV 2,265–2,769; LT 4,252–5,157 [E:A-WS1-20]. In the 11-50 bucket alone (the likelier buyers): EE 1,124–1,386; LV 868–1,016; LT 1,531–1,768 [E:A-WS1-20]. With a named (personal) e-mail the 11-50 pool is EE 703–1,019; LV 542–747; LT 957–1,300 (corrected — see VL-027) [E:A-WS9-02]. These counts come before the language and sanctions screens. They are vendor-database counts (a reachability proxy), not market size.
 6. **Accounting firms are thin in the database and only partly counted in statistics.** Hunter lists 97 (EE), 63 (LV) and 126 (LT) accounting records with ≤50 staff [E:A-WS1-20]. Professional bodies: LV ≈2,800 licensed outsourced-accounting providers (mid-2023) [V:WS1-127]; EE 338 sworn auditors and 112 audit firms (2025) [V:WS1-128]; LT >300 certified auditors (2025) [V:WS1-130]. Statistical M69.20 counts remain UNKNOWN (§4.4).
-7. **Associations:** ELEA lists 65 members on a public list (prior lead confirmed) [V:WS6-007]; LINEKA (LT) 42 [V:WS6-008]; Kaubanduskoda ~3,402 listed [V:WS6-001]. Foreign chambers with verified counts add up to ≈900 memberships (not de-duplicated) [E:A-WS1-24]; the largest is the German-Baltic AHK with >470 members and a public member database [V:WS1-110] [V:WS1-111]. Estonia has the EU's second-highest share of foreign-controlled enterprises, 11% (2023) [V:WS1-109].
+7. **Associations:** ELEA lists 65 members on a public list (prior lead confirmed) [V:WS6-007]; another ELEA page gives 68 members and an average of 91 employees per member (LEAD VL-021), so many members are above the up-to-fifty scope (verifier note — see VL-021); LINEKA (LT) 42 in an undated report [V:WS6-008] versus 60 in a report dated 17 Apr 2021 [V:VL-022] (corrected — see VL-022); Kaubanduskoda ~3,402 listed [V:WS6-001]. Foreign chambers with verified counts add up to ≈900 memberships (not de-duplicated) [E:A-WS1-24]; the largest is the German-Baltic AHK with >470 members and a public member database [V:WS1-110] [V:WS1-111]. Estonia has the EU's second-highest share of foreign-controlled enterprises, 11% (2023) [V:WS1-109].
 8. **Multilingual Baltic coverage is not unique, and tool languages differ.** Fontakt [V:WS3-002], Ripe Leads [V:WS3-009] and a Riga Pipedrive partner [V:WS3-013] already sell RU + local-language coverage. HubSpot has Latvian and Lithuanian interfaces but not Estonian [V:WS0-003]; Zoho supports ET/LV/LT only partially [V:WS0-004].
 9. **Language reality differs sharply by country.** EE: Russian is the mother tongue of 29% (2021) [V:WS1-099]; English is spoken as a foreign language by 48% and Russian by 39% [V:WS1-100], so ≈68% can speak Russian [E:A-WS1-22]. LV: 34.6% of 18–69-year-olds use Russian at home (2022) [V:WS1-101]; Russian (91.3%) and English (64.0%) are the most common foreign languages spoken or understood [V:WS1-104]. LT: Russian mother tongue ≥≈4.6% [E:A-WS1-23]; 60.6% know Russian and 31.1% English (2021) [V:WS1-105]. The LV and EE language laws regulate private-sector language only where a public interest (consumers, labour, safety) is affected, plus public signs and notices [V:WS1-132] [V:WS1-133]; nothing found targets B2B emails or proposals (LT law not checked).
 10. **Exports and the sanctions screen.** Main goods-export partners: EE 2024 Finland 16%, Latvia 11%, Sweden 9% [V:WS1-120]; LV 2024 top five Lithuania, Estonia, Germany, Sweden and Russia (47.5% together) [V:WS1-122]; LT 2022 Germany 9.7%, Poland 9%, Latvia 8.7% (pre-2023) [V:WS1-125]. In Latvia 400 firms exported goods to Russia and 218 to Belarus in Jan–Nov 2023 [V:WS1-123], at most ≈0.6% of Latvian firms with ≤50 staff [E:A-WS1-21]. Exporting-SME counts remain UNKNOWN (§3.3).
@@ -58,7 +85,7 @@
 | Size class | EE (2025, national, by employees) | LV (2024, EC SME Fact Sheet 2025 = JRC estimate, SBS scope, persons employed) | LT (2022 (pre-2023), VDA, persons employed) |
 |---|---|---|---|
 | 0–9 (in scope) | 152,205 [V:WS1-095] | 99,066 [V:WS1-025] | ≈312,827 (312,663–312,992) [E:A-WS1-19]; share 95.2% [V:WS1-034] |
-| 10–49 (in scope; core) | 6,284 [V:WS1-095] | 6,457 [V:WS1-025] | ≈12,815 (12,651–12,980) [E:A-WS1-04]; share 3.9% [V:WS1-034] |
+| 10–49 (in scope; core) | 6,284 [V:WS1-095] | 6,457 [V:WS1-025] | ≈12,815 (12,651–12,980) [E:A-WS1-04]; share 3.9% [V:WS1-034] (corrected — see VL-017: ceiling; working range 11.3–12.8 thousand [E:A-WS9-03]) |
 | **≤50 staff (0–49), in scope** | **158,489** [E:A-WS1-16] | **105,523** [E:A-WS1-18] | **≈325,643 (325,314–325,971)** [E:A-WS1-19] |
 | 50–249 (out of scope since 2026-10-03) | 1,151 [V:WS1-095] | 1,363 [V:WS1-025] | ≈2,629 (2,465–2,793) [E:A-WS1-05]; share 0.8% [V:WS1-034] |
 | 250+ | 187 [V:WS1-095] | 205 [V:WS1-025] | share 0.1% [V:WS1-034] |
@@ -72,7 +99,7 @@
   - The LV count covers the Eurostat SBS business economy (excludes agriculture, finance and most public/social services), by *persons employed* (owners included).
   - The LT total includes very small units such as natural persons engaged in business.
 
-  For the 10–249 band these differences matter less than for the micro class, but they do not vanish.
+  For the `10–249` band these differences matter less than for the micro class, but they do not vanish.
 - **Reference years differ.** EE is 2025 (observed) [V:WS1-095]; LV is 2024 (model estimate from 2008–2023 data [V:WS1-027]); LT is 2022 (pre-2023; observed shares × observed total). No newer LT national count was found in the gap-fill pass (UNKNOWN; resolve: VDA operating enterprises at the start of 2025 by personnel group).
 - **Latvian small firms average ≈20.4 persons employed** (medium firms ≈98.5, now out of scope) [E:A-WS1-03]; underlying data [V:WS1-026].
 - **LT is stable over time.** The 2021 (pre-2023) cross-check gives ≈12,550 small and ≈2,390 medium (shares 4.2% and 0.8% of 298.8 thousand) [V:WS1-035] [E:A-WS1-04] [E:A-WS1-05]. Growth in the LT total comes from very small units, not from the 10–249 band.
@@ -84,9 +111,9 @@ Other LT context (not used in calculations):
 
 ### 3.2 Enterprises by target sector × size class
 
-Only Estonia could be filled (2025, NACE section level). The 50–249 class is out of scope and shown in the last row for reference.
+Only Estonia could be filled (2025, NACE section level). The `50–249` class is out of scope and shown in the last row for reference.
 
-| Sector (see §2) | EE small, 10–49 (2025) | EE micro, 0–9 (2025) | LV 10–49 | LT 10–49 |
+| Sector (see §2) | EE small, `10–49` (2025) | EE micro, `0–9` (2025) | LV `10–49` | LT `10–49` |
 |---|---|---|---|---|
 | C manufacturing (fully in target) | 1,191 [V:WS1-096] | UNKNOWN (resolve: ER025, section C, <10 employees) | UNKNOWN (resolve: CSB UZS030/UZS031, 2024, NACE C × size group) | UNKNOWN (resolve: VDA operating enterprises by NACE × personnel group) |
 | G46 wholesale | ≤1,036 (whole section G, incl. G45 motor trade and G47 retail) [V:WS1-096] | UNKNOWN | UNKNOWN | UNKNOWN |
@@ -98,7 +125,7 @@ Only Estonia could be filled (2025, NACE section level). The 50–249 class is o
 
 **Cheapest resolution (all three countries in one pass).** Eurostat `sbs_sc_ovw` [V:WS1-028]:
 - geo = EE, LV, LT
-- size classes 0–9 and 10–49 (in scope)
+- size classes `0–9` and `10–49` (in scope)
 - NACE = C, G46, H49, H51, H52, H53, M69, M70, M71, M72, M73, M74, N77, N78, N80, N81, N82
 - indicator = number of enterprises
 - latest year (2023 or 2024)
@@ -121,7 +148,7 @@ Why it matters: exporters are the natural buyers of component C (outbound lead g
 |---|---|---|---|---|---|---|
 | EE | Estonian Chamber of Commerce and Industry (Eesti Kaubandus-Tööstuskoda) | cross-sector | koda.ee/en/members | ~3,402 listed; "over 3,500" claimed | Yes (members page) | [V:WS6-001] [V:WS6-002] |
 | EE | EVEA (Estonian Association of SMEs) | cross-sector SMEs | evea.ee/liikmed | represents >6,000 enterprises (direct + collective) | UNKNOWN | [V:WS6-006]; composition LEAD WS6-031 |
-| EE | ELEA (Estonian Logistics and Freight Forwarding Association) | logistics / forwarding | elea.ee/en/members | 65 incl. 13 associate members (2026) | Yes | [V:WS6-007] (**prior lead ~65 confirmed**) |
+| EE | ELEA (Estonian Logistics and Freight Forwarding Association) | logistics / forwarding | elea.ee/en/members | 65 incl. 13 associate members (2026); 68 incl. 17 associates and an average of 91 employees per member on another ELEA page (LEAD VL-021) (corrected — see VL-021) | Yes | [V:WS6-007] (**prior lead ~65 confirmed**) |
 | EE | Estonian Machinery Industry Association | manufacturing exporters | UNKNOWN | UNKNOWN | UNKNOWN | existence via event [V:WS6-017] |
 | EE | Audiitorkogu (Estonian Auditors' Association); Eesti Raamatupidajate Kogu (ERK, accountants) | accounting / audit | audiitorkogu.ee; erk.ee | Audiitorkogu 450 members = 338 sworn auditors + 112 audit firms (30.06.2025); ERK count UNKNOWN (certified accountants 4,182 in 2020 is a LEAD, WS1-129) | UNKNOWN | [V:WS1-128] |
 | LV | Latvian Chamber of Commerce and Industry (LTRK) | cross-sector | chamber.lv | 6,000 members incl. associations and business clubs | UNKNOWN | [V:WS6-003]; conflicting direct-company breakdown LEAD WS6-030 |
@@ -129,7 +156,7 @@ Why it matters: exporters are the natural buyers of component C (outbound lead g
 | LV | Licensed outsourced-accounting providers (VID licence, mandatory since 1 July 2023); accountants' and exporters' associations | accounting | vid.gov.lv (licence register) | ≈2,800 licences (mid-2023; 5,886 providers were registered before licensing); association counts UNKNOWN | UNKNOWN (resolve: VID public licence register) | [V:WS1-127] |
 | LT | Association of Lithuanian Chambers of Commerce, Industry and Crafts | cross-sector (regional chambers) | chambers.lt | ~2,000 | UNKNOWN | [V:WS6-004] |
 | LT | Vilnius Chamber of Commerce, Industry and Crafts | cross-sector | cci.lt (older site) | >550 (date unknown) | UNKNOWN | [V:WS6-005] |
-| LT | LINEKA (national forwarders & logistics association) | logistics / forwarding | lineka.lt | 42 (41 companies + 1 education institution) | UNKNOWN | [V:WS6-008] |
+| LT | LINEKA (national forwarders & logistics association) | logistics / forwarding | lineka.lt | 42 (41 companies + 1 education institution; undated report) [V:WS6-008] versus 60 (54 companies + 6 related organisations; report dated 17 Apr 2021, pre-2023) [V:VL-022] (corrected — see VL-022) | UNKNOWN | [V:WS6-008] [V:VL-022] [V:VL-031] |
 | LT | LBAA (Lithuanian Association of Accountants and Auditors) | accounting | lbaa.lt | UNKNOWN: >700 vs 472 (2020), conflicting (LEAD WS1-131) | UNKNOWN | LEAD WS6-032, WS1-131 |
 | LT | Lithuanian Chamber of Auditors (Lietuvos auditorių rūmai) | audit | lar.lt | >300 certified auditors (2025) | UNKNOWN | [V:WS1-130] |
 
@@ -173,9 +200,9 @@ Reading: Russian reaches about two-thirds of Estonia's population [E:A-WS1-22] a
 
 Implication: nothing found in the LV or EE acts targets private B2B emails, proposals or CRM content. The constraints bite on public-facing material (signs, advertising, consumer information) and on staff in public-interest roles. Consumer-facing campaigns, which are not this brief's focus, would need state-language versions.
 
-### 3.6 G1 funnel per country (total → right size → target sectors → plausibly reachable), ≤50-staff scope
+### 3.6 G1 funnel per country (total → right size → target sectors → plausibly reachable), scope: up to fifty staff
 
-The brief's order is total → sectors → size. Here size is applied first because only the size cut is published for all three countries; the order does not change the endpoint. Since the user's scope change (2026-10-03), step 2 is "≤50 staff" (0–9 + 10–49) and the 50–249 class is out of scope.
+The brief's order is total → sectors → size. Here size is applied first because only the size cut is published for all three countries; the order does not change the endpoint. Since the user's scope change (2026-10-03), the size step is "up to fifty staff" (`0–9` + `10–49`) and the `50–249` class is out of scope.
 
 | Step | EE | LV | LT |
 |---|---|---|---|
@@ -191,7 +218,7 @@ The brief's order is total → sectors → size. Here size is applied first beca
 
 The statistical-route formula is Reachable_c = N2_c × s_c × (1 − x_c) × d_c × l_c [E:A-WS1-08], with N2_c now the ≤50-staff count. No values were assumed for s (LV, LT) or l, because they could not be sourced.
 
-**Database route (secondary reachability proxy, Hunter.io Discover, 2026-10-03), ≤50 staff.** Counts are company records in a vendor database: **a reachability proxy, not market size.** All rows use the 1-10 + 11-50 headcount buckets; the 11-50 bucket is also shown alone because most 1-10 records are firms with one to four staff.
+**Database route (secondary reachability proxy, Hunter.io Discover, 2026-10-03), up to fifty staff.** Counts are company records in a vendor database: **a reachability proxy, not market size.** All rows use the `1-10` + `11-50` headcount buckets; the `11-50` bucket is also shown alone because most `1-10` records are firms with one to four staff.
 
 | Step | EE | LV | LT |
 |---|---|---|---|
@@ -204,14 +231,14 @@ The statistical-route formula is Reachable_c = N2_c × s_c × (1 − x_c) × d_c
 | D2e. Administrative & Support (1912) | 456 [V:WS1-139] [V:WS1-056] | 302 [V:WS1-145] [V:WS1-071] | 578 [V:WS1-151] [V:WS1-086] |
 | **D2. Target-sector records, ≤50 (sum)** | **4,345–5,539** [E:A-WS1-20] | **2,729–3,336** [E:A-WS1-20] | **5,123–6,213** [E:A-WS1-20] |
 | D2 in the 11-50 bucket only | 1,355–1,670 [E:A-WS1-20] | 1,046–1,224 [E:A-WS1-20] | 1,845–2,130 [E:A-WS1-20] |
-| D3. Email-availability rate (pooled exact segments) | any 83.0%; personal 61.0% [E:A-WS1-13] | same [E:A-WS1-13] | same [E:A-WS1-13] |
+| D3. Email-availability rate (pooled exact segments) | any 83.0%; personal 61.0% [E:A-WS1-13]; in-scope segments only: any 84.5%, personal 51.9% [E:A-WS9-01] (verifier note — see VL-027) | same [E:A-WS1-13] | same [E:A-WS1-13] |
 | **D4. Database-reachable, ≥1 indexed email, ≤50** | **3,606–4,598** [E:A-WS1-20] | **2,265–2,769** [E:A-WS1-20] | **4,252–5,157** [E:A-WS1-20] |
 | D4 in the 11-50 bucket only | 1,124–1,386 [E:A-WS1-20] | 868–1,016 [E:A-WS1-20] | 1,531–1,768 [E:A-WS1-20] |
-| **D4'. With ≥1 personal (named) email, ≤50** | **2,650–3,379** [E:A-WS1-20] | **1,665–2,035** [E:A-WS1-20] | **3,125–3,790** [E:A-WS1-20] |
-| D4' in the 11-50 bucket only | 826–1,019 [E:A-WS1-20] | 638–747 [E:A-WS1-20] | 1,125–1,299 [E:A-WS1-20] |
+| **D4'. With ≥1 personal (named) email, ≤50** (corrected — see VL-027) | **2,254–3,381** [E:A-WS9-02] (was 2,650–3,379 [E:A-WS1-20]) | **1,416–2,036** [E:A-WS9-02] (was 1,665–2,035 [E:A-WS1-20]) | **2,657–3,793** [E:A-WS9-02] (was 3,125–3,790 [E:A-WS1-20]) |
+| D4' in the 11-50 bucket only (corrected — see VL-027) | 703–1,019 [E:A-WS9-02] (was 826–1,019 [E:A-WS1-20]) | 542–747 [E:A-WS9-02] (was 638–747 [E:A-WS1-20]) | 957–1,300 [E:A-WS9-02] (was 1,125–1,299 [E:A-WS1-20]) |
 | D5. After language-workability (l) and Russia/Belarus screening (x) | UNKNOWN (§7 U3, U5) | UNKNOWN; x ≤≈0.6% [E:A-WS1-21] | UNKNOWN |
 
-The earlier 11–200 version of this table (51-200 bucket now out of scope) is kept in A-WS1-10 to A-WS1-14 for reference.
+The earlier `11–200` version of this table (`51-200` bucket now out of scope) is kept in A-WS1-10 to A-WS1-14 for reference.
 
 **Caveats that travel with the database route** (lead analyst, `db_coverage_README.md`):
 1. **Headcount buckets are not statistical size classes.** Hunter's 1-10 / 11-50 do not match 0–9 / 10–49 (UNKNOWN net effect): a 10-person firm is in Hunter's 1-10 but in the statistical 10–49 class.
@@ -225,7 +252,7 @@ The earlier 11–200 version of this table (51-200 bucket now out of scope) is k
    - LT: 7/100 in 1-10 [V:WS1-147] and 0/100 in 11-50 [V:WS1-078]
 
    In LT, 99 of the 199 records in the 11-50 bucket were not sampled, so LT is an upper bound. Airlines/Aviation is **retained** pending an operator decision [E:A-WS1-11].
-4. **Email shares.** All 1-10 and 11-50 sector segments exceed 100 records, so their own email shares are upper bounds. D3 therefore uses the pooled rate from the 22 exact segments [E:A-WS1-13], which come mostly from larger firms; micro accounting firms show lower personal-email rates (32.6–55.1%) [V:WS1-058] [V:WS1-073] [V:WS1-088], so the ≤50 pools lean high.
+4. **Email shares.** All 1-10 and 11-50 sector segments exceed 100 records, so their own email shares are upper bounds. D3 therefore uses the pooled rate from the 22 exact segments [E:A-WS1-13], which come mostly from larger firms; micro accounting firms show lower personal-email rates (32.6–55.1%) [V:WS1-058] [V:WS1-073] [V:WS1-088], so the ≤50 pools lean high. Fifteen of the 22 exact segments are in the 51-200 bucket, which is out of scope; restricted to in-scope segments the personal-email share is 51.9% [E:A-WS9-01] (corrected — see VL-027).
 5. **CRM technology filter not supported.** Database counts cannot be split by CRM in use.
 
 Further caveats:
@@ -233,7 +260,7 @@ Further caveats:
 - **EE ratio inflated.** The EE coverage ratio is inflated by internationally run firms registered in Estonia (e-Residency).
 - **Not legal units.** Records are web domains, so one firm can appear under several domains.
 
-**What the two routes together tell the decision (≤50-staff scope).**
+**What the two routes together tell the decision (scope: up to fifty staff).**
 - **Statistical core:** the in-scope 10–49 class holds ≈6.3k firms in EE [V:WS1-095], ≈6.5k in LV [V:WS1-025] and ≈12.8k in LT [E:A-WS1-04], across all sectors. In Estonia at most ≈3.5k of them sit in the target sections [E:A-WS1-17].
 - **Practical outbound pool:** with any indexed email, ≈2.3k–5.2k target-sector firms per country with ≤50 staff, but only ≈0.9k–1.8k per country in the 11-50 bucket [E:A-WS1-20]. The extra volume from the 1-10 bucket is mostly firms too small to buy a CRM or lead-generation retainer (UNKNOWN share; test in interviews).
 - **Implication:** an enrichment-tool list for G1 is exhausted after a few campaigns, especially in LV. Deeper coverage needs register-based list building (business registers, association lists); WS4 covers the legality.
@@ -249,11 +276,11 @@ Further caveats:
 **Method (three routes; report the range, not a sum):**
 1. **Exporter route:** count enterprises in FI, SE, NO, DK, PL, DE, UA and other EU countries that export goods to EE/LV/LT. Sources: Eurostat TEC partner tables; national customs "exporters by destination" statistics. De-duplicate firms that export to more than one Baltic state by reporting max_c (lower bound) and Σ_c (upper bound).
 2. **Presence route:** count foreign-controlled enterprises in each Baltic state by controlling country. Sources: Eurostat inward FATS; CSB Latvia table UZG030 "Number of enterprises in enterprise groups by country" [V:WS1-042]; VDA "Foreign-owned enterprises in Lithuania" [V:WS1-043]. These firms are already present, so they are G2 buyers of local pipeline work rather than market-entry clients.
-3. **Network route:** combine the membership of foreign chambers in each Baltic state (§4.2), de-duplicated.
+3. **Network route:** combine the membership of foreign chambers in each Baltic state (see the foreign-chambers section), de-duplicated.
 
 Then apply the same B2B-relevance, sanctions and reachability filters as G1 (A-WS1-08).
 
-**Caveat:** route 1 counts goods exporters only. Service exporters (SaaS, consultancies) who are natural buyers of Baltic lead generation are not captured by TEC. Route 3 partly covers them.
+**Caveat:** the exporter route counts goods exporters only. Service exporters (SaaS, consultancies) who are natural buyers of Baltic lead generation are not captured by TEC. The network route partly covers them.
 
 ---
 
@@ -314,7 +341,7 @@ Also needed are regional counts for Ida-Virumaa (EE: Statistics Estonia county t
 
 ### 4.5 Re-verification of prior lead: ELEA member count
 
-**Confirmed.** ELEA lists 65 members, including 13 associate members, on a public members page (2026) [V:WS6-007]. WS6 verified this, and WS1 re-checked the row.
+**Confirmed.** ELEA lists 65 members, including 13 associate members, on a public members page (2026) [V:WS6-007]. WS6 verified this, and WS1 re-checked the row. Verifier re-check (2026-10-03): the prior lead of about 65 holds, but another page on the ELEA site reports 68 members including 17 associates and 6,170 employees in member companies, an average of 91 per member (LEAD VL-021; page attribution not pinned). If the average is representative, many members are above the up-to-fifty scope (corrected — see VL-021).
 
 ---
 
@@ -339,14 +366,14 @@ Also needed are regional counts for Ida-Virumaa (EE: Statistics Estonia county t
 
 | Language | Example queries | Found | Not found |
 |---|---|---|---|
-| EN | "Statistics Estonia number of economically active enterprises 2024 by number of persons employed 10-49 50-249" (stat.ee); "CSB Latvia economically active enterprises 2024 … size group" (stat.gov.lv); "SME country fact sheet 2025 Latvia …" (ec.europa.eu); "SMEs in operation Lithuania …" (osp.stat.gov.lt); "Eurostat sbs_sc_ovw …" | EE totals and size classes (WS1-001–004); LV EC fact sheet (WS1-025–027); Eurostat `sbs_sc_ovw` metadata (WS1-028); LT *Business in Lithuania* totals and shares (WS1-033–036); LV trade and Riga GDP releases (WS1-031, WS1-032); EMTAK 2025 pointers (WS1-044, WS1-045) | CSB national size counts; LT 2024/2025 counts; EE and LT 2025 SME fact sheets |
+| EN | "Statistics Estonia number of economically active enterprises 2024 by number of persons employed 10-49 50-249" (stat.ee); "CSB Latvia economically active enterprises 2024 … size group" (stat.gov.lv); "SME country fact sheet 2025 Latvia …" (ec.europa.eu); "SMEs in operation Lithuania …" (osp.stat.gov.lt); "Eurostat sbs_sc_ovw …" | EE totals and size classes [V:WS1-001] [V:WS1-003] (also WS1-002, WS1-004); LV EC fact sheet (WS1-025–027); Eurostat `sbs_sc_ovw` metadata (WS1-028); LT *Business in Lithuania* totals and shares (WS1-033–036); LV trade and Riga GDP releases (WS1-031, WS1-032); EMTAK 2025 pointers (WS1-044, WS1-045) | CSB national size counts; LT 2024/2025 counts; EE and LT 2025 SME fact sheets |
 | ET | "majanduslikult aktiivsed ettevõtted 2024 tööga hõivatud isikute arv statistikaamet"; "Eesti ettevõtted 2024 töötajate arvu järgi 10–49 50–249" | The EE 10–49 count of 6,461 [V:WS1-003] was first surfaced by the ET query; trade-by-size release title (WS1-041) | 50–249 count (found later via EN) |
 | LV | "ekonomiski aktīvo uzņēmumu skaits 2024 pēc lieluma grupām"; "tirgus sektora ekonomiski aktīvo uzņēmumu skaits 2024" | Table IDs UZS020, UZS030/UZS031, UZS041, UZS011 (WS1-029, WS1-030) | Any LV size-class values (PxWeb tables are not readable via search) |
 | LT | "veikiančių ūkio subjektų skaičius 2025 m. pradžioje pagal darbuotojų skaičių"; "Verslas Lietuvoje 2025 …"; "Lietuva skaičiais 2025 …" | Registrų centras legal-entity counts via duomenugalia.lt (WS1-038); conflicting operating-entity LEADs (WS1-040) | VDA 2024/2025 size-class values |
 | RU | none run (budget exhausted) | — | Russian-language business-community and language-use evidence is entirely open |
 | (API, not search) | Hunter.io Discover natural-language company queries, run by the lead analyst (`db_coverage.csv`) | Database-coverage counts by country × headcount × industry (WS1-046 to WS1-094) | CRM-technology split (filter not supported) |
-| EN (gap-fill) | stat.ee "economically active enterprises 2025 … 10-49 50-249"; stat.gov.lv AES language releases; osp.stat.gov.lt census; Eurostat AES, FATS, TEC; chamber member counts; likumi.lv, riigiteataja.ee language acts | EE 2025 size and section counts (WS1-095–097); census/AES language data (WS1-099–107); foreign-control share (WS1-109); chambers (WS1-110–119); export partners and RU/BY exporters (WS1-120–126); language-law scope (WS1-132–133) | LV/LT sector × size values; exporter counts; Finnish exporter counts to the Baltics |
-| ET (gap-fill) | "2025. aastal majanduslikult aktiivseid ettevõtteid … 10–49 50–249"; "Eesti Raamatupidajate Kogu liikmete arv … vandeaudiitorite arv" | EE 2025 size totals (WS1-095); Audiitorkogu counts (WS1-128) | ERK member count |
+| EN (gap-fill) | stat.ee "economically active enterprises 2025 … 10-49 50-249"; stat.gov.lv AES language releases; osp.stat.gov.lt census; Eurostat AES, FATS, TEC; chamber member counts; likumi.lv, riigiteataja.ee language acts | EE 2025 size and section counts [V:WS1-095] [V:WS1-096] [V:WS1-097]; census/AES language data (WS1-099–107); foreign-control share (WS1-109); chambers (WS1-110–119); export partners and RU/BY exporters (WS1-120–126); language-law scope (WS1-132–133) | LV/LT sector × size values; exporter counts; Finnish exporter counts to the Baltics |
+| ET (gap-fill) | "2025. aastal majanduslikult aktiivseid ettevõtteid … 10–49 50–249"; "Eesti Raamatupidajate Kogu liikmete arv … vandeaudiitorite arv" | EE 2025 size totals [V:WS1-095]; Audiitorkogu counts [V:WS1-128] | ERK member count |
 | LV (gap-fill) | "ārpakalpojuma grāmatvedības pakalpojumu sniedzēji … licence skaits" | VID licensing count (WS1-127) | CSB size × sector values |
 | LT (gap-fill) | "veikiančių mažų ir vidutinių įmonių skaičius 2025 …"; "2021 m. surašymas gimtoji kalba …"; "Lietuvos auditorių rūmai auditorių skaičius" | 2022 SME structure (WS1-098); census languages (WS1-105); auditors (WS1-130) | VDA 2025 size or sector counts; 2024–2025 export partners |
 | DE (gap-fill) | "Deutsch-Baltische Handelskammer … Mitglieder Anzahl" | AHK member count (WS1-110, WS1-111; logged as EN in the CSV because the field allows only EN/ET/LV/LT/RU) | — |
@@ -389,7 +416,7 @@ All scores are 1–5, where 5 = most favourable to the operator. Scores are sugg
 | G1 funnel endpoint (statistical route, core 10–49) | ceiling ≤3,481 [E:A-WS1-17] | UNKNOWN; ceiling ≤6,457 [V:WS1-025] | UNKNOWN; ceiling ≤≈12,815 [E:A-WS1-04] |
 | G1 database-reachable target-sector firms, ≤50 staff, ≥1 email (before language and sanctions screens) | 3,606–4,598 [E:A-WS1-20] | 2,265–2,769 [E:A-WS1-20] | 4,252–5,157 [E:A-WS1-20] |
 | Same, 11-50 bucket only | 1,124–1,386 [E:A-WS1-20] | 868–1,016 [E:A-WS1-20] | 1,531–1,768 [E:A-WS1-20] |
-| Same, with a named (personal) email, ≤50 | 2,650–3,379 [E:A-WS1-20] | 1,665–2,035 [E:A-WS1-20] | 3,125–3,790 [E:A-WS1-20] |
+| Same, with a named (personal) email, ≤50 (corrected — see VL-027) | 2,254–3,381 [E:A-WS9-02] | 1,416–2,036 [E:A-WS9-02] | 2,657–3,793 [E:A-WS9-02] |
 | Database coverage of the statistical 10–49 class (11-50 records) | 56.7% (inflated) [E:A-WS1-20] | 36.5% [E:A-WS1-20] | 34.1% [E:A-WS1-20] |
 | Accounting firms listed in database (≤50 staff) | 97 [E:A-WS1-20] | 63 [E:A-WS1-20] | 126 [E:A-WS1-20] |
 | Accounting professional bodies | 338 sworn auditors, 112 audit firms (2025) [V:WS1-128] | ≈2,800 licensed outsourced-accounting providers (2023) [V:WS1-127] | >300 certified auditors (2025) [V:WS1-130] |
@@ -400,7 +427,7 @@ All scores are 1–5, where 5 = most favourable to the operator. Scores are sugg
 | Language-law constraint summary | Private-sector language regulated only for public-interest cases; public signs, advertising and notices in Estonian; no B2B-email rule found [V:WS1-133] | Same pattern (Section 2 public-interest test; Section 21 public information) [V:WS1-132] | UNKNOWN (U7) |
 | Russia/Belarus exporter exposure | UNKNOWN | 400–618 firms (Jan–Nov 2023), ≤≈0.6% of ≤50 firms [E:A-WS1-21] | UNKNOWN |
 | Operator speaks state language? | No (BRIEF §2) | No (BRIEF §2) | Yes (BRIEF §2) |
-| Association member lists public? | Yes: Kaubanduskoda ~3,402 [V:WS6-001]; ELEA 65 [V:WS6-007]; AHK database [V:WS1-111] | Partly: LAFF yes [V:WS6-009]; AHK database [V:WS1-111]; LTRK UNKNOWN | Partly: AHK database [V:WS1-111]; LINEKA count only (42) [V:WS6-008]; chambers ~2,000 [V:WS6-004], list status UNKNOWN |
+| Association member lists public? | Yes: Kaubanduskoda ~3,402 [V:WS6-001]; ELEA 65–68 [V:WS6-007] (corrected — see VL-021); AHK database [V:WS1-111] | Partly: LAFF yes [V:WS6-009]; AHK database [V:WS1-111]; LTRK UNKNOWN | Partly: AHK database [V:WS1-111]; LINEKA count only (42 undated; 60 in 2021) [V:WS6-008] [V:VL-022] (corrected — see VL-022); chambers ~2,000 [V:WS6-004], list status UNKNOWN |
 | Multilingual (incl. RU) Baltic coverage already offered by competitors? | Yes [V:WS3-002] [V:WS3-009] | Yes [V:WS3-002] [V:WS3-009] [V:WS3-013] | Yes [V:WS3-002] [V:WS3-009] |
 
 ---
@@ -408,12 +435,12 @@ All scores are 1–5, where 5 = most favourable to the operator. Scores are sugg
 ## Appendix A — Follow-up query plan (to close UNKNOWNs if the search budget is raised)
 
 These are listed in priority order; together they need a few dozen searches.
-1. `allowed_domains=["ec.europa.eu"]`: "sbs_sc_ovw Estonia Latvia Lithuania number of enterprises 10-49 manufacturing wholesale G46 2023". Then repeat per sector.
-2. `["stat.gov.lv"]`: "UZS031 2024 10-49 50-249 nodarbināto" and the CSB annual press release on economically active enterprises (LV).
-3. `["osp.stat.gov.lt"]`: "veikiančių įmonių skaičius 2025 m. pradžioje darbuotojų skaičiaus grupės 10–19 20–49 50–99 100–249".
+1. `allowed_domains=["ec.europa.eu"]`: `"sbs_sc_ovw Estonia Latvia Lithuania number of enterprises 10-49 manufacturing wholesale G46 2023"`. Then repeat per sector.
+2. `["stat.gov.lv"]`: `"UZS031 2024 10-49 50-249 nodarbināto"` and the CSB annual press release on economically active enterprises (LV).
+3. `["osp.stat.gov.lt"]`: `"veikiančių įmonių skaičius 2025 m. pradžioje darbuotojų skaičiaus grupės 10–19 20–49 50–99 100–249"`.
 4. Census language: `["stat.ee","rahvaloendus.ee"]` "emakeel vene 2021 rahvaloendus"; `["stat.gov.lv"]` "2021 tautas skaitīšana mājās runātā valoda krievu"; `["osp.stat.gov.lt"]` "2021 surašymas gimtoji kalba rusų".
 5. `["europa.eu"]`: "Special Eurobarometer Europeans and their languages 2024 Estonia Latvia Lithuania English Russian".
 6. `["ec.europa.eu"]`: "Adult Education Survey 2022 foreign language knowledge Estonia Latvia Lithuania Russian English".
 7. Eurostat TEC: "trade by enterprise characteristics number of exporting enterprises Estonia size class 2023"; partner tables for RU/BY.
-8. Foreign chambers (§4.2) and accountants' bodies (§4.4): one query each on their own domains.
+8. Foreign chambers (see the foreign-chambers section) and accountants' bodies (see the accounting section): one query each on their own domains.
 9. RU-language: "русскоязычный бизнес Латвия Эстония язык общения с клиентами исследование" (any survey evidence on business language use).

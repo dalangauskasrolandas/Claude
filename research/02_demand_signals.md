@@ -10,6 +10,8 @@
 >
 > **Scope change (user, 2026-10-03):** only companies with **up to 50 staff** are in scope. Adoption data below foregrounds the 10–49 ("small") class. The ICT surveys exclude firms with 0–9 persons employed [V:WS2-053], so micro-firm adoption is UNKNOWN in all three countries.
 
+> **Verifier note (2026-10-03).** Re-checked by search: the EE AI-adoption grant terms and same-day closure (VL-005), the RTE grant and the three-similar-projects advisor rule (VL-006), EE AI-use shares (VL-007), the LV closures (VL-008) and the LT call status (VL-009); all confirmed. Documentary check only: the roadmap-grant closure (VL-023) and the CRM/ERP shares (VL-025). One correction: the LV sales-process share (VL-008). Next-call dates, Eurostat Baltic AI values, job postings, freelance volumes, trends and procurement stay UNKNOWN. See `verification_log.md`.
+
 ---
 
 ## 1. Key findings
@@ -45,7 +47,7 @@
    - **LT:** 8.8% (2024) → 21.3% (2025), one of the EU's largest increases (+12.5 pp) [V:WS2-057][V:WS2-054][E:A-WS2-12].
    - **LV:** 4.5% (2023; small firms 3.5%) [V:WS2-060] → 8.83% (2024) [V:WS2-062]; the 2025 value is a LEAD only (12.2%, WS2-056). EU: 20.0% (2025) [V:WS2-054].
 7. **Latvia showed mass demand for subsidised sales digitalisation, but both LIAA programmes are now closed.**
-   - RRF programme: 2,908 applications requesting EUR 36,892,501; acceptance stopped 17.06.2025 [V:WS2-069]. The largest group, 1,438 applications (about 49%), was for sales-process digitalisation incl. websites, CRM, booking and payments [V:WS2-070][E:A-WS2-08].
+   - RRF programme: 2,908 applications requesting EUR 36,892,501; acceptance stopped 17.06.2025 [V:WS2-069]. The largest group, 1,438 applications (about 49%), was for sales-process digitalisation incl. websites, CRM, booking and payments [V:WS2-070][E:A-WS2-08] (corrected — see VL-008: the 1,438 comes from one LIAA news item and the 2,908 from another page, so read the share as roughly one half, not 49%).
    - The follow-on programme (≤ EUR 10,000 digital solutions; ≤ EUR 200,000 AI; 50% small firms) took applications 21.07.2025–07.11.2025 and required quotes from at least 3 vendors [V:WS2-071]. No 2026 call was found: next call UNKNOWN.
    - The EDIC catalogue lists CRM packages from EUR 2,990 excl. VAT [V:WS3-017]; EDIC test-before-invest is up to EUR 20,000 at 100% (de minimis) [V:WS3-046].
 8. **Lithuania: no open digitalisation grant on 2026-10-03.**
@@ -148,7 +150,7 @@ Context:
 
 Latvian demand signals:
 - RRF programme: 2,908 applications requesting EUR 36,892,501; 2,646 approved (EUR 33.34M) by 20.04.2026 [V:WS2-069].
-- The largest group, 1,438 applications (about 49% [E:A-WS2-08]), was for sales-process digitalisation incl. websites, CRM systems, booking and payments [V:WS2-070]. The CRM-only share is UNKNOWN.
+- The largest group, 1,438 applications (about 49% [E:A-WS2-08]), was for sales-process digitalisation incl. websites, CRM systems, booking and payments [V:WS2-070]. The CRM-only share is UNKNOWN. (corrected — see VL-008: numerator and denominator come from two different LIAA pages, so the share is roughly one half.)
 - Average request about EUR 12,687 per application [E:A-WS2-08]. Earlier undated signals: 241 applications [V:WS2-025]; EUR 4.28M of reserved funds earmarked for AI [V:WS2-024].
 
 ### 5.3 Lithuania — Innovation Agency (Inovacijų agentūra) and others
